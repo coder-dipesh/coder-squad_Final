@@ -51,7 +51,7 @@
          <right>
             <AnchorPane prefHeight="582.0" prefWidth="512.0" style="-fx-background-color: #e5e9ff;" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="visiblepasswordAdminLogin" layoutX="200.0" layoutY="312.0" prefHeight="44.0" prefWidth="252.0" promptText="Password">
+                  <TextField fx:id="visiblepasswordAdminLogin" layoutX="200.0" layoutY="297.0" prefHeight="44.0" prefWidth="252.0" promptText="Password" AnchorPane.bottomAnchor="242.0">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -61,16 +61,16 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <Label layoutX="50.0" layoutY="301.0" prefHeight="67.0" prefWidth="222.0" text="Password" AnchorPane.leftAnchor="50.0">
+                  <Label layoutX="50.0" layoutY="301.0" prefHeight="67.0" prefWidth="222.0" text="Password" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="48.0">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="usernameAdminLogin" layoutX="193.0" layoutY="212.0" prefHeight="44.0" prefWidth="252.0" promptText="Username" AnchorPane.leftAnchor="200.0">
+                  <TextField fx:id="usernameAdminLogin" layoutX="193.0" layoutY="212.0" prefHeight="44.0" prefWidth="252.0" promptText="Username" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="60.0">
                      <font>
                         <Font size="14.0" />
                      </font></TextField>
-                  <Button fx:id="actionLoginAdmin" layoutX="221.0" layoutY="420.0" mnemonicParsing="false" onAction="#setActionLoginAdmin" style="-fx-background-color: #FDC361;" text="LOG IN">
+                  <Button fx:id="actionLoginAdmin" layoutX="221.0" layoutY="420.0" mnemonicParsing="false" onAction="#setActionLoginAdmin" prefHeight="52.0" prefWidth="140.0" style="-fx-background-color: #FDC361;" text="LOG IN" AnchorPane.bottomAnchor="128.0">
                      <font>
                         <Font size="25.0" />
                      </font>
@@ -80,26 +80,36 @@
                         <Image url="@../img/a.png" />
                      </image>
                   </ImageView>
-                  <Hyperlink fx:id="forgotpasswordAdmin" layoutX="192.0" layoutY="487.0" text="Forgot Password?" underline="true">
+                  <Hyperlink fx:id="forgotpasswordAdmin" layoutX="200.0" layoutY="527.0" text="Forgot Password?" underline="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="151.0">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Hyperlink>
-                  <PasswordField fx:id="passwordAdminLogin" layoutX="200.0" layoutY="312.0" prefHeight="44.0" prefWidth="252.0" promptText="Password" AnchorPane.leftAnchor="200.0">
+                  <PasswordField fx:id="passwordAdminLogin" layoutX="200.0" layoutY="312.0" prefHeight="44.0" prefWidth="252.0" promptText="Password" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="200.0">
                      <font>
                         <Font size="14.0" />
                      </font></PasswordField>
-                  <CheckBox fx:id="showpasswordAdminLogin" layoutX="426.0" layoutY="326.0" mnemonicParsing="false" onAction="#changeVisibility" />
-                  <Label fx:id="warningmessageAdminLogin" layoutX="206.0" layoutY="382.0" prefHeight="20.0" prefWidth="219.0" textFill="RED">
+                  <CheckBox fx:id="showpasswordAdminLogin" layoutX="426.0" layoutY="326.0" mnemonicParsing="false" onAction="#changeVisibility" AnchorPane.bottomAnchor="255.0" />
+                  <Label fx:id="warningmessageAdminLogin" layoutX="206.0" layoutY="382.0" prefHeight="20.0" prefWidth="219.0" textFill="RED" AnchorPane.bottomAnchor="197.00000000000003" AnchorPane.leftAnchor="203.0">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="successmessageAdminLogin" layoutX="203.0" layoutY="382.0" prefHeight="20.0" prefWidth="219.0" textFill="#0ed747">
+                  <Label fx:id="successmessageAdminLogin" layoutX="203.0" layoutY="382.0" prefHeight="20.0" prefWidth="219.0" textFill="#0ed747" AnchorPane.bottomAnchor="197.00000000000003" AnchorPane.leftAnchor="203.0">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
+                  <Label layoutX="181.0" layoutY="496.0" text="Do not have account?" AnchorPane.bottomAnchor="72.0">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="redirectAdminSignup" layoutX="364.0" layoutY="492.0" onAction="#redirectAdminSignup" text="SIGN UP" underline="true" AnchorPane.bottomAnchor="68.0" AnchorPane.rightAnchor="60.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Hyperlink>
                </children>
             </AnchorPane>
          </right>
