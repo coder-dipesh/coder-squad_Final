@@ -7,29 +7,29 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="820.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.splash_screen">
+<AnchorPane prefHeight="820.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.SplashScreenController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ff" height="820.0" stroke="BLACK" strokeType="INSIDE" width="1500.0" />
-      <Button layoutX="32.0" layoutY="53.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="271.0" style="-fx-background-color: #407093;" text="          ADMIN" textAlignment="RIGHT" textFill="WHITE">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ff" height="820.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1500.0" />
+      <Button fx:id="adminPanelOnAction" layoutX="78.0" layoutY="62.0" mnemonicParsing="false" onAction="#adminPanelOnAction" prefHeight="84.0" prefWidth="271.0" style="-fx-background-color: #407093;" text="          ADMIN" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font></Button>
-      <ImageView fitHeight="618.0" fitWidth="1438.0" layoutX="19.0" layoutY="165.0">
+      <ImageView fitHeight="600.0" fitWidth="1400.0" layoutX="60.0" layoutY="165.0">
          <image>
             <Image url="@../img/b.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="87.0" fitWidth="89.0" layoutX="47.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="69.0" fitWidth="67.0" layoutX="92.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/a.png" />
          </image>
       </ImageView>
-      <Button layoutX="1117.0" layoutY="52.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="271.0" style="-fx-background-color: #465062;" text="           CLIENT" textAlignment="RIGHT" textFill="WHITE">
+      <Button fx:id="clientPanelOnAction" layoutX="1117.0" layoutY="52.0" mnemonicParsing="false" onAction="#clientPanelOnAction" prefHeight="84.0" prefWidth="271.0" style="-fx-background-color: #465062;" text="           CLIENT" textAlignment="RIGHT" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font>
       </Button>
-      <ImageView fitHeight="88.0" fitWidth="87.0" layoutX="1131.0" layoutY="60.0">
+      <ImageView fitHeight="66.0" fitWidth="67.0" layoutX="1131.0" layoutY="60.0">
          <image>
             <Image url="@../img/e.png" />
          </image>

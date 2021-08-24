@@ -34,6 +34,8 @@ public class LoginAdminController{
     private TextField visiblepasswordAdminLogin;
     @FXML
     private CheckBox showpasswordAdminLogin;
+    @FXML
+    private Hyperlink redirectAdminSignup;
 
 
 
@@ -56,7 +58,6 @@ public class LoginAdminController{
 
         if (usernameAdminLogin.getText().equals(username) && passwordAdminLogin.getText().equals(password)){
             successmessageAdminLogin.setText("Login Success! Please wait.");
-            createAccountForm();
 
         }
         else{
@@ -65,7 +66,6 @@ public class LoginAdminController{
         }
 
     }
-
 
     // Password Visibality on check
     public void changeVisibility(ActionEvent event) {
@@ -80,24 +80,25 @@ public class LoginAdminController{
         visiblepasswordAdminLogin.setVisible(false);
     }
 
-    // Account Register Form
+        // Redirect to Admin Signup
+        public void redirectAdminSignup(){
+            try{
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/registration_admin.fxml")));
+                Stage registerAdminstage = new Stage();
+                registerAdminstage.setTitle("All IN ONE STORE - Admin Signup");
+                registerAdminstage.getIcons().add(new Image("src/img/icon.png"));
+                registerAdminstage.setScene(new Scene(root,1500,820));
+                registerAdminstage.show();
 
-    public void createAccountForm(){
-        try{
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/registration_admin.fxml")));
-            Stage registerAdminstage = new Stage();
-            registerAdminstage.setTitle("All IN ONE STORE - Admin Login");
-            registerAdminstage.getIcons().add(new Image("src/img/icon.png"));
-            registerAdminstage.setScene(new Scene(root,1500,820));
-            registerAdminstage.show();
 
+            } catch (Exception e) {
+                e.printStackTrace();
+                e.getCause();
 
-        } catch (Exception e) {
-            e.printStackTrace();
-            e.getCause();
+            }
 
         }
-        }
+
     }
 
 

@@ -121,12 +121,12 @@
                         <Font size="14.0" />
                      </font></PasswordField>
                   <CheckBox fx:id="showpasswordAdmin" layoutX="425.0" layoutY="369.0" mnemonicParsing="false" onAction="#changeVisibilitySignup" prefHeight="30.0" prefWidth="24.0" />
-                  <Label fx:id="successRegisterAdmin" layoutX="233.0" layoutY="414.0" prefHeight="26.0" prefWidth="154.0" textFill="#0acf0a">
+                  <Label fx:id="successRegisterAdmin" layoutX="233.0" layoutY="414.0" prefHeight="26.0" prefWidth="154.0" textFill="#0acf0a" AnchorPane.bottomAnchor="141.99999999999997" AnchorPane.leftAnchor="233.0">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="warningRegisterAdmin" layoutX="201.0" layoutY="414.0" prefHeight="26.0" prefWidth="250.0" textFill="#d91a08">
+                  <Label fx:id="warningRegisterAdmin" layoutX="201.0" layoutY="414.0" prefHeight="26.0" prefWidth="217.0" textFill="#d91a08" AnchorPane.leftAnchor="233.0">
                      <font>
                         <Font size="16.0" />
                      </font>

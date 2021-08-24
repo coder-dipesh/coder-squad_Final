@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.LoginClientController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" height="865.0" layoutX="-29.0" layoutY="-25.0" stroke="BLACK" strokeType="INSIDE" width="1545.0">
             <fill>
@@ -51,18 +51,26 @@
             <right>
                 <AnchorPane prefHeight="582.0" prefWidth="512.0" style="-fx-background-color: #e5e9ff#e5e9ff #e5e9f#e5e9ff;" BorderPane.alignment="CENTER">
                     <children>
+                  <TextField fx:id="visiblepasswordClientLogin" layoutX="200.0" layoutY="296.0" prefHeight="44.0" prefWidth="252.0" promptText="Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
                         <Label layoutX="44.0" layoutY="200.0" prefHeight="67.0" prefWidth="222.0" text="Username" AnchorPane.leftAnchor="44.0">
                             <font>
                                 <Font size="25.0" />
                             </font>
                         </Label>
-                        <Label layoutX="44.0" layoutY="311.0" prefHeight="67.0" prefWidth="222.0" text="Password" AnchorPane.leftAnchor="50.0">
+                        <Label layoutX="48.0" layoutY="285.0" prefHeight="67.0" prefWidth="222.0" text="Password" AnchorPane.leftAnchor="48.0">
                             <font>
                                 <Font size="25.0" />
                             </font>
                         </Label>
-                        <TextField layoutX="193.0" layoutY="212.0" prefHeight="44.0" prefWidth="252.0" AnchorPane.leftAnchor="200.0" />
-                        <Button layoutX="221.0" layoutY="432.0" mnemonicParsing="false" style="-fx-background-color: #FDC361;" text="LOG IN">
+                        <TextField fx:id="usernameClientLogin" layoutX="193.0" layoutY="212.0" prefHeight="44.0" prefWidth="252.0" promptText="Username" AnchorPane.leftAnchor="200.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                        <Button fx:id="actionClientLogin" layoutX="221.0" layoutY="402.0" mnemonicParsing="false" onAction="#actionClientLogin" style="-fx-background-color: #FDC361;" text="LOG IN">
                             <font>
                                 <Font size="25.0" />
                             </font>
@@ -72,13 +80,36 @@
                                 <Image url="@../img/e.png" />
                             </image>
                         </ImageView>
-                        <Hyperlink layoutX="192.0" layoutY="485.0" text="Forgot Password?" underline="true">
+                        <Hyperlink fx:id="forgotPasswordClient" layoutX="192.0" layoutY="522.0" text="Forgot Password?" underline="true">
                             <font>
                                 <Font size="20.0" />
                             </font>
                         </Hyperlink>
-                  <PasswordField layoutX="200.0" layoutY="316.0" prefHeight="44.0" prefWidth="252.0" AnchorPane.leftAnchor="200.0" />
-                  <CheckBox layoutX="419.0" layoutY="331.0" mnemonicParsing="false" />
+                  <PasswordField fx:id="hiddenpasswordClientLogin" layoutX="200.0" layoutY="296.0" prefHeight="44.0" prefWidth="252.0" promptText="Password" AnchorPane.leftAnchor="200.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></PasswordField>
+                  <CheckBox fx:id="showpasswordClientLogin" layoutX="419.0" layoutY="310.0" mnemonicParsing="false" onAction="#changeVisibilityLogin" />
+                  <Label fx:id="successmessageClientLogin" layoutX="203.0" layoutY="364.0" prefHeight="18.0" prefWidth="258.0" textFill="#0bc42a">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="warningmessageClientLogin" layoutX="203.0" layoutY="364.0" prefHeight="18.0" prefWidth="258.0" textFill="#cc0b0b">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="redirectClientSignup" layoutX="352.0" layoutY="476.0" onAction="#redirectClientSignup" text="SIGN UP" underline="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Hyperlink>
+                  <Label layoutX="163.0" layoutY="482.0" text="Do not have account?">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
                     </children>
                 </AnchorPane>
             </right>

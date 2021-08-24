@@ -47,18 +47,12 @@ public class RegisterAdminController {
         if(firstnameAdmin.getText().isBlank()!=true && lastnameAdmin.getText().isBlank()!=true &&
                 emailaddressAdmin.getText().isBlank()!=true && usernameAdmin.getText().isBlank()!=true &&
                 passwordAdmin.getText().isBlank()!=true ) {
-
-            successRegisterAdmin.setText("Registration Success");
-
-        }else{
-
-            warningRegisterAdmin.setText("Please Fill all the data.");
-
+                successRegisterAdmin.setText("Registration Success");
         }
-
+        else{
+            warningRegisterAdmin.setText("Please Fill all the data.");
+        }
     }
-
-
 
     // Password Visibality on check
     public void changeVisibilitySignup(ActionEvent event) {
@@ -74,9 +68,10 @@ public class RegisterAdminController {
         showpasswordAdminRegister.setVisible(false);
     }
 
-// Redirects to the Login page
+    // Redirects to the Login page
     public void redirectLoginAdmin(){
         try{
+
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/login_admin.fxml")));
             Stage redirectStage = new Stage();
             redirectStage.setTitle("All IN ONE STORE - Admin Login");
@@ -84,15 +79,9 @@ public class RegisterAdminController {
             redirectStage.setScene(new Scene(root,1500,820));
             redirectStage.show();
 
-
         }catch(Exception e){
             e.printStackTrace();
             e.getCause();
         }
-
-
-
     }
-
-
 }
