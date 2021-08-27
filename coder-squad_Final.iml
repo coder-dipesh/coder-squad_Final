@@ -37,6 +37,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="mysql-connector-java-8.0.25" level="project" />
+<<<<<<< HEAD
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -62,6 +63,22 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+=======
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" />
+        </NATIVE>
+        <SOURCES>
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" recursive="false" type="SOURCES" />
+>>>>>>> 54a231967674cb018ce4b41ad2c41afed7cbb211
       </library>
     </orderEntry>
   </component>
