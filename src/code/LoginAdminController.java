@@ -60,7 +60,7 @@ public class LoginAdminController {
 
             String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
             String user = "root";
-            String dbPassword = "&@N984937284n";
+            String dbPassword = "root";
             String username = usernameAdminLogin.getText();
             String password = passwordAdminLogin.getText();
 

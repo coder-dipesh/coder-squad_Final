@@ -63,7 +63,7 @@ public class LoginClientController {
 
         String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
         String user = "root";
-        String dbPassword = "&@N984937284n";
+        String dbPassword = "root";
         String username = usernameClientLogin.getText();
         String password = hiddenpasswordClientLogin.getText();
 
