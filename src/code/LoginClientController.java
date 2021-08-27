@@ -14,8 +14,7 @@ import javafx.event.ActionEvent;
 
 import java.io.File;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Objects;
 
 
@@ -38,15 +37,13 @@ public class LoginClientController {
     private CheckBox showpasswordClientLogin;
     @FXML
     private Hyperlink forgotPaswordClient;
-//    @FXML
-//    private Hyperlink redirectClientSignup;
+    @FXML
+    private Hyperlink redirectClientSignup;
 
-    private String username = "dipesh";
-    private String password = "111";
 
     public void actionClientLogin(ActionEvent event){
         if(usernameClientLogin.getText().isBlank()!=true && hiddenpasswordClientLogin.getText().isBlank()!=true){
-            validateLogin();
+            validateLoginClient();
         }
         else{
             warningmessageClientLogin.setText("Invalid Login! Please try again.");
@@ -55,7 +52,62 @@ public class LoginClientController {
     }
 
 
-// Password Visibality
+    // Validate data from Database
+    public void validateLoginClient(){
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
+        Connection connectDB = connect.getConnection();
+
+        String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
+        String user = "root";
+        String dbPassword = "&@N984937284n";
+        String username = usernameClientLogin.getText();
+        String password = hiddenpasswordClientLogin.getText();
+
+        try {
+            connection = DriverManager.getConnection(url, user, dbPassword);
+            preparedStatement = connection.prepareStatement("SELECT password FROM client_register WHERE username= ? ");
+            preparedStatement.setString(1, username);
+            resultSet = preparedStatement.executeQuery();
+
+            if (!resultSet.isBeforeFirst()) {
+                warningmessageClientLogin.setText("Invalid login! Username does not match.");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("First Error - Username Wrong");
+                alert.show();
+            } else {
+                while (resultSet.next()) {
+                    String retrivedPassword = resultSet.getString("password");
+
+                    if (retrivedPassword.equals(password)) {
+                        successmessageClientLogin.setText("Login sucessfull!");
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setContentText("Wooo Hooo... Successfully Logged Into the SYSTEM...");
+                        alert.show();
+
+                        // Redirect to Dashboard Page
+                        dashboardClient();
+
+                    } else {
+                        warningmessageClientLogin.setText("Invalid login! Password does not match.");
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText("Second Error - Password Wrong");
+                        alert.show();
+                    }
+                }
+            } }catch(SQLException throwables){
+            throwables.printStackTrace();
+        }
+    }
+
+    private void dashboardClient() {
+    }
+
+
+    // Password Visibality
 
     public void changeVisibilityLogin(ActionEvent event) {
 
@@ -74,7 +126,7 @@ public class LoginClientController {
     // Validating Login data
     public void validateLogin(){
 
-        if (usernameClientLogin.getText().equals(username) && hiddenpasswordClientLogin.getText().equals(password)){
+        if (usernameClientLogin.getText().equals("w") && hiddenpasswordClientLogin.getText().equals("w")){
             successmessageClientLogin.setText("Login Success! Please wait.");
 
 

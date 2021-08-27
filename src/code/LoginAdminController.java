@@ -9,23 +9,22 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import  javafx.stage.Stage;
-import javafx.event.ActionEvent;
+import javafx.event.*;
 
 import java.io.File;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Objects;
 
 
-public class LoginAdminController{
+public class LoginAdminController {
 
     @FXML
     private Button actionLoginAdmin;
     @FXML
     private Label warningmessageAdminLogin;
     @FXML
-    private TextField usernameAdminLogin ;
+    private TextField usernameAdminLogin;
     @FXML
     private Label successmessageAdminLogin;
     @FXML
@@ -38,56 +37,93 @@ public class LoginAdminController{
     private Hyperlink redirectAdminSignup;
 
 
+        // Action while clicking Login button
 
-    private String username = "dipesh";
-    private String password = "111";
-
-    // Action while clicking signup button
-    public void setActionLoginAdmin(ActionEvent event){
-        if(usernameAdminLogin.getText().isBlank()!=true && passwordAdminLogin.getText().isBlank()!=true){
-            validateLogin();
-        }
-        else{
+        public void setActionLoginAdmin(ActionEvent event) {
+        if (usernameAdminLogin.getText().isBlank() != true && passwordAdminLogin.getText().isBlank() != true) {
+            validateLoginAdmin();
+        } else {
             warningmessageAdminLogin.setText("Invalid Login! Please try again.");
         }
 
     }
 
-    // Validating Login data
-    public void validateLogin(){
 
-        if (usernameAdminLogin.getText().equals(username) && passwordAdminLogin.getText().equals(password)){
-            successmessageAdminLogin.setText("Login Success! Please wait.");
+        // Validate data from Database
+        public void validateLoginAdmin(){
 
-        }
-        else{
-            warningmessageAdminLogin.setText("Invalid Login! Please try again.");
+            Connection connection = null;
+            PreparedStatement preparedStatement = null;
+            ResultSet resultSet = null;
+            AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
+            Connection connectDB = connect.getConnection();
 
-        }
+            String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
+            String user = "root";
+            String dbPassword = "&@N984937284n";
+            String username = usernameAdminLogin.getText();
+            String password = passwordAdminLogin.getText();
 
-    }
+            try {
+                connection = DriverManager.getConnection(url, user, dbPassword);
+                preparedStatement = connection.prepareStatement("SELECT password FROM admin_register WHERE username= ? ");
+                preparedStatement.setString(1, username);
+                resultSet = preparedStatement.executeQuery();
+
+                if (!resultSet.isBeforeFirst()) {
+                    warningmessageAdminLogin.setText("Invalid login! Username does not match.");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("First Error - Username Wrong");
+                    alert.show();
+                } else {
+                    while (resultSet.next()) {
+                        String retrivedPassword = resultSet.getString("password");
+
+                        if (retrivedPassword.equals(password)) {
+                            successmessageAdminLogin.setText("Login sucessfull!");
+                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setContentText("Wooo Hooo... Successfully Logged Into the SYSTEM...");
+                            alert.show();
+
+                            // Redirect to Dashboard Page
+                            dashboardAdmin();
+
+                        } else {
+                            warningmessageAdminLogin.setText("Invalid login! Password does not match.");
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setContentText("Second Error - Password Wrong");
+                            alert.show();
+                        }
+                    }
+                } }catch(SQLException throwables){
+                    throwables.printStackTrace();
+                }
+            }
+
+
+
 
     // Password Visibality on check
-    public void changeVisibility(ActionEvent event) {
-        if (showpasswordAdminLogin.isSelected()) {
-            visiblepasswordAdminLogin.setText(passwordAdminLogin.getText());
-            visiblepasswordAdminLogin.setVisible(true);
-            passwordAdminLogin.setVisible(false);
-            return;
+        public void changeVisibility (ActionEvent event){
+            if (showpasswordAdminLogin.isSelected()) {
+                visiblepasswordAdminLogin.setText(passwordAdminLogin.getText());
+                visiblepasswordAdminLogin.setVisible(true);
+                passwordAdminLogin.setVisible(false);
+                return;
+            }
+            passwordAdminLogin.setText(visiblepasswordAdminLogin.getText());
+            passwordAdminLogin.setVisible(true);
+            visiblepasswordAdminLogin.setVisible(false);
         }
-        passwordAdminLogin.setText(visiblepasswordAdminLogin.getText());
-        passwordAdminLogin.setVisible(true);
-        visiblepasswordAdminLogin.setVisible(false);
-    }
 
         // Redirect to Admin Signup
-        public void redirectAdminSignup(){
-            try{
+        public void redirectAdminSignup (ActionEvent event){
+            try {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/registration_admin.fxml")));
                 Stage registerAdminstage = new Stage();
                 registerAdminstage.setTitle("All IN ONE STORE - Admin Signup");
                 registerAdminstage.getIcons().add(new Image("src/img/icon.png"));
-                registerAdminstage.setScene(new Scene(root,1500,820));
+                registerAdminstage.setScene(new Scene(root, 1500, 820));
                 registerAdminstage.show();
 
 
@@ -99,6 +135,11 @@ public class LoginAdminController{
 
         }
 
+
+
+    private void dashboardAdmin() {
+
+    }
     }
 
 

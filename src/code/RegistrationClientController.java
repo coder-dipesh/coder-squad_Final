@@ -19,7 +19,6 @@ import java.util.Objects;
 
 public class RegistrationClientController {
 
-
     @FXML
     private CheckBox showpasswordClientRegister;
     @FXML
@@ -46,21 +45,50 @@ public class RegistrationClientController {
     private Label warningmessageClientRegister;
 
 
+    // Register Client Insert data to database
+    public void registerClient(){
 
-// Register Button
+        AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
+        Connection connectDB = connect.getConnection();
 
+        String firstname = firstnameClient.getText();
+        String lastname = lastnameClient.getText();
+        String emailaddress = emailaddressClient.getText();
+        String username = usernameClient.getText();
+        String password = hiddenpasswordClientRegister.getText();
+
+        String insertFields = "INSERT INTO client_register(first_name, last_name, email_id, username, password) VALUES ('";
+        String insertValues = firstname + "','" +lastname +"','" + emailaddress +"','" + username +"','" + password +"')";
+        String insertToRegister = insertFields + insertValues;
+
+        try{
+
+            Statement statement = connectDB.createStatement();
+            statement.executeUpdate(insertToRegister);
+            successmessageClientRegister.setText("Registration Successfull!");
+
+        }catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
+
+    }
+
+
+    // Register Client Button action
     public void actionClientRegister(ActionEvent event){
         if(firstnameClient.getText().isBlank()!=true && lastnameClient.getText().isBlank()!=true &&
                 emailaddressClient.getText().isBlank()!=true && usernameClient.getText().isBlank()!=true &&
                 hiddenpasswordClientRegister.getText().isBlank()!=true ) {
-            successmessageClientRegister.setText("Registration Successfull");
+                    registerClient();
+                    successmessageClientRegister.setText("Registration Successfull!");
         }
         else{
             warningmessageClientRegister.setText("Please fill all the details.");
         }
     }
 
-// Redirect to login page
+    // Redirect to login page
     public void redirectClientLogin(){
 
         try{
@@ -79,18 +107,18 @@ public class RegistrationClientController {
 
     }
 
-// Password Visibality
-public void changeVisibilityRegister(ActionEvent event) {
+    // Password Visibality
+    public void changeVisibilityRegister(ActionEvent event) {
 
-    if (showpasswordClientRegister.isSelected()) {
-        visiblepasswordClientRegister.setText(hiddenpasswordClientRegister.getText());
-        visiblepasswordClientRegister.setVisible(true);
-        hiddenpasswordClientRegister.setVisible(false);
-        return;
+        if (showpasswordClientRegister.isSelected()) {
+            visiblepasswordClientRegister.setText(hiddenpasswordClientRegister.getText());
+            visiblepasswordClientRegister.setVisible(true);
+            hiddenpasswordClientRegister.setVisible(false);
+            return;
+        }
+        hiddenpasswordClientRegister.setText(visiblepasswordClientRegister.getText());
+        hiddenpasswordClientRegister.setVisible(true);
+        visiblepasswordClientRegister.setVisible(false);
     }
-    hiddenpasswordClientRegister.setText(visiblepasswordClientRegister.getText());
-    hiddenpasswordClientRegister.setVisible(true);
-    visiblepasswordClientRegister.setVisible(false);
-}
 
 }
