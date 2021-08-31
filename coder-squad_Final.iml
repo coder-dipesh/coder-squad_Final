@@ -10,17 +10,28 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" />
+          <root url="jar://C:/Program Files/Java/mysql-connector-java-8.0.25.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <NATIVE>
-          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" />
-        </NATIVE>
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$PATH_TO_FX$" />
+        </CLASSES>
+        <JAVADOC />
         <SOURCES>
-          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" />
+          <root url="file://$PATH_TO_FX$/src/javafx.base" />
+          <root url="file://$PATH_TO_FX$/src/javafx.controls" />
+          <root url="file://$PATH_TO_FX$/src/javafx.fxml" />
+          <root url="file://$PATH_TO_FX$/src/javafx.graphics" />
+          <root url="file://$PATH_TO_FX$/src/javafx.media" />
+          <root url="file://$PATH_TO_FX$/src/javafx.swing" />
+          <root url="file://$PATH_TO_FX$/src/javafx.web" />
         </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" recursive="false" />
-        <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://$PATH_TO_FX$" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -41,6 +52,29 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" />
+        </NATIVE>
+        <SOURCES>
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" />
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib/src/javafx.base" />
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib/src/javafx.controls" />
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib/src/javafx.fxml" />
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib/src/javafx.graphics" />
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib/src/javafx.media" />
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib/src/javafx.swing" />
+          <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib/src/javafx.web" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>
