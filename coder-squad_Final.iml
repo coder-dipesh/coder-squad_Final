@@ -5,38 +5,8 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="16" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://C:/Program Files/Java/javafx-sdk-16/lib" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://C:/Program Files/Java/javafx-sdk-16/lib/src/javafx.base" />
-          <root url="file://C:/Program Files/Java/javafx-sdk-16/lib/src/javafx.controls" />
-          <root url="file://C:/Program Files/Java/javafx-sdk-16/lib/src/javafx.fxml" />
-          <root url="file://C:/Program Files/Java/javafx-sdk-16/lib/src/javafx.graphics" />
-          <root url="file://C:/Program Files/Java/javafx-sdk-16/lib/src/javafx.media" />
-          <root url="file://C:/Program Files/Java/javafx-sdk-16/lib/src/javafx.swing" />
-          <root url="file://C:/Program Files/Java/javafx-sdk-16/lib/src/javafx.web" />
-        </SOURCES>
-        <jarDirectory url="file://C:/Program Files/Java/javafx-sdk-16/lib" recursive="false" />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/src" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="library" name="mysql-connector-java-8.0.25" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -51,6 +21,26 @@
         </SOURCES>
         <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" recursive="false" />
         <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/mysql-connector-java-8.0.26 4/mysql-connector-java-8.0.26.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
   </component>

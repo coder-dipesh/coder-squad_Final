@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="42.0" layoutY="19.0" prefHeight="26.0" prefWidth="521.0" text="Please enter the Product Id of the product you want to update.">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="265.0" layoutY="72.0">
+            <image>
+                <Image url="@../img/update_product.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="139.0" layoutY="180.0" text="Product ID">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TextField layoutX="273.0" layoutY="171.0" prefHeight="42.0" prefWidth="234.0" />
+        <Button layoutX="88.0" layoutY="302.0" mnemonicParsing="false" style="-fx-background-color: #460A85 #460A85 #460A85 #460A85;" text="SUBMIT" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Button>
+        <Button layoutX="376.0" layoutY="300.0" mnemonicParsing="false" style="-fx-background-color: #460A85 #460A85 #460A85 #460A85;" text="CANCEL" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Button>
+        <Label layoutX="282.0" layoutY="252.0" text="Invalid Id" />
+    </children>
+</AnchorPane>
