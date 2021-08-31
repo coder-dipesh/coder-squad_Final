@@ -14,6 +14,8 @@ public class Splash_Screen extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/splash_screen.fxml")));
         stage.setTitle("All IN ONE STORE - Welcome");
+
+
         stage.getIcons().add(new Image("src/img/icon.png"));
         stage.setScene(new Scene(root,1500,820));
         stage.show();
@@ -23,5 +25,17 @@ public class Splash_Screen extends Application {
     public static void main(String[] args) { launch(args);}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
