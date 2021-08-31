@@ -9,7 +9,7 @@ public class AuthenticationDatabaseConnection {
                 public static Connection getConnection() {
                     String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
                     String user = "root";
-                    String password = "root";
+                    String password = "prasid890";
                     try {
                         Class.forName("com.mysql.cj.jdbc.Driver");
                         databaseLink = DriverManager.getConnection(url, user, password);

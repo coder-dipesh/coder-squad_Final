@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="820.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <BorderPane layoutY="-5.0" prefHeight="820.0" prefWidth="1500.0">
+            <center>
+                <BorderPane prefHeight="820.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+                    <top>
+                        <Pane prefHeight="76.0" prefWidth="1362.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label layoutX="255.0" layoutY="38.0" text="Welcome To your Dashboard!!">
+                                    <font>
+                                        <Font size="25.0" />
+                                    </font>
+                                </Label>
+                                <TextField layoutX="850.0" layoutY="32.0" prefHeight="38.0" prefWidth="222.0" promptText="Search" />
+                                <ImageView fitHeight="28.0" fitWidth="32.0" layoutX="1079.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" rotate="-84.4">
+                                    <image>
+                                        <Image url="@../img/f.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="1198.0" layoutY="27.0">
+                                    <image>
+                                        <Image url="@../img/setting-user.png" />
+                                    </image>
+                                </ImageView>
+                                <Line endX="1187.7176513671875" endY="7.62939453125E-6" layoutX="110.0" layoutY="97.0" startX="-100.0" />
+                                <ImageView fitHeight="83.0" fitWidth="82.0" layoutX="14.0" layoutY="9.0">
+                                    <image>
+                                        <Image url="@../img/dash_image-modified.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                    </top>
+                    <center>
+                        <Pane prefHeight="722.0" prefWidth="1327.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label layoutX="242.0" layoutY="31.0" text="CLIENT">
+                                    <font>
+                                        <Font size="25.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="909.0" layoutY="31.0" text="PRODUCT">
+                                    <font>
+                                        <Font size="25.0" />
+                                    </font>
+                                </Label>
+                                <Line endX="1160.5" layoutX="107.0" layoutY="68.0" startX="-100.0" />
+                                <TableView layoutX="14.0" layoutY="79.0" prefHeight="602.0" prefWidth="682.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="CLIENT ID" />
+                                        <TableColumn prefWidth="139.0" text="FIRST NAME" />
+                                        <TableColumn prefWidth="128.0" text="LAST NAME" />
+                                        <TableColumn prefWidth="214.0" text="EMAIL ID" />
+                                        <TableColumn prefWidth="148.0" text="USERNAME" />
+                                    </columns>
+                                </TableView>
+                                <TableView layoutX="701.0" layoutY="80.0" prefHeight="599.0" prefWidth="554.0">
+                                    <columns>
+                                        <TableColumn prefWidth="84.0" text="PRODUCT ID" />
+                                        <TableColumn prefWidth="199.0" text="PRODUCT NAME" />
+                                        <TableColumn prefWidth="137.0" text="CATEGORY" />
+                                        <TableColumn prefWidth="160.0" text="PRICE" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </Pane>
+                    </center>
+                </BorderPane>
+            </center>
+            <left>
+                <Pane prefHeight="820.0" prefWidth="173.0" style="-fx-background-color: #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Line endX="99.07136535644531" endY="-7.62939453125E-6" layoutX="60.0" layoutY="97.0" startX="-50.65603256225586" />
+                        <Label layoutX="54.0" layoutY="139.0" text="Create Category" />
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="131.0">
+                            <image>
+                                <Image url="@../img/create_category.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="9.0" layoutY="189.0">
+                            <image>
+                                <Image url="@../img/add_product.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="54.0" layoutY="197.0" text="Add Product" />
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="9.0" layoutY="724.0">
+                            <image>
+                                <Image url="@../../../coder-squad_Final/src/img/logout.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="54.0" layoutY="730.0" text="Logout" />
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="7.0" layoutY="247.0">
+                            <image>
+                                <Image url="@../img/delete_product.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="55.0" layoutY="257.0" text="Delete Product " />
+                        <Label layoutX="51.0" layoutY="314.0" text="Update Product" />
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="4.0" layoutY="358.0">
+                            <image>
+                                <Image url="@../img/view_product_details.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="47.0" layoutY="369.0" text="View Product Details" />
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="415.0">
+                            <image>
+                                <Image url="@../img/view_client_details.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="47.0" layoutY="425.0" text="View Client Details" />
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="7.0" layoutY="724.0">
+                            <image>
+                                <Image url="@../img/logout.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="7.0" layoutY="306.0">
+                            <image>
+                                <Image url="@../img/update_product.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </left>
+        </BorderPane>
+    </children>
+</AnchorPane>
