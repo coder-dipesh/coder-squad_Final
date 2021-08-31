@@ -1,4 +1,4 @@
-package code;
+package admin;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,8 +21,9 @@ public class Dashboard_Admin extends Application{
             stage.show();
         }
 
-
         public static void main(String[] args) { launch(args);}
+
+
 
     }
 

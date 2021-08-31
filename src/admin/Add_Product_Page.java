@@ -1,4 +1,4 @@
-package code;
+package admin;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +17,6 @@ public class Add_Product_Page extends Application {
         stage_add_product_page.setScene(new Scene(root,1500,820));
         stage_add_product_page.show();
     }
-
 
     public static void main(String[] args) { launch(args);}
 
