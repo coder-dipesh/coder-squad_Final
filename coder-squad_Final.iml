@@ -48,6 +48,15 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/mysql-connector-java-8.0.26 4/mysql-connector-java-8.0.26.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
           <root url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" />
         </CLASSES>
         <JAVADOC />
@@ -66,15 +75,6 @@
         </SOURCES>
         <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" recursive="false" />
         <jarDirectory url="file://$USER_HOME$/Desktop/javafx-sdk-16/lib" recursive="false" type="SOURCES" />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/mysql-connector-java-8.0.26 4/mysql-connector-java-8.0.26.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
       </library>
     </orderEntry>
   </component>
