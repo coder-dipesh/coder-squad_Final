@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="820.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashScreenController">
+<AnchorPane prefHeight="820.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.SplashScreenController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ff" height="820.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1500.0" />
       <Button fx:id="adminPanelOnAction" layoutX="78.0" layoutY="62.0" mnemonicParsing="false" onAction="#adminPanelOnAction" prefHeight="84.0" prefWidth="271.0" style="-fx-background-color: #407093;" text="          ADMIN" textAlignment="RIGHT" textFill="WHITE">
