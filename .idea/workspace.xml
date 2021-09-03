@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="064b3465-bd6a-4f3e-b4e1-c6d892e426a6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coder-squad_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coder-squad_Final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/AuthenticationDatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AuthenticationDatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/LoginAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/LoginClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginClientController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +29,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/coder-squad_Final.iml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/code/Splash_Screen.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1xZqO06rsZef8d3pZVPczX6oTru" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -29,12 +42,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/code/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.19753087" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -108,7 +121,7 @@
     <configuration name="Splash_Screen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="code.Splash_Screen" />
       <module name="coder-squad_Final" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\openjfx-16_windows-x64_bin-sdk\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="code.*" />
@@ -196,10 +209,10 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/coder_squad_Final$Login_Client.ic" NAME="Login_Client Coverage Results" MODIFIED="1630573284572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coder_squad_Final$Delete_Product_Page.ic" NAME="Delete_Product_Page Coverage Results" MODIFIED="1630573218959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>code.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/coder_squad_Final$Delete_Product_Page.ic" NAME="Delete_Product_Page Coverage Results" MODIFIED="1630573218959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coder_squad_Final$Login_Client.ic" NAME="Login_Client Coverage Results" MODIFIED="1630573284572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>code.*</FILTER>
     </SUITE>
   </component>
