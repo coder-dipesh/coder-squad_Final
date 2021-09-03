@@ -2,18 +2,17 @@ package code;
 
 
 //Necessary Imports
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import  javafx.stage.Stage;
 import javafx.event.ActionEvent;
+import javafx.stage.StageStyle;
 
-import java.io.File;
-import java.net.URL;
 import java.sql.*;
 import java.util.Objects;
 
@@ -42,7 +41,7 @@ public class LoginClientController {
 
 
     public void actionClientLogin(ActionEvent event){
-        if(usernameClientLogin.getText().isBlank()!=true && hiddenpasswordClientLogin.getText().isBlank()!=true){
+        if(!usernameClientLogin.getText().isBlank() && !hiddenpasswordClientLogin.getText().isBlank()){
             validateLoginClient();
         }
         else{
@@ -63,7 +62,7 @@ public class LoginClientController {
 
         String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
         String user = "root";
-        String dbPassword = "&@N984937284n";
+        String dbPassword = "root";
         String username = usernameClientLogin.getText();
         String password = hiddenpasswordClientLogin.getText();
 
@@ -74,36 +73,39 @@ public class LoginClientController {
             resultSet = preparedStatement.executeQuery();
 
             if (!resultSet.isBeforeFirst()) {
+                warningmessageClientLogin.setText("");
+                warningmessageClientLogin.setVisible(false);
+                warningmessageClientLogin.setVisible(true);
                 warningmessageClientLogin.setText("Invalid login! Username does not match.");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setContentText("First Error - Username Wrong");
-                alert.show();
+
             } else {
                 while (resultSet.next()) {
                     String retrivedPassword = resultSet.getString("password");
 
                     if (retrivedPassword.equals(password)) {
-                        successmessageClientLogin.setText("Login sucessfull!");
-                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                        alert.setContentText("Wooo Hooo... Successfully Logged Into the SYSTEM...");
-                        alert.show();
-
+                        warningmessageClientLogin.setVisible(false);
+                        successmessageClientLogin.setVisible(true);
+                        successmessageClientLogin.setText("Login successful!");
                         // Redirect to Dashboard Page
                         dashboardClient();
 
                     } else {
+                        successmessageClientLogin.setVisible(false);
                         warningmessageClientLogin.setText("Invalid login! Password does not match.");
-                        Alert alert = new Alert(Alert.AlertType.ERROR);
-                        alert.setContentText("Second Error - Password Wrong");
-                        alert.show();
+
                     }
                 }
-            } }catch(SQLException throwables){
-            throwables.printStackTrace();
+            } }catch(Exception e){
+            e.printStackTrace();
+            e.getCause();
         }
     }
 
+    // Redirects to Client Dashboard
     private void dashboardClient() {
+
+
+
     }
 
 
@@ -123,22 +125,24 @@ public class LoginClientController {
     }
 
 
-    // Validating Login data
-    public void validateLogin(){
+    // Change Password of code.admin
 
-        if (usernameClientLogin.getText().equals("w") && hiddenpasswordClientLogin.getText().equals("w")){
-            successmessageClientLogin.setText("Login Success! Please wait.");
+    public void forgotpasswordClient(){
 
+        try {
 
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/forgot_password_client.fxml")));
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.getIcons().add(new Image("src/img/icon.png"));
+            stage.setScene(new Scene(root, 500, 450));
+            stage.show();
+
+        }catch(Exception e){
+            e.printStackTrace();
+            e.getCause();
         }
-        else{
-            warningmessageClientLogin.setText("Invalid Login! Please try again.");
 
-        }
-
-    }
-
-    private void createAccountForm() {
     }
 
     //

@@ -80,7 +80,7 @@
                         <Image url="@../img/a.png" />
                      </image>
                   </ImageView>
-                  <Hyperlink fx:id="forgotpasswordAdmin" layoutX="200.0" layoutY="527.0" text="Forgot Password?" underline="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="151.0">
+                  <Hyperlink fx:id="forgotpasswordAdmin" layoutX="200.0" layoutY="527.0" onAction="#forgotpasswordAdmin" text="Forgot Password?" underline="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="151.0">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -90,12 +90,12 @@
                         <Font size="14.0" />
                      </font></PasswordField>
                   <CheckBox fx:id="showpasswordAdminLogin" layoutX="426.0" layoutY="326.0" mnemonicParsing="false" onAction="#changeVisibility" AnchorPane.bottomAnchor="255.0" />
-                  <Label fx:id="warningmessageAdminLogin" layoutX="206.0" layoutY="382.0" prefHeight="20.0" prefWidth="219.0" textFill="RED" AnchorPane.bottomAnchor="197.00000000000003" AnchorPane.leftAnchor="203.0">
+                  <Label fx:id="warningmessageAdminLogin" layoutX="164.0" layoutY="382.0" prefHeight="26.0" prefWidth="296.0" textFill="RED" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="164.0">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="successmessageAdminLogin" layoutX="203.0" layoutY="382.0" prefHeight="20.0" prefWidth="219.0" textFill="#0ed747" AnchorPane.bottomAnchor="197.00000000000003" AnchorPane.leftAnchor="203.0">
+                  <Label fx:id="successmessageAdminLogin" layoutX="221.0" layoutY="382.0" prefHeight="26.0" prefWidth="250.0" textFill="#0ed747" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="221.0">
                      <font>
                         <Font size="16.0" />
                      </font>

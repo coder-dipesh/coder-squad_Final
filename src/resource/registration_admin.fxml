@@ -18,7 +18,7 @@
 
 <AnchorPane maxHeight="820.0" maxWidth="1500.0" minHeight="720.0" minWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.RegisterAdminController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="892.0" layoutX="-11.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="1511.0" AnchorPane.bottomAnchor="-9.0" AnchorPane.leftAnchor="-11.0">
+      <Rectangle fx:id="validEmail" arcHeight="5.0" arcWidth="5.0" height="892.0" layoutX="-11.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="1511.0" AnchorPane.bottomAnchor="-9.0" AnchorPane.leftAnchor="-11.0">
          <fill>
             <LinearGradient endY="1.0" startY="1.0">
                <stops>
@@ -101,7 +101,7 @@
                         <Font size="25.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="106.0" fitWidth="112.0" layoutX="245.0" layoutY="18.0">
+                  <ImageView fitHeight="106.0" fitWidth="112.0" layoutX="245.0" layoutY="18.0" style="visibility: true;">
                      <image>
                         <Image url="@../img/a.png" />
                      </image>
@@ -129,6 +129,16 @@
                   <Label fx:id="warningRegisterAdmin" layoutX="201.0" layoutY="414.0" prefHeight="26.0" prefWidth="217.0" textFill="#d91a08" AnchorPane.leftAnchor="233.0">
                      <font>
                         <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="invalidEmail" layoutX="457.0" layoutY="258.0" style="visibility: false;" text="❌" textFill="#fa0e0e">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="confirmValidEmail" layoutX="457.0" layoutY="258.0" style="visibility: false;" text="✔" textFill="#18ff00">
+                     <font>
+                        <Font size="22.0" />
                      </font>
                   </Label>
                </children>

@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
+
 public class Registration_Admin extends Application {
 
     @Override
@@ -19,7 +20,6 @@ public class Registration_Admin extends Application {
         primaryStage.setScene(new Scene(root,1500,820));
         primaryStage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);

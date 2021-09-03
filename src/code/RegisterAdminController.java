@@ -1,21 +1,19 @@
 package code;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.util.regex.Matcher;
-import java.io.File;
-import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.Objects;
-import java.util.regex.Pattern;
 
 public class RegisterAdminController {
 
@@ -26,7 +24,7 @@ public class RegisterAdminController {
     @FXML
     private TextField lastnameAdmin;
     @FXML
-    private TextField emailaddressAdmin;
+    public  TextField emailaddressAdmin;
     @FXML
     private TextField usernameAdmin;
     @FXML
@@ -41,49 +39,17 @@ public class RegisterAdminController {
     private Label successRegisterAdmin;
     @FXML
     private Label warningRegisterAdmin;
-
-    // Email Validate
-//    String email = emailaddressAdmin.getText();
-//    public boolean emailValidate() {
-//        boolean emailStatus = false;
-//
-//        String emailPattern = "^[_A-Za-z0-9-+]+(\\\\.[_A-Za-z0-9-]+)*@\"\n" +
-//                "                + \"[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$";
-//
-//        Pattern pattern = Pattern.compile(emailPattern);
-//
-//        Matcher matcher = pattern.matcher(email);
-//
-//        //
-////        if(matcher.matches()){
-////            emailStatus.setText("");
-////        }else{
-////            emailStatus.setText("");
-////        }
-//        return emailStatus;
-//
-//    }
+    @FXML
+    private Label invalidEmail;
+    @FXML
+    private Label confirmValidEmail;
 
 
-    // Register Button
-
-    public void actionSignupAdmin(ActionEvent event){
-
-        if(firstnameAdmin.getText().isBlank()!=true && lastnameAdmin.getText().isBlank()!=true &&
-                emailaddressAdmin.getText().isBlank()!=true && usernameAdmin.getText().isBlank()!=true &&
-                passwordAdmin.getText().isBlank()!=true ) {
-            registerUser();
-
-        }
-        else{
-            warningRegisterAdmin.setText("Please Fill all the data.");
-        }
-    }
 
     // Register Admin Insert data to database
 
     public void registerUser(){
-        AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
+      AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
         Connection connectDB = connect.getConnection();
 
         String firstname = firstnameAdmin.getText();
@@ -92,27 +58,82 @@ public class RegisterAdminController {
         String username = usernameAdmin.getText();
         String password = passwordAdmin.getText();
 
-        String insertFields = "INSERT INTO admin_register(first_name, last_name, email_id, username, password) VALUES ('";
-        String insertValues = firstname + "','" +lastname +"','" + emailaddress +"','" + username +"','" + password +"')";
-        String insertToRegister = insertFields + insertValues;
-
-        try{
-
-            Statement statement = connectDB.createStatement();
-            statement.executeUpdate(insertToRegister);
-
-            successRegisterAdmin.setText("Registration Success");
+        try {
+            String query = "SELECT * FROM admin_register WHERE username= ? ";
+            PreparedStatement preparedStmt = connectDB.prepareStatement(query);
+            preparedStmt.setString(1, username);
+            ResultSet resultSet = preparedStmt.executeQuery();
 
 
-        }catch (Exception e){
+            if (resultSet.isBeforeFirst()){
+                successRegisterAdmin.setVisible(false);
+                warningRegisterAdmin.setVisible(true);
+                warningRegisterAdmin.setText("Username Already Taken!");
+
+
+
+            }
+            else {
+                String insertFields = "INSERT INTO admin_register(first_name, last_name, email_id, username, password) VALUES ('";
+                String insertValues = firstname + "','" + lastname + "','" + emailaddress + "','" + username + "','" + password + "')";
+                String insertToRegister = insertFields + insertValues;
+
+                Statement statement = connectDB.createStatement();
+                statement.executeUpdate(insertToRegister);
+
+                warningRegisterAdmin.setVisible(false);
+                successRegisterAdmin.setVisible(true);
+                successRegisterAdmin.setText("Registration Success");
+
+                firstnameAdmin.setText("");
+                lastnameAdmin.setText("");
+                emailaddressAdmin.setText("");
+                usernameAdmin.setText("");
+                passwordAdmin.setText("");
+                confirmValidEmail.setVisible(false);
+
+
+
+
+
+            } }
+        catch (Exception e) {
             e.printStackTrace();
             e.getCause();
         }
-
     }
 
+    // Register Button
 
-    // Password Visibality on check
+    public void actionSignupAdmin(ActionEvent event){
+
+        if(!firstnameAdmin.getText().isBlank() && !lastnameAdmin.getText().isBlank() &&
+                !emailaddressAdmin.getText().isBlank() && !usernameAdmin.getText().isBlank() &&
+                !passwordAdmin.getText().isBlank()) {
+
+            EmailValidator emailValidator = new EmailValidator();
+            if(!emailValidator.validate(emailaddressAdmin.getText().trim())) {
+
+                    confirmValidEmail.setVisible(false);
+                    invalidEmail.setVisible(true);
+
+                System.out.print("Invalid Email ID");
+            }else {
+                    invalidEmail.setVisible(false);
+                    confirmValidEmail.setVisible(true);
+
+                System.out.println("Valid email");
+                registerUser();
+            }
+        }
+        else{
+            warningRegisterAdmin.setText("Please Fill all the data.");
+        }}
+
+
+
+
+    // Password Visibility on check
     public void changeVisibilitySignup(ActionEvent event) {
 
         if (showpasswordAdmin.isSelected()) {
@@ -130,7 +151,7 @@ public class RegisterAdminController {
     public void redirectLoginAdmin(){
         try{
 
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/login_admin.fxml")));
+            Parent root = FXMLLoader.load(getClass().getResource("../resource/login_admin.fxml"));
             Stage redirectStage = new Stage();
             redirectStage.setTitle("All IN ONE STORE - Admin Login");
             redirectStage.getIcons().add(new Image("src/img/icon.png"));

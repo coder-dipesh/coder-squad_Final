@@ -80,7 +80,7 @@
                                 <Image url="@../img/e.png" />
                             </image>
                         </ImageView>
-                        <Hyperlink fx:id="forgotPasswordClient" layoutX="192.0" layoutY="522.0" text="Forgot Password?" underline="true">
+                        <Hyperlink fx:id="forgotPasswordClient" layoutX="192.0" layoutY="522.0" onAction="#forgotpasswordClient" text="Forgot Password?" underline="true">
                             <font>
                                 <Font size="20.0" />
                             </font>
@@ -95,7 +95,7 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <Label fx:id="warningmessageClientLogin" layoutX="203.0" layoutY="364.0" prefHeight="18.0" prefWidth="258.0" textFill="#cc0b0b">
+                  <Label fx:id="warningmessageClientLogin" layoutX="169.0" layoutY="364.0" prefHeight="22.0" prefWidth="311.0" textFill="#cc0b0b">
                      <font>
                         <Font size="15.0" />
                      </font>

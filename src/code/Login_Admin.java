@@ -15,6 +15,7 @@ public class Login_Admin extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/login_admin.fxml")));
         stage.setTitle("All IN ONE STORE - Admin Login");
+        stage.setAlwaysOnTop(true);
         stage.getIcons().add(new Image("src/img/icon.png"));
         stage.setScene(new Scene(root,1500,820));
         stage.show();

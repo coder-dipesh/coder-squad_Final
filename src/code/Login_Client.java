@@ -7,10 +7,12 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class Login_Client extends Application {
     @Override
     public void start(Stage clientLoginStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("../resource/login_client.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/login_client.fxml")));
         clientLoginStage.setTitle("All IN ONE STORE - Client Login");
         clientLoginStage.getIcons().add(new Image("src/img/icon.png"));
         clientLoginStage.setScene(new Scene(root,1500,820));

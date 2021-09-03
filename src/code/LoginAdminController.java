@@ -3,16 +3,16 @@ package code;
 //Necessary Imports
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import  javafx.stage.Stage;
 import javafx.event.*;
+import javafx.stage.StageStyle;
 
-import java.io.File;
-import java.net.URL;
+
+import java.io.IOException;
 import java.sql.*;
 import java.util.Objects;
 
@@ -40,10 +40,10 @@ public class LoginAdminController {
         // Action while clicking Login button
 
         public void setActionLoginAdmin(ActionEvent event) {
-        if (usernameAdminLogin.getText().isBlank() != true && passwordAdminLogin.getText().isBlank() != true) {
+        if (!usernameAdminLogin.getText().isBlank() && !passwordAdminLogin.getText().isBlank()) {
             validateLoginAdmin();
         } else {
-            warningmessageAdminLogin.setText("Invalid Login! Please try again.");
+            warningmessageAdminLogin.setText("Invalid Login! Fields cannot be empty.");
         }
 
     }
@@ -55,12 +55,10 @@ public class LoginAdminController {
             Connection connection = null;
             PreparedStatement preparedStatement = null;
             ResultSet resultSet = null;
-            AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
-            Connection connectDB = connect.getConnection();
 
             String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
             String user = "root";
-            String dbPassword = "&@N984937284n";
+            String dbPassword = "root";
             String username = usernameAdminLogin.getText();
             String password = passwordAdminLogin.getText();
 
@@ -71,39 +69,41 @@ public class LoginAdminController {
                 resultSet = preparedStatement.executeQuery();
 
                 if (!resultSet.isBeforeFirst()) {
+                    warningmessageAdminLogin.setText("");
+                    warningmessageAdminLogin.setVisible(false);
+                    warningmessageAdminLogin.setVisible(true);
                     warningmessageAdminLogin.setText("Invalid login! Username does not match.");
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setContentText("First Error - Username Wrong");
-                    alert.show();
+
                 } else {
                     while (resultSet.next()) {
                         String retrivedPassword = resultSet.getString("password");
 
                         if (retrivedPassword.equals(password)) {
-                            successmessageAdminLogin.setText("Login sucessfull!");
-                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                            alert.setContentText("Wooo Hooo... Successfully Logged Into the SYSTEM...");
-                            alert.show();
+                            warningmessageAdminLogin.setVisible(false);
+                            successmessageAdminLogin.setVisible(true);
+                            successmessageAdminLogin.setText("Login successful!");
 
                             // Redirect to Dashboard Page
+
                             dashboardAdmin();
+//                            successmessageAdminLogin.setText("");
 
                         } else {
+                            successmessageAdminLogin.setVisible(false);
                             warningmessageAdminLogin.setText("Invalid login! Password does not match.");
-                            Alert alert = new Alert(Alert.AlertType.ERROR);
-                            alert.setContentText("Second Error - Password Wrong");
-                            alert.show();
+
                         }
                     }
-                } }catch(SQLException throwables){
-                    throwables.printStackTrace();
+                } }catch(Exception e){
+                    e.printStackTrace();
+                    e.getCause();
                 }
             }
 
 
 
 
-    // Password Visibality on check
+    // Password Visibility on check
         public void changeVisibility (ActionEvent event){
             if (showpasswordAdminLogin.isSelected()) {
                 visiblepasswordAdminLogin.setText(passwordAdminLogin.getText());
@@ -136,11 +136,45 @@ public class LoginAdminController {
         }
 
 
+// Redirects to Admin Dashboard after validating login details
 
-    private void dashboardAdmin() {
+    private void dashboardAdmin() throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("../resource/dashboard_admin.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("All IN ONE STORE - Admin Dashboard");
+        stage.getIcons().add(new Image("src/img/icon.png"));
+        stage.setScene(new Scene(root,1500,820));
+        stage.show();
+
+
 
     }
+
+    // Change Password of code.admin
+
+    public void forgotpasswordAdmin(){
+
+        try {
+
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/forgot_password_admin.fxml")));
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.UNDECORATED);
+            stage.getIcons().add(new Image("src/img/icon.png"));
+            stage.setScene(new Scene(root, 500, 450));
+            stage.show();
+
+        }catch(Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
+
+        }
     }
+
+
+
+
 
 
 

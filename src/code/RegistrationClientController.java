@@ -1,19 +1,18 @@
 package code;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Objects;
 
@@ -43,11 +42,13 @@ public class RegistrationClientController {
     private Label successmessageClientRegister;
     @FXML
     private Label warningmessageClientRegister;
+    @FXML
+    private Label invalidEmail;
+    @FXML
+    private Label confirmValidEmail;
 
 
-    // Register Client Insert data to database
     public void registerClient(){
-
         AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
         Connection connectDB = connect.getConnection();
 
@@ -57,31 +58,68 @@ public class RegistrationClientController {
         String username = usernameClient.getText();
         String password = hiddenpasswordClientRegister.getText();
 
-        String insertFields = "INSERT INTO client_register(first_name, last_name, email_id, username, password) VALUES ('";
-        String insertValues = firstname + "','" +lastname +"','" + emailaddress +"','" + username +"','" + password +"')";
-        String insertToRegister = insertFields + insertValues;
+        try {
+            String query = "SELECT * FROM client_register WHERE username= ? ";
+            PreparedStatement preparedStmt = connectDB.prepareStatement(query);
+            preparedStmt.setString(1, username);
+            ResultSet resultSet = preparedStmt.executeQuery();
 
-        try{
 
-            Statement statement = connectDB.createStatement();
-            statement.executeUpdate(insertToRegister);
-            successmessageClientRegister.setText("Registration Successfull!");
+            if (resultSet.isBeforeFirst()){
+                successmessageClientRegister.setVisible(false);
+                warningmessageClientRegister.setVisible(true);
+                warningmessageClientRegister.setText("Username Already Taken!");
+            }
+            else {
+                String insertFields = "INSERT INTO client_register(first_name, last_name, email_id, username, password) VALUES ('";
+                String insertValues = firstname + "','" + lastname + "','" + emailaddress + "','" + username + "','" + password + "')";
+                String insertToRegister = insertFields + insertValues;
 
-        }catch (Exception e){
+                Statement statement = connectDB.createStatement();
+                statement.executeUpdate(insertToRegister);
+
+                warningmessageClientRegister.setVisible(false);
+                successmessageClientRegister.setVisible(true);
+                successmessageClientRegister.setText("Registration Success");
+
+                firstnameClient.setText("");
+                lastnameClient.setText("");
+                emailaddressClient.setText("");
+                usernameClient.setText("");
+                hiddenpasswordClientRegister.setText("");
+                confirmValidEmail.setVisible(false);
+
+
+            } }
+        catch (Exception e) {
             e.printStackTrace();
             e.getCause();
         }
-
     }
+
 
 
     // Register Client Button action
     public void actionClientRegister(ActionEvent event){
-        if(firstnameClient.getText().isBlank()!=true && lastnameClient.getText().isBlank()!=true &&
-                emailaddressClient.getText().isBlank()!=true && usernameClient.getText().isBlank()!=true &&
-                hiddenpasswordClientRegister.getText().isBlank()!=true ) {
-                    registerClient();
-                    successmessageClientRegister.setText("Registration Successfull!");
+
+        if(!firstnameClient.getText().isBlank() && !lastnameClient.getText().isBlank() &&
+                !emailaddressClient.getText().isBlank() && !usernameClient.getText().isBlank() &&
+                !hiddenpasswordClientRegister.getText().isBlank()) {
+
+            EmailValidator emailValidator = new EmailValidator();
+            if(!emailValidator.validate(emailaddressClient.getText().trim())) {
+
+                confirmValidEmail.setVisible(false);
+                invalidEmail.setVisible(true);
+
+                System.out.print("Invalid Email ID");
+            }else {
+                invalidEmail.setVisible(false);
+                confirmValidEmail.setVisible(true);
+
+                System.out.println("Valid email");
+                registerClient();
+            }
         }
         else{
             warningmessageClientRegister.setText("Please fill all the details.");

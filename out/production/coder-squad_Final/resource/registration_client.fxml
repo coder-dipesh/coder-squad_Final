@@ -131,6 +131,16 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
+                  <Label fx:id="confirmValidEmail" layoutX="455.0" layoutY="258.0" text="✔" textFill="#18ff00" visible="false">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="invalidEmail" layoutX="455.0" layoutY="260.0" text="❌" textFill="#fa0e0e" visible="false">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
                     </children>
                 </AnchorPane>
             </center>
