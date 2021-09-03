@@ -21,25 +21,25 @@
                     <top>
                         <Pane prefHeight="76.0" prefWidth="1362.0" style="-fx-background-color: #d8dee8;" BorderPane.alignment="CENTER">
                             <children>
-                        <Button layoutX="1183.0" layoutY="5.0" mnemonicParsing="false" opacity="0.0" prefHeight="72.0" prefWidth="73.0" />
+                        <Button fx:id="userDetails" layoutX="1183.0" layoutY="5.0" mnemonicParsing="false" onAction="#userDetails" opacity="0.0" prefHeight="72.0" prefWidth="73.0" />
                                 <Label layoutX="145.0" layoutY="33.0" text="Welcome To your Dashboard!!">
                                     <font>
                                         <Font size="25.0" />
                                     </font>
                                 </Label>
-                                <TextField layoutX="850.0" layoutY="32.0" prefHeight="38.0" prefWidth="222.0" promptText="Search">
+                                <TextField fx:id="searchField" layoutX="850.0" layoutY="32.0" prefHeight="38.0" prefWidth="222.0" promptText="Search">
                            <font>
                               <Font name="Fira Code Light" size="14.0" />
                            </font></TextField>
-                                <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="1198.0" layoutY="27.0">
+                                <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="1198.0" layoutY="27.0" onMouseClicked="#userDetails">
                                     <image>
                                         <Image url="@../img/setting-user.png" />
                                     </image>
                                 </ImageView>
                         <AnchorPane layoutX="1078.0" layoutY="32.0">
                            <children>
-                              <Button contentDisplay="CENTER" mnemonicParsing="false" opacity="0.0" prefHeight="38.0" prefWidth="52.0" textOverrun="CLIP" />
-                              <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="11.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                              <Button fx:id="searchButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchButton" opacity="0.0" prefHeight="38.0" prefWidth="52.0" textOverrun="CLIP" />
+                              <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="11.0" layoutY="6.0" onKeyPressed="#searchButton" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../img/f.png" />
                                  </image>
@@ -104,27 +104,27 @@
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER_RIGHT" layoutY="445.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
+                  <Button alignment="CENTER_RIGHT" disable="true" layoutY="445.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER" visible="false">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER_RIGHT" layoutX="1.0" layoutY="383.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
+                  <Button fx:id="updateProduct" alignment="CENTER_RIGHT" layoutX="1.0" layoutY="383.0" mnemonicParsing="false" onAction="#updateProduct" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER_RIGHT" layoutX="2.0" layoutY="321.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
+                  <Button fx:id="deleteProduct" alignment="CENTER_RIGHT" layoutX="2.0" layoutY="321.0" mnemonicParsing="false" onAction="#deleteProduct" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER_RIGHT" layoutX="2.0" layoutY="259.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
+                  <Button fx:id="addProduct" alignment="CENTER_RIGHT" layoutX="2.0" layoutY="259.0" mnemonicParsing="false" onAction="#addProduct" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER_RIGHT" layoutX="2.0" layoutY="188.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
+                  <Button fx:id="createCategory" alignment="CENTER_RIGHT" layoutX="2.0" layoutY="188.0" mnemonicParsing="false" onAction="#createCategory" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font>
@@ -140,7 +140,7 @@
                                 <Image url="@../img/add_product.png" />
                             </image>
                         </ImageView>
-                        <Label layoutX="74.0" layoutY="278.0" text="Add Product">
+                        <Label layoutX="74.0" layoutY="278.0" onMouseClicked="#addProduct" text="Add Product">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Reg" size="14.0" />
                      </font></Label>
@@ -149,7 +149,7 @@
                                 <Image url="@../img/logout.png" />
                             </image>
                         </ImageView>
-                        <Label layoutX="62.0" layoutY="730.0" text="Logout">
+                        <Label layoutX="62.0" layoutY="730.0" onMouseClicked="#logout" text="Logout">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font></Label>
@@ -158,29 +158,29 @@
                                 <Image url="@../img/delete_product.png" />
                             </image>
                         </ImageView>
-                        <Label layoutX="72.0" layoutY="340.0" text="Delete Product ">
+                        <Label layoutX="72.0" layoutY="340.0" onMouseClicked="#deleteProduct" text="Delete Product ">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font></Label>
-                        <Label layoutX="71.0" layoutY="404.0" text="Update Product">
+                        <Label layoutX="71.0" layoutY="404.0" onMouseClicked="#updateProduct" text="Update Product">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font></Label>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="4.0" layoutY="457.0">
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="4.0" layoutY="457.0" visible="false">
                             <image>
                                 <Image url="@../img/view_product_details.png" />
                             </image>
                         </ImageView>
-                        <Label layoutX="77.0" layoutY="466.0" text="View Products ">
+                        <Label layoutX="77.0" layoutY="466.0" text="View Products " visible="false">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font></Label>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="516.0">
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="6.0" layoutY="516.0" visible="false">
                             <image>
                                 <Image url="@../img/view_client_details.png" />
                             </image>
                         </ImageView>
-                        <Label layoutX="77.0" layoutY="525.0" text="View Clients">
+                        <Label layoutX="77.0" layoutY="525.0" text="View Clients" visible="false">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font></Label>
@@ -189,7 +189,7 @@
                                 <Image url="@../img/update_product.png" />
                             </image>
                         </ImageView>
-                  <Label layoutX="74.0" layoutY="209.0" text="Create Category">
+                  <Label layoutX="74.0" layoutY="209.0" onMouseClicked="#createCategory" text="Create Category">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Reg" size="14.0" />
                      </font>

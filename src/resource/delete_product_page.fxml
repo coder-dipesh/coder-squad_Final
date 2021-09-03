@@ -8,35 +8,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label layoutX="41.0" layoutY="21.0" prefHeight="29.0" prefWidth="518.0" text="Please enter the Product ID of the product you want to delete.">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Label>
-        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="268.0" layoutY="79.0">
+        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="268.0" layoutY="83.0">
             <image>
                 <Image url="@../img/delete_product.png" />
             </image>
         </ImageView>
-        <Label layoutX="114.0" layoutY="186.0" text="Product ID">
+        <Label layoutX="114.0" layoutY="196.0" text="Product ID">
             <font>
                 <Font size="25.0" />
             </font>
         </Label>
-        <TextField layoutX="287.0" layoutY="177.0" prefHeight="40.0" prefWidth="213.0" />
-        <Button layoutX="96.0" layoutY="309.0" mnemonicParsing="false" style="-fx-background-color: #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85;" text="DELETE" textFill="WHITE">
+        <TextField layoutX="287.0" layoutY="187.0" prefHeight="44.0" prefWidth="252.0" />
+        <Button layoutX="96.0" layoutY="319.0" mnemonicParsing="false" style="-fx-background-color: #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85;" text="DELETE" textFill="WHITE">
             <font>
                 <Font size="25.0" />
             </font>
         </Button>
-        <Button layoutX="372.0" layoutY="306.0" mnemonicParsing="false" style="-fx-background-color: #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85;" text="CANCEL" textFill="WHITE">
+        <Button layoutX="372.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85;" text="CANCEL" textFill="WHITE">
             <font>
                 <Font size="25.0" />
             </font>
         </Button>
-        <Label layoutX="285.0" layoutY="252.0" text="Invalid Id" />
+        <Label layoutX="285.0" layoutY="262.0" text="Invalid Id" />
+      <Label layoutX="206.0" layoutY="25.0" text="Delete Pr0duct">
+         <font>
+            <Font name="Hansief" size="28.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

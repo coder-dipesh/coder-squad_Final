@@ -2,7 +2,6 @@ package code;
 
 
 //Necessary Imports
-import code.AuthenticationDatabaseConnection;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import  javafx.stage.Stage;
