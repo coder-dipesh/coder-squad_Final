@@ -19,6 +19,21 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+<<<<<<< HEAD
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.base" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.controls" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.fxml" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.graphics" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.media" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.swing" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.web" />
+        </SOURCES>
+        <jarDirectory url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" recursive="false" />
+=======
           <root url="file://$PATH_TO_FX$" />
         </CLASSES>
         <JAVADOC />
@@ -54,8 +69,23 @@
         <SOURCES>
           <root url="file://C:/Program Files/Java/jdk-16.0.2/lib" />
         </SOURCES>
+<<<<<<< HEAD
         <jarDirectory url="file://C:/Program Files/Java/jdk-16.0.2/lib" recursive="false" />
         <jarDirectory url="file://C:/Program Files/Java/jdk-16.0.2/lib" recursive="false" type="SOURCES" />
+=======
+        <jarDirectory url="file://C:/javafx-sdk-16/lib" recursive="false" />
+        <jarDirectory url="file://C:/javafx-sdk-16/lib" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/mysql-connector-java-8.0.25/mysql-connector-java-8.0.25.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+>>>>>>> 37cd768d10877bc093b4108555f3e79e9ea8b8d6
+>>>>>>> 352aa97f401f7dc4bb4504064165372897bfb87b
       </library>
     </orderEntry>
   </component>
