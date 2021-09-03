@@ -1,0 +1,29 @@
+Index: src/code/DashboardAdminController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package code;\r\n\r\n//Necessary Imports\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Button;\r\nimport javafx.stage.Stage;\r\n\r\npublic class DashboardAdminController {\r\n    @FXML\r\n    private Button buttonLogout;\r\n\r\n\r\n    // Logout features\r\n    public void logout() {\r\n        try {\r\n            Stage stageClose = ((Stage) buttonLogout.getScene().getWindow());\r\n            stageClose.close();\r\n\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n\r\n\r\n        }\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/code/DashboardAdminController.java b/src/code/DashboardAdminController.java
+--- a/src/code/DashboardAdminController.java	
++++ b/src/code/DashboardAdminController.java	
+@@ -11,6 +11,18 @@
+     private Button buttonLogout;
+ 
+ 
++
++
++
++
++
++
++
++
++
++
++
++
+     // Logout features
+     public void logout() {
+         try {
