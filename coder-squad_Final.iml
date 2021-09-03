@@ -10,19 +10,12 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" />
+          <root url="file://$MODULE_DIR$" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.base" />
-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.controls" />
-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.fxml" />
-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.graphics" />
-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.media" />
-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.swing" />
-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.web" />
+          <root url="file://$MODULE_DIR$/src" />
         </SOURCES>
-        <jarDirectory url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -37,12 +30,19 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$MODULE_DIR$/src" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.base" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.controls" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.fxml" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.graphics" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.media" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.swing" />
+          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.web" />
         </SOURCES>
+        <jarDirectory url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>
