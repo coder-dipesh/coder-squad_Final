@@ -1,17 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="064b3465-bd6a-4f3e-b4e1-c6d892e426a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="2efe0313-d74e-4d9a-aab2-b5e36c48cbb0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_57_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_57_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coder-squad_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coder-squad_Final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AddProductAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AddProductAdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/CreateCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/CreateCategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Dashboard_Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Dashboard_Admin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Update_ID_Enter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Update_Product_Page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/img/add_product.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/img/add_product.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/img/create_category.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/img/create_category.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/img/delete_product.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/img/delete_product.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/img/logout.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/img/logout.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/add_product_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/add_product_page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/create_category.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/create_category.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/delete_product_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/delete_product_page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/update_ID_enter.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/update_product_page.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/AddProductAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AddProductAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/AuthenticationDatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AuthenticationDatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/CreateCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/CreateCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/DashboardAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DashboardAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Dashboard_Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Dashboard_Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/LoginAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/LoginClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Update_ID_Enter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Update_Product_Page.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/add_product.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/add_product.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/create_category.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/create_category.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/delete_product.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/delete_product.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/logout.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/logout.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/add_product_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/add_product_page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/create_category.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/create_category.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/dashboard_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/dashboard_admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/delete_product_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/delete_product_page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/update_ID_enter.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/update_product_page.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +62,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/coder-squad_Final.iml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/code/DeleteProductAdminController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/code/DashboardAdminController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/code/Dashboard_Admin.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/code/Splash_Screen.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/resource/add_product_page.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coder-squad_Final.iml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/code/Table.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1xZqO06rsZef8d3pZVPczX6oTru" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -40,14 +96,18 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.19753087" />
+    <property name="project.structure.proportion" value="0.14414415" />
+    <property name="project.structure.side.proportion" value="0.17528735" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -62,8 +122,22 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Splash_Screen">
-    <configuration name="Forgot_Password" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="code.Forgot_Password" />
+    <configuration name="Add_Product_Page" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="code.Add_Product_Page" />
+      <module name="coder-squad_Final" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dashboard_Admin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="code.Dashboard_Admin" />
       <module name="coder-squad_Final" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
@@ -90,38 +164,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Registration_Admin" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="code.Registration_Admin" />
-      <module name="coder-squad_Final" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="code.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Registration_Admin" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="code.admin.authentication.Registration_Admin" />
-      <module name="coder-squad_Final" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="code.admin.authentication.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Splash_Screen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Splash_Screen" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="code.Splash_Screen" />
       <module name="coder-squad_Final" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\openjfx-16_windows-x64_bin-sdk\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="code.*" />
@@ -146,13 +192,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Splash_Screen" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="code.main.Splash_Screen" />
+    <configuration name="Update_ID_Enter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="code.Update_ID_Enter" />
       <module name="coder-squad_Final" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="code.main.*" />
+          <option name="PATTERN" value="code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDetails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="code.UserDetails" />
+      <module name="coder-squad_Final" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="code.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,24 +221,27 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Registration_Admin" />
-      <item itemvalue="Application.Login_Admin" />
-      <item itemvalue="Application.Forgot_Password" />
       <item itemvalue="Application.Splash_Screen" />
+      <item itemvalue="Application.Dashboard_Admin" />
+      <item itemvalue="Application.Login_Admin" />
+      <item itemvalue="Application.Update_ID_Enter" />
+      <item itemvalue="Application.Add_Product_Page" />
+      <item itemvalue="Application.UserDetails" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Splash_Screen" />
-        <item itemvalue="Application.Splash_Screen" />
+        <item itemvalue="Application.Dashboard_Admin" />
+        <item itemvalue="Application.UserDetails" />
         <item itemvalue="Application.Login_Admin" />
-        <item itemvalue="Application.Splash_Screen" />
+        <item itemvalue="Application.Add_Product_Page" />
+        <item itemvalue="Application.Update_ID_Enter" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="064b3465-bd6a-4f3e-b4e1-c6d892e426a6" name="Changes" comment="" />
+      <changelist id="2efe0313-d74e-4d9a-aab2-b5e36c48cbb0" name="Changes" comment="" />
       <created>1630572931380</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -198,6 +261,9 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -208,11 +274,18 @@
       </breakpoints>
     </breakpoint-manager>
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/coder_squad_Final$Delete_Product_Page.ic" NAME="Delete_Product_Page Coverage Results" MODIFIED="1630573218959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coder_squad_Final$Login_Client.ic" NAME="Login_Client Coverage Results" MODIFIED="1630573284572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>code.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/coder_squad_Final$Login_Client.ic" NAME="Login_Client Coverage Results" MODIFIED="1630573284572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coder_squad_Final$Create_Category.ic" NAME="Create_Category Coverage Results" MODIFIED="1630923630277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>code.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/coder_squad_Final$Delete_Product_Page.ic" NAME="Delete_Product_Page Coverage Results" MODIFIED="1630573218959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>code.*</FILTER>
     </SUITE>
   </component>

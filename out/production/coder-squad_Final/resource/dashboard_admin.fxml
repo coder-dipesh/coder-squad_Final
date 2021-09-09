@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -11,6 +12,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="820.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.DashboardAdminController">
@@ -18,81 +20,124 @@
         <BorderPane layoutY="-5.0" prefHeight="820.0" prefWidth="1500.0">
             <center>
                 <BorderPane prefHeight="820.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
-                    <top>
-                        <Pane prefHeight="76.0" prefWidth="1362.0" style="-fx-background-color: #d8dee8;" BorderPane.alignment="CENTER">
-                            <children>
-                        <Button fx:id="userDetails" layoutX="1183.0" layoutY="5.0" mnemonicParsing="false" onAction="#userDetails" opacity="0.0" prefHeight="72.0" prefWidth="73.0" />
-                                <Label layoutX="145.0" layoutY="33.0" text="Welcome To your Dashboard!!">
-                                    <font>
-                                        <Font size="25.0" />
-                                    </font>
-                                </Label>
-                                <TextField fx:id="searchField" layoutX="850.0" layoutY="32.0" prefHeight="38.0" prefWidth="222.0" promptText="Search">
-                           <font>
-                              <Font name="Fira Code Light" size="14.0" />
-                           </font></TextField>
-                                <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="1198.0" layoutY="27.0" onMouseClicked="#userDetails">
-                                    <image>
-                                        <Image url="@../img/setting-user.png" />
-                                    </image>
-                                </ImageView>
-                        <AnchorPane layoutX="1078.0" layoutY="32.0">
-                           <children>
-                              <Button fx:id="searchButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#searchButton" opacity="0.0" prefHeight="38.0" prefWidth="52.0" textOverrun="CLIP" />
-                              <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="11.0" layoutY="6.0" onKeyPressed="#searchButton" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../img/f.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                            </children>
-                        </Pane>
-                    </top>
                     <center>
-                        <Pane prefHeight="722.0" prefWidth="1327.0" style="-fx-background-color: #d8dee8;" BorderPane.alignment="CENTER">
+                        <Pane prefHeight="722.0" prefWidth="1327.0" style="-fx-background-color: #F6F4F4;" BorderPane.alignment="CENTER">
                             <children>
-                                <Label layoutX="242.0" layoutY="31.0" text="CLIENT">
+                        <Button fx:id="userDetails" layoutX="1180.0" layoutY="18.0" mnemonicParsing="false" onAction="#userDetails" opacity="0.0" prefHeight="82.0" prefWidth="92.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ff" height="635.0" layoutX="750.0" layoutY="179.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="538.0" />
+                                <Label layoutX="939.0" layoutY="119.0" text="UPDATE PRODUCT">
                                     <font>
                                         <Font size="25.0" />
                                     </font>
                                 </Label>
-                                <Label layoutX="909.0" layoutY="31.0" text="PRODUCT">
+                                <Label layoutX="280.0" layoutY="118.0" text="VIEW PRODUCT">
                                     <font>
                                         <Font size="25.0" />
                                     </font>
                                 </Label>
-                                <Line endX="1160.5" layoutX="107.0" layoutY="68.0" startX="-100.0" />
-                                <TableView layoutX="14.0" layoutY="79.0" prefHeight="647.0" prefWidth="637.0">
+                                <Line endX="1160.5" layoutX="107.0" layoutY="158.0" startX="-100.0" />
+                                <TableView fx:id="tableProduct" layoutX="8.0" layoutY="179.0" prefHeight="635.0" prefWidth="737.0">
                                     <columns>
-                                        <TableColumn prefWidth="70.93331718444824" text="CLIENT ID" />
-                                        <TableColumn prefWidth="130.13336944580078" text="FIRST NAME" />
-                                        <TableColumn prefWidth="141.86660766601562" text="LAST NAME" />
-                                        <TableColumn prefWidth="162.93325805664062" text="EMAIL ID" />
-                                        <TableColumn prefWidth="128.26666259765625" text="USERNAME" />
+                                        <TableColumn fx:id="colID" prefWidth="76.79998588562012" text=" ID" />
+                                        <TableColumn fx:id="colQuantity" prefWidth="79.9999771118164" text="QUANTITY" />
+                                        <TableColumn fx:id="colName" prefWidth="146.39996337890625" text="PRODUCT NAME" />
+                                        <TableColumn fx:id="colCategory" prefWidth="139.19998168945312" text="CATEGORY" />
+                              <TableColumn fx:id="colPrice" prefWidth="116.00003051757812" text="PRICE" />
+                              <TableColumn fx:id="colDescription" prefWidth="185.60003662109375" text="DESCRIPTION" />
                                     </columns>
                                 </TableView>
-                                <TableView layoutX="658.0" layoutY="80.0" prefHeight="646.0" prefWidth="614.0">
-                                    <columns>
-                                        <TableColumn prefWidth="84.0" text="PRODUCT ID" />
-                                        <TableColumn prefWidth="199.0" text="PRODUCT NAME" />
-                                        <TableColumn prefWidth="137.0" text="CATEGORY" />
-                                        <TableColumn prefWidth="160.0" text="PRICE" />
-                                    </columns>
-                                </TableView>
-                                <ImageView fitHeight="83.0" fitWidth="82.0" layoutX="27.0" layoutY="-66.0">
+                                <ImageView fitHeight="83.0" fitWidth="82.0" layoutX="27.0" layoutY="17.0">
                                     <image>
                                         <Image url="@../img/dash_image-modified.png" />
                                     </image>
                                 </ImageView>
-                        <Line endX="1160.5" layoutX="107.0" layoutY="24.0" startX="-100.0" />
+                        <Line endX="1160.5" layoutX="107.0" layoutY="114.0" startX="-100.0" />
+                        <Label layoutX="766.0" layoutY="276.0" text="Product ID">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="766.0" layoutY="414.0" text="Product Quantity">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="766.0" layoutY="486.0" text="Category">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="766.0" layoutY="556.0" text="Price">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pidUpdate" editable="false" layoutX="975.0" layoutY="272.0" prefHeight="44.0" prefWidth="252.0" promptText="Not Editable">
+                           <font>
+                              <Font name="Fira Code Retina" size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="pquantityUpdate" layoutX="975.0" layoutY="410.0" prefHeight="44.0" prefWidth="252.0" />
+                        <TextField fx:id="ppriceUpdate" layoutX="975.0" layoutY="551.0" prefHeight="44.0" prefWidth="252.0" />
+                        <ComboBox fx:id="pcategoryUpdate" layoutX="974.0" layoutY="482.0" prefHeight="44.0" prefWidth="254.0" />
+                        <Button fx:id="btnUpdateProduct" layoutX="1014.0" layoutY="687.0" mnemonicParsing="false" onAction="#btnUpdateProduct" prefHeight="52.0" prefWidth="215.0" style="-fx-background-color: #FDC361;" text="   Update Data" wrapText="true">
+                           <font>
+                              <Font name="AkzidenzGroteskBQ-Medium" size="18.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="994.0" layoutY="193.0">
+                           <image>
+                              <Image url="@../img/update_product.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="766.0" layoutY="344.0" text="Product Name">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pnameUpdate" layoutX="975.0" layoutY="340.0" prefHeight="44.0" prefWidth="252.0" />
+                        <Label layoutX="766.0" layoutY="626.0" text="Description">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pdescriptionUpdate" layoutX="975.0" layoutY="621.0" prefHeight="44.0" prefWidth="252.0" />
+                        <Label fx:id="welcomeUsername" layoutX="137.0" layoutY="46.0" prefHeight="36.0" prefWidth="102.0" textFill="#346fc1">
+                           <font>
+                              <Font name="Fira Code Medium" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="238.0" layoutY="46.0" text="Welcome to your dashboard!!">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="1058.0" layoutY="44.0" rotate="-95.2">
+                           <image>
+                              <Image url="@../img/f.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1197.0" layoutY="30.0" onMouseClicked="#userDetails">
+                           <image>
+                              <Image url="@../img/setting-user.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnUpdateTable" layoutX="766.0" layoutY="687.0" mnemonicParsing="false" onAction="#btnUpdateTable" prefHeight="52.0" prefWidth="215.0" style="-fx-background-color: #30475E;" text="Update Table" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="AkzidenzGroteskBQ-Medium" size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="searchField" layoutX="627.0" layoutY="40.0" prefHeight="44.0" prefWidth="421.0" promptText="Search.....">
+                           <font>
+                              <Font name="Fira Code Retina" size="14.0" />
+                           </font>
+                        </TextField>
                             </children>
                         </Pane>
                     </center>
                 </BorderPane>
             </center>
             <left>
-                <Pane prefHeight="820.0" prefWidth="198.0" style="-fx-background-color: #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff;" BorderPane.alignment="CENTER">
+                <Pane prefHeight="820.0" prefWidth="202.0" style="-fx-background-color: #30475E;" BorderPane.alignment="CENTER">
                     <children>
                   <Button fx:id="buttonLogout" alignment="CENTER_RIGHT" layoutX="2.0" layoutY="709.0" mnemonicParsing="false" onAction="#logout" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
                      <font>
@@ -109,12 +154,7 @@
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font>
                   </Button>
-                  <Button fx:id="updateProduct" alignment="CENTER_RIGHT" layoutX="1.0" layoutY="383.0" mnemonicParsing="false" onAction="#updateProduct" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
-                     <font>
-                        <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="deleteProduct" alignment="CENTER_RIGHT" layoutX="2.0" layoutY="321.0" mnemonicParsing="false" onAction="#deleteProduct" opacity="0.0" prefHeight="57.0" prefWidth="190.0" textAlignment="CENTER">
+                  <Button fx:id="deleteProduct" alignment="CENTER_RIGHT" layoutX="4.0" layoutY="334.0" mnemonicParsing="false" onAction="#deleteProduct" opacity="0.0" prefHeight="49.0" prefWidth="190.0" textAlignment="CENTER">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font>
@@ -129,42 +169,38 @@
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font>
                   </Button>
-                        <Line endX="126.39999389648438" endY="7.62939453125E-6" layoutX="60.0" layoutY="145.0" startX="-50.65603256225586" />
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="13.0" layoutY="201.0">
+                        <Line endX="126.39999389648438" endY="7.62939453125E-6" layoutX="60.0" layoutY="145.0" startX="-50.65603256225586" stroke="#f7f7f7" />
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="11.0" layoutY="205.0">
                             <image>
-                                <Image url="@../img/create_category.png" />
+                                <Image url="@../img/create_category_dash.png" />
                             </image>
                         </ImageView>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="9.0" layoutY="269.0">
+                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="7.0" layoutY="273.0">
                             <image>
-                                <Image url="@../img/add_product.png" />
+                                <Image url="@../img/add_product_dash.png" />
                             </image>
                         </ImageView>
-                        <Label layoutX="74.0" layoutY="278.0" onMouseClicked="#addProduct" text="Add Product">
+                        <Label layoutX="54.0" layoutY="278.0" onMouseClicked="#addProduct" text="Add Product" textFill="WHITE">
                      <font>
-                        <Font name="AkzidenzGroteskBQ-Reg" size="14.0" />
+                        <Font name="AkzidenzGroteskBQ-Medium" size="18.0" />
                      </font></Label>
                         <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="12.0" layoutY="724.0">
                             <image>
                                 <Image url="@../img/logout.png" />
                             </image>
                         </ImageView>
-                        <Label layoutX="62.0" layoutY="730.0" onMouseClicked="#logout" text="Logout">
+                        <Label layoutX="62.0" layoutY="730.0" onMouseClicked="#logout" text="Logout" textFill="#f05454">
                      <font>
-                        <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
+                        <Font name="AkzidenzGroteskBQ-Medium" size="18.0" />
                      </font></Label>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="7.0" layoutY="330.0">
+                        <ImageView fitHeight="39.0" fitWidth="34.0" layoutX="10.0" layoutY="342.0">
                             <image>
-                                <Image url="@../img/delete_product.png" />
+                                <Image url="@../img/delete_product_dash.png" />
                             </image>
                         </ImageView>
-                        <Label layoutX="72.0" layoutY="340.0" onMouseClicked="#deleteProduct" text="Delete Product ">
+                        <Label alignment="CENTER" layoutX="54.0" layoutY="351.0" onMouseClicked="#deleteProduct" text="Delete Product " textFill="WHITE">
                      <font>
-                        <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
-                     </font></Label>
-                        <Label layoutX="71.0" layoutY="404.0" onMouseClicked="#updateProduct" text="Update Product">
-                     <font>
-                        <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
+                        <Font name="AkzidenzGroteskBQ-Medium" size="18.0" />
                      </font></Label>
                         <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="4.0" layoutY="457.0" visible="false">
                             <image>
@@ -184,14 +220,9 @@
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="14.0" />
                      </font></Label>
-                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="7.0" layoutY="396.0">
-                            <image>
-                                <Image url="@../img/update_product.png" />
-                            </image>
-                        </ImageView>
-                  <Label layoutX="74.0" layoutY="209.0" onMouseClicked="#createCategory" text="Create Category">
+                  <Label layoutX="54.0" layoutY="209.0" onMouseClicked="#createCategory" text="Create Category" textFill="WHITE">
                      <font>
-                        <Font name="AkzidenzGroteskBQ-Reg" size="14.0" />
+                        <Font name="AkzidenzGroteskBQ-Medium" size="18.0" />
                      </font>
                   </Label>
                   <ImageView fitHeight="123.0" fitWidth="124.0" layoutX="32.0" layoutY="12.0">

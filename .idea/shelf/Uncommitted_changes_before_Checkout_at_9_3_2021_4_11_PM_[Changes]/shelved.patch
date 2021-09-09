@@ -1,0 +1,203 @@
+Index: src/code/LoginClientController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package code;\r\n\r\n\r\n//Necessary Imports\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.*;\r\nimport javafx.scene.image.Image;\r\nimport  javafx.stage.Stage;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.stage.StageStyle;\r\n\r\nimport java.sql.*;\r\nimport java.util.Objects;\r\n\r\n\r\npublic class LoginClientController {\r\n\r\n\r\n    @FXML\r\n    private Button actionClientLogin;\r\n    @FXML\r\n    private Label warningmessageClientLogin;\r\n    @FXML\r\n    private Label successmessageClientLogin;\r\n    @FXML\r\n    private TextField usernameClientLogin ;\r\n    @FXML\r\n    private PasswordField hiddenpasswordClientLogin;\r\n    @FXML\r\n    private TextField visiblepasswordClientLogin;\r\n    @FXML\r\n    private CheckBox showpasswordClientLogin;\r\n    @FXML\r\n    private Hyperlink forgotPaswordClient;\r\n    @FXML\r\n    private Hyperlink redirectClientSignup;\r\n\r\n\r\n    public void actionClientLogin(ActionEvent event){\r\n        if(!usernameClientLogin.getText().isBlank() && !hiddenpasswordClientLogin.getText().isBlank()){\r\n            validateLoginClient();\r\n        }\r\n        else{\r\n            warningmessageClientLogin.setText(\"Invalid Login! Please try again.\");\r\n        }\r\n\r\n    }\r\n\r\n\r\n    // Validate data from Database\r\n    public void validateLoginClient(){\r\n\r\n        Connection connection = null;\r\n        PreparedStatement preparedStatement = null;\r\n        ResultSet resultSet = null;\r\n        AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();\r\n        Connection connectDB = connect.getConnection();\r\n\r\n        String url = \"jdbc:mysql://127.0.0.1:3306/codersquad\";\r\n        String user = \"root\";\r\n        String dbPassword = \"&@N984937284n\";\r\n        String username = usernameClientLogin.getText();\r\n        String password = hiddenpasswordClientLogin.getText();\r\n\r\n        try {\r\n            connection = DriverManager.getConnection(url, user, dbPassword);\r\n            preparedStatement = connection.prepareStatement(\"SELECT password FROM client_register WHERE username= ? \");\r\n            preparedStatement.setString(1, username);\r\n            resultSet = preparedStatement.executeQuery();\r\n\r\n            if (!resultSet.isBeforeFirst()) {\r\n                warningmessageClientLogin.setText(\"\");\r\n                warningmessageClientLogin.setVisible(false);\r\n                warningmessageClientLogin.setVisible(true);\r\n                warningmessageClientLogin.setText(\"Invalid login! Username does not match.\");\r\n\r\n            } else {\r\n                while (resultSet.next()) {\r\n                    String retrivedPassword = resultSet.getString(\"password\");\r\n\r\n                    if (retrivedPassword.equals(password)) {\r\n                        warningmessageClientLogin.setVisible(false);\r\n                        successmessageClientLogin.setVisible(true);\r\n                        successmessageClientLogin.setText(\"Login successful!\");\r\n                        // Redirect to Dashboard Page\r\n                        dashboardClient();\r\n\r\n                    } else {\r\n                        successmessageClientLogin.setVisible(false);\r\n                        warningmessageClientLogin.setText(\"Invalid login! Password does not match.\");\r\n\r\n                    }\r\n                }\r\n            } }catch(Exception e){\r\n            e.printStackTrace();\r\n            e.getCause();\r\n        }\r\n    }\r\n\r\n    // Redirects to Client Dashboard\r\n    private void dashboardClient() {\r\n\r\n\r\n\r\n    }\r\n\r\n\r\n    // Password Visibality\r\n\r\n    public void changeVisibilityLogin(ActionEvent event) {\r\n\r\n        if (showpasswordClientLogin.isSelected()) {\r\n            visiblepasswordClientLogin.setText(hiddenpasswordClientLogin.getText());\r\n            visiblepasswordClientLogin.setVisible(true);\r\n            hiddenpasswordClientLogin.setVisible(false);\r\n            return;\r\n        }\r\n        hiddenpasswordClientLogin.setText(visiblepasswordClientLogin.getText());\r\n        hiddenpasswordClientLogin.setVisible(true);\r\n        visiblepasswordClientLogin.setVisible(false);\r\n    }\r\n\r\n\r\n    // Change Password of code.admin\r\n\r\n    public void forgotpasswordClient(){\r\n\r\n        try {\r\n\r\n            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(\"../resource/forgot_password_client.fxml\")));\r\n            Stage stage = new Stage();\r\n            stage.initStyle(StageStyle.UNDECORATED);\r\n            stage.getIcons().add(new Image(\"src/img/icon.png\"));\r\n            stage.setScene(new Scene(root, 500, 450));\r\n            stage.show();\r\n\r\n        }catch(Exception e){\r\n            e.printStackTrace();\r\n            e.getCause();\r\n        }\r\n\r\n    }\r\n\r\n    //\r\n    @FXML\r\n    private void redirectClientSignup(){\r\n\r\n        try{\r\n\r\n            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(\"../resource/registration_client.fxml\")));\r\n            Stage registerClientstage = new Stage();\r\n            registerClientstage.setTitle(\"All IN ONE STORE - Client Registration\");\r\n            registerClientstage.getIcons().add(new Image(\"src/img/icon.png\"));\r\n            registerClientstage.setScene(new Scene(root,1500,820));\r\n            registerClientstage.show();\r\n\r\n\r\n        }catch(Exception e){\r\n            e.printStackTrace();\r\n            e.getCause();\r\n\r\n        }\r\n\r\n\r\n    }\r\n\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/code/LoginClientController.java b/src/code/LoginClientController.java
+--- a/src/code/LoginClientController.java	
++++ b/src/code/LoginClientController.java	
+@@ -62,7 +62,7 @@
+ 
+         String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
+         String user = "root";
+-        String dbPassword = "&@N984937284n";
++        String dbPassword = "root";
+         String username = usernameClientLogin.getText();
+         String password = hiddenpasswordClientLogin.getText();
+ 
+Index: src/code/LoginAdminController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package code;\r\n\r\n//Necessary Imports\r\nimport javafx.fxml.FXML;\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Parent;\r\nimport javafx.scene.Scene;\r\nimport javafx.scene.control.*;\r\nimport javafx.scene.image.Image;\r\nimport  javafx.stage.Stage;\r\nimport javafx.event.*;\r\nimport javafx.stage.StageStyle;\r\n\r\n\r\nimport java.io.IOException;\r\nimport java.sql.*;\r\nimport java.util.Objects;\r\n\r\n\r\npublic class LoginAdminController {\r\n\r\n    @FXML\r\n    private Button actionLoginAdmin;\r\n    @FXML\r\n    private Label warningmessageAdminLogin;\r\n    @FXML\r\n    private TextField usernameAdminLogin;\r\n    @FXML\r\n    private Label successmessageAdminLogin;\r\n    @FXML\r\n    private PasswordField passwordAdminLogin;\r\n    @FXML\r\n    private TextField visiblepasswordAdminLogin;\r\n    @FXML\r\n    private CheckBox showpasswordAdminLogin;\r\n    @FXML\r\n    private Hyperlink redirectAdminSignup;\r\n\r\n\r\n        // Action while clicking Login button\r\n\r\n        public void setActionLoginAdmin(ActionEvent event) {\r\n        if (!usernameAdminLogin.getText().isBlank() && !passwordAdminLogin.getText().isBlank()) {\r\n            validateLoginAdmin();\r\n        } else {\r\n            warningmessageAdminLogin.setText(\"Invalid Login! Fields cannot be empty.\");\r\n        }\r\n\r\n    }\r\n\r\n\r\n        // Validate data from Database\r\n        public void validateLoginAdmin(){\r\n\r\n            Connection connection = null;\r\n            PreparedStatement preparedStatement = null;\r\n            ResultSet resultSet = null;\r\n\r\n            String url = \"jdbc:mysql://127.0.0.1:3306/codersquad\";\r\n            String user = \"root\";\r\n            String dbPassword = \"&@N984937284n\";\r\n            String username = usernameAdminLogin.getText();\r\n            String password = passwordAdminLogin.getText();\r\n\r\n            try {\r\n                connection = DriverManager.getConnection(url, user, dbPassword);\r\n                preparedStatement = connection.prepareStatement(\"SELECT password FROM admin_register WHERE username= ? \");\r\n                preparedStatement.setString(1, username);\r\n                resultSet = preparedStatement.executeQuery();\r\n\r\n                if (!resultSet.isBeforeFirst()) {\r\n                    warningmessageAdminLogin.setText(\"\");\r\n                    warningmessageAdminLogin.setVisible(false);\r\n                    warningmessageAdminLogin.setVisible(true);\r\n                    warningmessageAdminLogin.setText(\"Invalid login! Username does not match.\");\r\n\r\n                } else {\r\n                    while (resultSet.next()) {\r\n                        String retrivedPassword = resultSet.getString(\"password\");\r\n\r\n                        if (retrivedPassword.equals(password)) {\r\n                            warningmessageAdminLogin.setVisible(false);\r\n                            successmessageAdminLogin.setVisible(true);\r\n                            successmessageAdminLogin.setText(\"Login successful!\");\r\n\r\n                            // Redirect to Dashboard Page\r\n\r\n                            dashboardAdmin();\r\n//                            successmessageAdminLogin.setText(\"\");\r\n\r\n                        } else {\r\n                            successmessageAdminLogin.setVisible(false);\r\n                            warningmessageAdminLogin.setText(\"Invalid login! Password does not match.\");\r\n\r\n                        }\r\n                    }\r\n                } }catch(Exception e){\r\n                    e.printStackTrace();\r\n                    e.getCause();\r\n                }\r\n            }\r\n\r\n\r\n\r\n\r\n    // Password Visibility on check\r\n        public void changeVisibility (ActionEvent event){\r\n            if (showpasswordAdminLogin.isSelected()) {\r\n                visiblepasswordAdminLogin.setText(passwordAdminLogin.getText());\r\n                visiblepasswordAdminLogin.setVisible(true);\r\n                passwordAdminLogin.setVisible(false);\r\n                return;\r\n            }\r\n            passwordAdminLogin.setText(visiblepasswordAdminLogin.getText());\r\n            passwordAdminLogin.setVisible(true);\r\n            visiblepasswordAdminLogin.setVisible(false);\r\n        }\r\n\r\n        // Redirect to Admin Signup\r\n        public void redirectAdminSignup (ActionEvent event){\r\n            try {\r\n                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(\"../resource/registration_admin.fxml\")));\r\n                Stage registerAdminstage = new Stage();\r\n                registerAdminstage.setTitle(\"All IN ONE STORE - Admin Signup\");\r\n                registerAdminstage.getIcons().add(new Image(\"src/img/icon.png\"));\r\n                registerAdminstage.setScene(new Scene(root, 1500, 820));\r\n                registerAdminstage.show();\r\n\r\n\r\n            } catch (Exception e) {\r\n                e.printStackTrace();\r\n                e.getCause();\r\n\r\n            }\r\n\r\n        }\r\n\r\n\r\n// Redirects to Admin Dashboard after validating login details\r\n\r\n    private void dashboardAdmin() throws IOException {\r\n\r\n        Parent root = FXMLLoader.load(getClass().getResource(\"../resource/dashboard_admin.fxml\"));\r\n        Stage stage = new Stage();\r\n        stage.setTitle(\"All IN ONE STORE - Admin Dashboard\");\r\n        stage.getIcons().add(new Image(\"src/img/icon.png\"));\r\n        stage.setScene(new Scene(root,1500,820));\r\n        stage.show();\r\n\r\n\r\n\r\n    }\r\n\r\n    // Change Password of code.admin\r\n\r\n    public void forgotpasswordAdmin(){\r\n\r\n        try {\r\n\r\n            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(\"../resource/forgot_password_admin.fxml\")));\r\n            Stage stage = new Stage();\r\n            stage.initStyle(StageStyle.UNDECORATED);\r\n            stage.getIcons().add(new Image(\"src/img/icon.png\"));\r\n            stage.setScene(new Scene(root, 500, 450));\r\n            stage.show();\r\n\r\n        }catch(Exception e){\r\n            e.printStackTrace();\r\n            e.getCause();\r\n        }\r\n\r\n        }\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/code/LoginAdminController.java b/src/code/LoginAdminController.java
+--- a/src/code/LoginAdminController.java	
++++ b/src/code/LoginAdminController.java	
+@@ -58,7 +58,7 @@
+ 
+             String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
+             String user = "root";
+-            String dbPassword = "&@N984937284n";
++            String dbPassword = "root";
+             String username = usernameAdminLogin.getText();
+             String password = passwordAdminLogin.getText();
+ 
+Index: src/code/AuthenticationDatabaseConnection.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package code;\r\n\r\nimport java.sql.*;\r\n\r\npublic class AuthenticationDatabaseConnection {\r\n                public static Connection databaseLink;\r\n\r\n                public static Connection getConnection() {\r\n                    String url = \"jdbc:mysql://127.0.0.1:3306/codersquad\";\r\n                    String user = \"root\";\r\n                    String password = \"&@N984937284n\";\r\n                    try {\r\n                        Class.forName(\"com.mysql.cj.jdbc.Driver\");\r\n                        databaseLink = DriverManager.getConnection(url, user, password);\r\n\r\n                    } catch (Exception e) {\r\n                        e.printStackTrace();\r\n                        e.getCause();\r\n                    }\r\n                    return databaseLink;\r\n                        }\r\n}\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/code/AuthenticationDatabaseConnection.java b/src/code/AuthenticationDatabaseConnection.java
+--- a/src/code/AuthenticationDatabaseConnection.java	
++++ b/src/code/AuthenticationDatabaseConnection.java	
+@@ -8,7 +8,7 @@
+                 public static Connection getConnection() {
+                     String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
+                     String user = "root";
+-                    String password = "&@N984937284n";
++                    String password = "root";
+                     try {
+                         Class.forName("com.mysql.cj.jdbc.Driver");
+                         databaseLink = DriverManager.getConnection(url, user, password);
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"16\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="16" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: coder-squad_Final.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"module-library\">\r\n      <library>\r\n        <CLASSES>\r\n          <root url=\"file://$MODULE_DIR$\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES>\r\n          <root url=\"file://$MODULE_DIR$/src\" />\r\n        </SOURCES>\r\n      </library>\r\n    </orderEntry>\r\n    <orderEntry type=\"module-library\">\r\n      <library>\r\n        <CLASSES>\r\n          <root url=\"jar://C:/mysql-connector-java-8.0.25/mysql-connector-java-8.0.25.jar!/\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES />\r\n      </library>\r\n    </orderEntry>\r\n    <orderEntry type=\"module-library\">\r\n      <library>\r\n        <CLASSES>\r\n          <root url=\"file://C:/Program Files/Java/jdk-16.0.1/lib\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES>\r\n          <root url=\"file://C:/Program Files/Java/jdk-16.0.1/lib\" />\r\n        </SOURCES>\r\n        <jarDirectory url=\"file://C:/Program Files/Java/jdk-16.0.1/lib\" recursive=\"false\" />\r\n        <jarDirectory url=\"file://C:/Program Files/Java/jdk-16.0.1/lib\" recursive=\"false\" type=\"SOURCES\" />\r\n      </library>\r\n    </orderEntry>\r\n    <orderEntry type=\"module-library\">\r\n      <library>\r\n        <CLASSES>\r\n          <root url=\"file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib\" />\r\n        </CLASSES>\r\n        <JAVADOC />\r\n        <SOURCES>\r\n          <root url=\"file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.base\" />\r\n          <root url=\"file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.controls\" />\r\n          <root url=\"file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.fxml\" />\r\n          <root url=\"file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.graphics\" />\r\n          <root url=\"file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.media\" />\r\n          <root url=\"file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.swing\" />\r\n          <root url=\"file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.web\" />\r\n        </SOURCES>\r\n        <jarDirectory url=\"file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib\" recursive=\"false\" />\r\n      </library>\r\n    </orderEntry>\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/coder-squad_Final.iml b/coder-squad_Final.iml
+--- a/coder-squad_Final.iml	
++++ b/coder-squad_Final.iml	
+@@ -21,7 +21,7 @@
+     <orderEntry type="module-library">
+       <library>
+         <CLASSES>
+-          <root url="jar://C:/mysql-connector-java-8.0.25/mysql-connector-java-8.0.25.jar!/" />
++          <root url="jar://C:/Program Files/Java/mysql-connector-java-8.0.25.jar!/" />
+         </CLASSES>
+         <JAVADOC />
+         <SOURCES />
+@@ -30,32 +30,19 @@
+     <orderEntry type="module-library">
+       <library>
+         <CLASSES>
+-          <root url="file://C:/Program Files/Java/jdk-16.0.1/lib" />
++          <root url="file://$PATH_TO_FX$" />
+         </CLASSES>
+         <JAVADOC />
+         <SOURCES>
+-          <root url="file://C:/Program Files/Java/jdk-16.0.1/lib" />
++          <root url="file://$PATH_TO_FX$/src/javafx.base" />
++          <root url="file://$PATH_TO_FX$/src/javafx.controls" />
++          <root url="file://$PATH_TO_FX$/src/javafx.fxml" />
++          <root url="file://$PATH_TO_FX$/src/javafx.graphics" />
++          <root url="file://$PATH_TO_FX$/src/javafx.media" />
++          <root url="file://$PATH_TO_FX$/src/javafx.swing" />
++          <root url="file://$PATH_TO_FX$/src/javafx.web" />
+         </SOURCES>
+-        <jarDirectory url="file://C:/Program Files/Java/jdk-16.0.1/lib" recursive="false" />
+-        <jarDirectory url="file://C:/Program Files/Java/jdk-16.0.1/lib" recursive="false" type="SOURCES" />
+-      </library>
+-    </orderEntry>
+-    <orderEntry type="module-library">
+-      <library>
+-        <CLASSES>
+-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" />
+-        </CLASSES>
+-        <JAVADOC />
+-        <SOURCES>
+-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.base" />
+-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.controls" />
+-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.fxml" />
+-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.graphics" />
+-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.media" />
+-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.swing" />
+-          <root url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib/src/javafx.web" />
+-        </SOURCES>
+-        <jarDirectory url="file://C:/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" recursive="false" />
++        <jarDirectory url="file://$PATH_TO_FX$" recursive="false" />
+       </library>
+     </orderEntry>
+   </component>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"064b3465-bd6a-4f3e-b4e1-c6d892e426a6\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/runConfigurations.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/coder-squad_Final.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/coder-squad_Final.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/coder-squad_Final/module-info.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/coder-squad_Final/module-info.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/code/AuthenticationDatabaseConnection.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/code/AuthenticationDatabaseConnection.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/code/LoginAdminController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/code/LoginAdminController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/code/LoginClientController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/code/LoginClientController.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/coder-squad_Final.iml\" root0=\"SKIP_INSPECTION\" />\r\n    <setting file=\"file://$PROJECT_DIR$/src/code/Splash_Screen.java\" root0=\"SKIP_INSPECTION\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1xZqO06rsZef8d3pZVPczX6oTru\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/../../../../openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.19753087\" />\r\n    <property name=\"restartRequiresConfirmation\" value=\"false\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\dipes\\IdeaProjects\\coder-squad_Final\\src\\code\\main\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\dipes\\IdeaProjects\\coder-squad_Final\\src\\code\\resource\" />\r\n      <recent name=\"C:\\Users\\dipes\\IdeaProjects\\coder-squad_Final\\src\\code\\main\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"code\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Splash_Screen\">\r\n    <configuration name=\"Forgot_Password\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"code.Forgot_Password\" />\r\n      <module name=\"coder-squad_Final\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path &quot;C:\\Program Files\\Java\\javafx-sdk-16\\lib&quot; --add-modules javafx.controls,javafx.fxml\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"code.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Login_Admin\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"code.Login_Admin\" />\r\n      <module name=\"coder-squad_Final\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path &quot;C:\\Program Files\\Java\\javafx-sdk-16\\lib&quot; --add-modules javafx.controls,javafx.fxml\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"code.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Registration_Admin\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"code.Registration_Admin\" />\r\n      <module name=\"coder-squad_Final\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path &quot;C:\\Program Files\\Java\\javafx-sdk-16\\lib&quot; --add-modules javafx.controls,javafx.fxml\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"code.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Registration_Admin\" type=\"Application\" factoryName=\"Application\" temporary=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"code.admin.authentication.Registration_Admin\" />\r\n      <module name=\"coder-squad_Final\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path &quot;C:\\Program Files\\Java\\javafx-sdk-16\\lib&quot; --add-modules javafx.controls,javafx.fxml\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"code.admin.authentication.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Splash_Screen\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"code.Splash_Screen\" />\r\n      <module name=\"coder-squad_Final\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path &quot;C:\\openjfx-16_windows-x64_bin-sdk\\javafx-sdk-16\\lib&quot; --add-modules javafx.controls,javafx.fxml\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"code.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Splash_Screen\" type=\"Application\" factoryName=\"Application\" temporary=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"code.main.Splash_Screen\" />\r\n      <module name=\"coder-squad_Final\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path &quot;C:\\Program Files\\Java\\javafx-sdk-16\\lib&quot; --add-modules javafx.controls,javafx.fxml\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"code.main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Splash_Screen\" type=\"Application\" factoryName=\"Application\" temporary=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"code.main.Splash_Screen\" />\r\n      <module name=\"coder-squad_Final\" />\r\n      <option name=\"VM_PARAMETERS\" value=\"--module-path &quot;C:\\Program Files\\Java\\javafx-sdk-16\\lib&quot; --add-modules javafx.controls,javafx.fxml\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"code.main.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.Registration_Admin\" />\r\n      <item itemvalue=\"Application.Login_Admin\" />\r\n      <item itemvalue=\"Application.Forgot_Password\" />\r\n      <item itemvalue=\"Application.Splash_Screen\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Splash_Screen\" />\r\n        <item itemvalue=\"Application.Splash_Screen\" />\r\n        <item itemvalue=\"Application.Login_Admin\" />\r\n        <item itemvalue=\"Application.Splash_Screen\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"064b3465-bd6a-4f3e-b4e1-c6d892e426a6\" name=\"Changes\" comment=\"\" />\r\n      <created>1630572931380</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1630572931380</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NullPointerException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/coder_squad_Final$Delete_Product_Page.ic\" NAME=\"Delete_Product_Page Coverage Results\" MODIFIED=\"1630573218959\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>code.*</FILTER>\r\n    </SUITE>\r\n    <SUITE FILE_PATH=\"coverage/coder_squad_Final$Login_Client.ic\" NAME=\"Login_Client Coverage Results\" MODIFIED=\"1630573284572\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\">\r\n      <FILTER>code.*</FILTER>\r\n    </SUITE>\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="064b3465-bd6a-4f3e-b4e1-c6d892e426a6" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/coder-squad_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coder-squad_Final.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class" afterDir="false" />
+@@ -27,11 +27,16 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="dipesh" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="HighlightingSettingsPerFile">
+-    <setting file="file://$PROJECT_DIR$/coder-squad_Final.iml" root0="SKIP_INSPECTION" />
+     <setting file="file://$PROJECT_DIR$/src/code/Splash_Screen.java" root0="SKIP_INSPECTION" />
++    <setting file="file://$PROJECT_DIR$/coder-squad_Final.iml" root0="SKIP_INSPECTION" />
+   </component>
+   <component name="ProjectId" id="1xZqO06rsZef8d3pZVPczX6oTru" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+@@ -42,7 +47,7 @@
+   <component name="PropertiesComponent">
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib" />
++    <property name="last_opened_file_path" value="$PATH_TO_FX$" />
+     <property name="project.structure.last.edited" value="Modules" />
+     <property name="project.structure.proportion" value="0.15" />
+     <property name="project.structure.side.proportion" value="0.19753087" />
+@@ -121,7 +126,7 @@
+     <configuration name="Splash_Screen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="code.Splash_Screen" />
+       <module name="coder-squad_Final" />
+-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\openjfx-16_windows-x64_bin-sdk\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
++      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+       <extension name="coverage">
+         <pattern>
+           <option name="PATTERN" value="code.*" />
+@@ -209,10 +214,10 @@
+     </breakpoint-manager>
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+-    <SUITE FILE_PATH="coverage/coder_squad_Final$Delete_Product_Page.ic" NAME="Delete_Product_Page Coverage Results" MODIFIED="1630573218959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++    <SUITE FILE_PATH="coverage/coder_squad_Final$Login_Client.ic" NAME="Login_Client Coverage Results" MODIFIED="1630573284572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>code.*</FILTER>
+     </SUITE>
+-    <SUITE FILE_PATH="coverage/coder_squad_Final$Login_Client.ic" NAME="Login_Client Coverage Results" MODIFIED="1630573284572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
++    <SUITE FILE_PATH="coverage/coder_squad_Final$Delete_Product_Page.ic" NAME="Delete_Product_Page Coverage Results" MODIFIED="1630573218959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+       <FILTER>code.*</FILTER>
+     </SUITE>
+   </component>
