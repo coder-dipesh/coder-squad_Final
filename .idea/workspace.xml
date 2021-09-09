@@ -1,53 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2efe0313-d74e-4d9a-aab2-b5e36c48cbb0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_57_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_57_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coder-squad_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coder-squad_Final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AddProductAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AddProductAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/CreateCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/CreateCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Dashboard_Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Dashboard_Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Update_ID_Enter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Update_Product_Page.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/img/add_product.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/img/add_product.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/img/create_category.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/img/create_category.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/img/delete_product.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/img/delete_product.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/img/logout.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/img/logout.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/add_product_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/add_product_page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/create_category.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/create_category.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/delete_product_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/delete_product_page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/update_ID_enter.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/update_product_page.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AddProductAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AddProductAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AuthenticationDatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AuthenticationDatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/CreateCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/CreateCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/DashboardAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DashboardAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Dashboard_Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Dashboard_Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/LoginAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/LoginClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Update_ID_Enter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Update_Product_Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/add_product.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/add_product.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/create_category.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/create_category.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/delete_product.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/delete_product.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/logout.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/logout.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/add_product_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/add_product_page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/create_category.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/create_category.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/dashboard_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/dashboard_admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/delete_product_page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/delete_product_page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/update_ID_enter.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/update_product_page.fxml" beforeDir="false" />
-    </list>
+    <list default="true" id="2efe0313-d74e-4d9a-aab2-b5e36c48cbb0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
