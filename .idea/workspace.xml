@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e9ce43-85f8-49ff-a11e-4a4f6e99faaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_57_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_57_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Dashboard_Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Dashboard_Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/DashboardAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DashboardAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/Dashboard_Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Dashboard_Admin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,9 +44,6 @@
     <setting file="file://$PROJECT_DIR$/src/resource/add_product_page.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/code/DeleteProductAdminController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/coder-squad_Final.iml" root0="SKIP_INSPECTION" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1xZqO06rsZef8d3pZVPczX6oTru" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
