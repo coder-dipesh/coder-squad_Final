@@ -297,12 +297,18 @@ public class DashboardAdminController implements Initializable {
     }
 
 
+
+
+
     // Initializing Methods
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         showTable();
         addListenerTable();
         refresh();
+
+
+
 
         Table product ;
 

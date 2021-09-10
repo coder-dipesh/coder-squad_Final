@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e9ce43-85f8-49ff-a11e-4a4f6e99faaa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/DashboardAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DashboardAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Dashboard_Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Dashboard_Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/LoginAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginAdminController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +39,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/code/DashboardAdminController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/code/DashboardAdminController.java" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/code/Table.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/code/Dashboard_Admin.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/code/Splash_Screen.java" root0="SKIP_INSPECTION" />
