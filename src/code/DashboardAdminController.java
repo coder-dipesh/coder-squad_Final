@@ -9,23 +9,15 @@ import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-<<<<<<< HEAD
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-=======
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
->>>>>>> b4c252226cc407f7727286a1652f56c7cc079bd3
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-<<<<<<< HEAD
 import java.net.URL;
 import java.sql.*;
 import java.util.Objects;
@@ -37,11 +29,6 @@ public class DashboardAdminController implements Initializable {
     AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
     Connection connectDB = AuthenticationDatabaseConnection.getConnection();
 
-=======
-import java.util.Objects;
-
-public class DashboardAdminController {
->>>>>>> b4c252226cc407f7727286a1652f56c7cc079bd3
 
     @FXML
     private Button createCategory;
@@ -50,7 +37,6 @@ public class DashboardAdminController {
     @FXML
     private Button deleteProduct;
     @FXML
-<<<<<<< HEAD
     private Button btnUpdateProduct;
     @FXML
     public Button buttonLogout;
@@ -68,9 +54,6 @@ public class DashboardAdminController {
     private TableColumn<Table, Integer> colID;
     @FXML
     private TableColumn<Table, Integer> colQuantity;
-=======
-    private Button updateProduct;
->>>>>>> b4c252226cc407f7727286a1652f56c7cc079bd3
     @FXML
     private TableColumn<Table, String>  colName;
     @FXML
@@ -205,116 +188,6 @@ public class DashboardAdminController {
 
     }
 
-    @FXML
-    private TextField searchField;
-    @FXML
-    private Button searchButton;
-    @FXML
-    private Button userDetails;
-
-
-    // Create Product Category feature
-
-    public void createCategory(){
-        try{
-
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/create_category.fxml")));
-            Stage stage_create_category = new Stage();
-            stage_create_category.setTitle("All in one store - Create Category Admin");
-            stage_create_category.getIcons().add(new Image("src/img/icon.png"));
-            stage_create_category.setScene(new Scene(root,600,400));
-            stage_create_category.show();
-
-        }catch(Exception e){
-            e.printStackTrace();
-            e.getCause();
-        }
-
-
-
-    }
-
-
-
-    // Add product feature
-
-    public void addProduct(){
-        try{
-
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/add_product_page.fxml")));
-            Stage stage_add_product_page = new Stage();
-            stage_add_product_page.setTitle("All in one store - Add Product Admin");
-            stage_add_product_page.getIcons().add(new Image("src/img/icon.png"));
-            stage_add_product_page.setScene(new Scene(root,1500,820));
-            stage_add_product_page.show();
-
-        }catch(Exception e){
-            e.printStackTrace();
-            e.getCause();
-        }
-
-
-
-    }
-
-    // Update products feature
-
-    public void updateProduct(){
-        try{
-
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/update_ID_enter.fxml")));
-            Stage stage_update_product_page = new Stage();
-            stage_update_product_page.setTitle("All in one store - Add Product Admin");
-            stage_update_product_page.getIcons().add(new Image("src/img/icon.png"));
-            stage_update_product_page.setScene(new Scene(root,600,400));
-            stage_update_product_page.show();
-
-        }catch(Exception e){
-            e.printStackTrace();
-            e.getCause();
-        }
-
-
-    }
-
-    // Delete Products feature
-
-    public void deleteProduct(){
-        try{
-
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/delete_product_page.fxml")));
-            Stage stage_delete_product_page = new Stage();
-            stage_delete_product_page.setTitle("All in one store - Add Product Admin");
-            stage_delete_product_page.getIcons().add(new Image("src/img/icon.png"));
-            stage_delete_product_page.setScene(new Scene(root,600,400));
-            stage_delete_product_page.show();
-
-        }catch(Exception e){
-            e.printStackTrace();
-            e.getCause();
-        }
-
-
-    }
-
-    // Search Button Feature
-
-    public void searchButton(){
-
-
-
-
-
-    }
-
-    // To view Loggedin User Details
-
-    public void userDetails(){
-
-
-    }
-
-
 
     // Logout features
     public void logout() {
@@ -325,13 +198,13 @@ public class DashboardAdminController {
         alert.setContentText("Are you sure do you want to Logout?");
 
         if(alert.showAndWait().get() == ButtonType.OK){
-        try {
-            Stage stageClose = ((Stage) buttonLogout.getScene().getWindow());
-            stageClose.getIcons().add(new Image("src/img/icon.png"));
-            stageClose.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            try {
+                Stage stageClose = ((Stage) buttonLogout.getScene().getWindow());
+                stageClose.getIcons().add(new Image("src/img/icon.png"));
+                stageClose.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
     }
@@ -395,29 +268,29 @@ public class DashboardAdminController {
     private void addListenerTable(){
 
         tableProduct.getSelectionModel().selectedItemProperty().addListener((obs,oldSelection,newSelection) ->{
-           if (newSelection != null){
-               btnUpdateProduct.setDisable(false);
-               deleteProduct.setDisable(false);
+            if (newSelection != null){
+                btnUpdateProduct.setDisable(false);
+                deleteProduct.setDisable(false);
 
-               pidUpdate.setText("" + newSelection.getProduct_id());
-               pnameUpdate.setText(newSelection.getProduct_name());
-               pcategoryUpdate.getSelectionModel().select(newSelection.getCategory()); // Get category from database
-               ppriceUpdate.setText(newSelection.getPrice());
-               pquantityUpdate.setText(newSelection.getProduct_qty());
-               pdescriptionUpdate.setText(newSelection.getDescription());
+                pidUpdate.setText("" + newSelection.getProduct_id());
+                pnameUpdate.setText(newSelection.getProduct_name());
+                pcategoryUpdate.getSelectionModel().select(newSelection.getCategory()); // Get category from database
+                ppriceUpdate.setText(newSelection.getPrice());
+                pquantityUpdate.setText(newSelection.getProduct_qty());
+                pdescriptionUpdate.setText(newSelection.getDescription());
 
-           }else{
-               pidUpdate.setText("");
-               pnameUpdate.setText("");
-               pcategoryUpdate.getSelectionModel().selectFirst(); // Reset combo box
-               ppriceUpdate.setText("");
-               pdescriptionUpdate.setText("");
-               pquantityUpdate.setText("");
+            }else{
+                pidUpdate.setText("");
+                pnameUpdate.setText("");
+                pcategoryUpdate.getSelectionModel().selectFirst(); // Reset combo box
+                ppriceUpdate.setText("");
+                pdescriptionUpdate.setText("");
+                pquantityUpdate.setText("");
 
-               btnUpdateProduct.setDisable(true);
-               deleteProduct.setDisable(true);
+                btnUpdateProduct.setDisable(true);
+                deleteProduct.setDisable(true);
 
-           }
+            }
         });
 
 
@@ -473,7 +346,7 @@ public class DashboardAdminController {
                 else {
                     return false; // no match found
                 }
-                });
+            });
 
             // Sorting
             SortedList<Table> sortedData = new SortedList<> (filteredData);
@@ -487,6 +360,3 @@ public class DashboardAdminController {
     }
 
 }
-
-
-
