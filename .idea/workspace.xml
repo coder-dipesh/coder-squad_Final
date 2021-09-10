@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2efe0313-d74e-4d9a-aab2-b5e36c48cbb0" name="Changes" comment="">
+    <list default="true" id="d8e9ce43-85f8-49ff-a11e-4a4f6e99faaa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_57_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_57_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Dashboard_Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Dashboard_Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Dashboard_Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Dashboard_Admin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +42,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/code/DashboardAdminController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/code/Table.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/code/Dashboard_Admin.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/code/Splash_Screen.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/resource/add_product_page.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/code/DeleteProductAdminController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/code/Table.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/coder-squad_Final.iml" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProblemsViewState">
@@ -79,7 +84,7 @@
       <recent name="code" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Splash_Screen">
+  <component name="RunManager" selected="Application.Login_Admin">
     <configuration name="Add_Product_Page" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="code.Add_Product_Page" />
       <module name="coder-squad_Final" />
@@ -188,9 +193,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Login_Admin" />
         <item itemvalue="Application.Dashboard_Admin" />
         <item itemvalue="Application.UserDetails" />
-        <item itemvalue="Application.Login_Admin" />
         <item itemvalue="Application.Add_Product_Page" />
         <item itemvalue="Application.Update_ID_Enter" />
       </list>
@@ -199,7 +204,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2efe0313-d74e-4d9a-aab2-b5e36c48cbb0" name="Changes" comment="" />
+      <changelist id="d8e9ce43-85f8-49ff-a11e-4a4f6e99faaa" name="Changes" comment="" />
       <created>1630572931380</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
