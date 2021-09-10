@@ -19,12 +19,13 @@ import java.util.Objects;
 
 public class LoginAdminController {
 
+
     @FXML
     private Button actionLoginAdmin;
     @FXML
     private Label warningmessageAdminLogin;
     @FXML
-    private TextField usernameAdminLogin;
+    public TextField usernameAdminLogin;
     @FXML
     private Label successmessageAdminLogin;
     @FXML
@@ -42,6 +43,16 @@ public class LoginAdminController {
         public void setActionLoginAdmin(ActionEvent event) {
         if (!usernameAdminLogin.getText().isBlank() && !passwordAdminLogin.getText().isBlank()) {
             validateLoginAdmin();
+
+            // To close previous window
+            try {
+                Stage stageClose = ((Stage) actionLoginAdmin.getScene().getWindow());
+                stageClose.close();
+
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+
         } else {
             warningmessageAdminLogin.setText("Invalid Login! Fields cannot be empty.");
         }
@@ -58,7 +69,7 @@ public class LoginAdminController {
 
             String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
             String user = "root";
-            String dbPassword = "&@N984937284n";
+            String dbPassword = "root";
             String username = usernameAdminLogin.getText();
             String password = passwordAdminLogin.getText();
 
@@ -84,9 +95,11 @@ public class LoginAdminController {
                             successmessageAdminLogin.setText("Login successful!");
 
                             // Redirect to Dashboard Page
-
                             dashboardAdmin();
-//                            successmessageAdminLogin.setText("");
+
+
+                            usernameAdminLogin.setText("");
+                            passwordAdminLogin.setText("");
 
                         } else {
                             successmessageAdminLogin.setVisible(false);

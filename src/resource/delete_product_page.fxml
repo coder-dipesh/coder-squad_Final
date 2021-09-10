@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff #e5e9ff#e5e9ff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.DeleteProductAdminController">
     <children>
         <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="268.0" layoutY="83.0">
             <image>
@@ -20,21 +20,29 @@
                 <Font size="25.0" />
             </font>
         </Label>
-        <TextField layoutX="287.0" layoutY="187.0" prefHeight="44.0" prefWidth="252.0" />
-        <Button layoutX="96.0" layoutY="319.0" mnemonicParsing="false" style="-fx-background-color: #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85;" text="DELETE" textFill="WHITE">
+        <TextField fx:id="deleteProductAdmin" layoutX="287.0" layoutY="187.0" prefHeight="44.0" prefWidth="252.0" />
+        <Button fx:id="btndeleteProductAdmin" layoutX="96.0" layoutY="319.0" mnemonicParsing="false" onAction="#btndeleteProductAdmin" style="-fx-background-color: #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85;" text="DELETE" textFill="WHITE">
             <font>
                 <Font size="25.0" />
             </font>
         </Button>
-        <Button layoutX="372.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85;" text="CANCEL" textFill="WHITE">
+        <Button fx:id="closeDeleteProduct" layoutX="372.0" layoutY="316.0" mnemonicParsing="false" onAction="#closeDeleteProduct" style="-fx-background-color: #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85 #460A85;" text="CANCEL" textFill="WHITE">
             <font>
                 <Font size="25.0" />
             </font>
         </Button>
-        <Label layoutX="285.0" layoutY="262.0" text="Invalid Id" />
+        <Label fx:id="warningMessage" layoutX="285.0" layoutY="262.0" prefHeight="27.0" prefWidth="252.0" textFill="#fa0e0e">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
       <Label layoutX="206.0" layoutY="25.0" text="Delete Pr0duct">
          <font>
             <Font name="Hansief" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="successMessage" layoutX="285.0" layoutY="262.0" prefHeight="27.0" prefWidth="252.0" textFill="#18ff00">
+         <font>
+            <Font size="18.0" />
          </font>
       </Label>
     </children>
