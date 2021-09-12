@@ -1,22 +1,25 @@
 package code;
 
-public class Product {
+public class Cart {
 
-    private String product_id;
-    private String product_qty;
-    private String product_name;
-    private String category;
-    private String price;
-    private String description;
+    // Variable
+    public String product_id,product_qty;
+    public  String product_name;
+    public  String category,description;
+    public String price;
 
-    public Product(String product_id, String product_qty, String product_name, String category, String price, String description) {
+    // Constructor
+    public Cart(String product_id, String product_qty, String product_name, String category, String description, String price) {
         this.product_id = product_id;
         this.product_qty = product_qty;
         this.product_name = product_name;
         this.category = category;
-        this.price = price;
         this.description = description;
+        this.price = price;
     }
+
+
+    // GETTERS and SETTERS for variables
 
     public String getProduct_id() {
         return product_id;
@@ -24,6 +27,14 @@ public class Product {
 
     public void setProduct_id(String product_id) {
         this.product_id = product_id;
+    }
+
+    public String getProduct_qty() {
+        return product_qty;
+    }
+
+    public void setProduct_qty(String product_qty) {
+        this.product_qty = product_qty;
     }
 
     public String getProduct_name() {
@@ -42,24 +53,16 @@ public class Product {
         this.category = category;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public String getProduct_qty() {
-        return product_qty;
-    }
-
-    public void setProduct_qty(String product_qty) {
-        this.product_qty = product_qty;
-    }
-
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getPrice() {
+        return price;
     }
 
     public void setPrice(String price) {

@@ -17,6 +17,7 @@ public class Registration_Client extends Application {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/registration_client.fxml")));
         Stage1.setTitle("All IN ONE STORE - Client Registration");
         Stage1.getIcons().add(new Image("src/img/icon.png"));
+        Stage1.setResizable(false);
         Stage1.setScene(new Scene(root,1500,820));
         Stage1.show();
 }

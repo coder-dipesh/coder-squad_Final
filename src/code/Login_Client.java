@@ -14,6 +14,7 @@ public class Login_Client extends Application {
     public void start(Stage clientLoginStage) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/login_client.fxml")));
         clientLoginStage.setTitle("All IN ONE STORE - Client Login");
+        clientLoginStage.setResizable(false);
         clientLoginStage.getIcons().add(new Image("src/img/icon.png"));
         clientLoginStage.setScene(new Scene(root,1500,820));
         clientLoginStage.show();

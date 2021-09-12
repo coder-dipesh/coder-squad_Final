@@ -2,11 +2,13 @@ package code;
 
 public class Table {
 
+    // Variables
     public String product_id,product_qty;
     public  String product_name;
     public  String category,description;
     public String price;
 
+    //Constructor
     public Table(String product_id, String product_qty, String product_name, String category, String description, String price) {
         this.product_id = product_id;
         this.product_qty = product_qty;
@@ -16,7 +18,7 @@ public class Table {
         this.price = price;
     }
 
-
+    // GETTERS and SETTERS for variables
     public String getProduct_id() {
         return product_id;
     }

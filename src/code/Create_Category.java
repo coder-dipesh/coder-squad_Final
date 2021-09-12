@@ -16,6 +16,7 @@ public class Create_Category extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("../resource/create_category.fxml"));
         stage_create_category.setTitle("All in one store - Create Category Admin");
+        stage_create_category.setResizable(false);
         stage_create_category.getIcons().add(new Image("src/img/icon.png"));
         stage_create_category.setScene(new Scene(root,600,400));
         stage_create_category.show();

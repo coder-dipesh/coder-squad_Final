@@ -1,19 +1,12 @@
 package code;
 
 //Necessary Imports
-import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.sql.*;
-import java.util.Objects;
+
 
 public class CreateCategoryController {
 
@@ -30,23 +23,30 @@ public class CreateCategoryController {
     @FXML
     private Label warningMessage;
 
+    // Calling database class
+    AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
+    Connection connectDB = connect.getConnection();
 
+
+    // Check which task to perform
     public void saveCreateCategory() {
-//
+
+        // Checks which task to perform either addCategory or removeCategory
         if (addCategory.getText().isBlank()){
+
             removeCreateCategory();
 
         }
         else {
+
             addCreateCategory();
+
         }
 
     }
 
 
-
-//    // Save create Category
-//
+    // Add category to category table
     public void addCreateCategory(){
 
         String categoryAdd = addCategory.getText();
@@ -55,6 +55,7 @@ public class CreateCategoryController {
 
         ResultSet resultSet = null;
 
+        // Checks if category is already available or not
         try {
                 String query = "SELECT * FROM category WHERE category= ? ";
                 PreparedStatement preparedStmt = connectDB.prepareStatement(query);
@@ -71,7 +72,7 @@ public class CreateCategoryController {
             e.printStackTrace();
         }
 
-        // Insert into category table as category
+        // Insert into category table
         try {
             String query = "INSERT INTO category(category) VALUES(?)";
             PreparedStatement preparedStmt = connectDB.prepareStatement(query);
@@ -90,18 +91,11 @@ public class CreateCategoryController {
             e.printStackTrace();
             e.getCause();
         }
-
-
-
     }
 
 
     // Remove category from table
-
     public void removeCreateCategory(){
-
-        AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
-        Connection connectDB = connect.getConnection();
 
         String categoryRemove = removeCategory.getText();
 
@@ -133,34 +127,18 @@ public class CreateCategoryController {
                     removeCategory.setText("");
 
 
-
                 } catch (Exception e) {
                     e.printStackTrace();
                     e.getCause();
                 }
-
-
-
             }
-
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
-
-
-
-
-
     }
 
 
-
-
-    // To close window
+    // To close present window
     public void closeCreateCategory(ActionEvent event) throws Exception {
         try {
             Stage stageClose = ((Stage) closeCreateCategory.getScene().getWindow());
@@ -169,11 +147,7 @@ public class CreateCategoryController {
         }catch(Exception e){
             e.printStackTrace();
         }
-
     }
-
-
-
 
 
 }

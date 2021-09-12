@@ -1,7 +1,6 @@
 package code;
 
 //Necessary Imports
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -16,8 +15,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-
 import java.net.URL;
 import java.sql.*;
 import java.util.Objects;
@@ -26,6 +23,7 @@ import java.util.ResourceBundle;
 
 public class DashboardAdminController implements Initializable {
 
+    // Calling database connection
     AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
     Connection connectDB = AuthenticationDatabaseConnection.getConnection();
 
@@ -47,7 +45,7 @@ public class DashboardAdminController implements Initializable {
     @FXML
     private Label welcomeUsername;
 
-    // Product Table
+    // Product Table FXML
     @FXML
     public TableView <Table> tableProduct;
     @FXML
@@ -63,8 +61,8 @@ public class DashboardAdminController implements Initializable {
     @FXML
     private TableColumn<Table, String>  colDescription;
 
-    // Update Page
 
+    // Update Data Section Fields
     @FXML
     private TextField pidUpdate;
     @FXML
@@ -84,14 +82,12 @@ public class DashboardAdminController implements Initializable {
 
 
 
-
-
-    // Create Product Category feature
-
+    // Redirects to Create Product Category Section
     public void createCategory(){
         try{
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/create_category.fxml")));
             Stage stage_create_category = new Stage();
+            stage_create_category.setResizable(false);
             stage_create_category.setTitle("All in one store - Create Category Admin");
             stage_create_category.getIcons().add(new Image("src/img/icon.png"));
             stage_create_category.setScene(new Scene(root,600,400));
@@ -102,11 +98,9 @@ public class DashboardAdminController implements Initializable {
             e.getCause();
         }
 
-
-
     }
 
-    // Add product feature
+    // Redirects to Add product Section
     public void addProduct(){
         try{
 
@@ -126,31 +120,38 @@ public class DashboardAdminController implements Initializable {
 
     }
 
-    // Update products feature
+    // Update Data on click
     public void btnUpdateProduct(ActionEvent event){
         try {
             Statement stmt = connectDB.createStatement();
             Table product = tableProduct.getSelectionModel().getSelectedItem();
 
-            String query = "UPDATE product_admin SET product_qty = '" + pquantityUpdate.getText() + "', product_name = '" + pnameUpdate.getText() + "',category = '" + pcategoryUpdate.getSelectionModel().getSelectedItem() + "'," +
-                    "price = '" + ppriceUpdate.getText() + "', description = '" + pdescriptionUpdate.getText() + "' WHERE product_id = '" + pidUpdate.getText() + "' ";
+            // Update query
+            String query = "UPDATE product_admin SET " +
+                    "product_qty = '" + pquantityUpdate.getText() + "'," +
+                    " product_name = '" + pnameUpdate.getText() + "'," +
+                    "category = '" + pcategoryUpdate.getSelectionModel().getSelectedItem() + "'," +
+                    "price = '" + ppriceUpdate.getText() + "', " +
+                    "description = '" + pdescriptionUpdate.getText() + "' " +
+                    "WHERE product_id = '" + pidUpdate.getText() + "' ";
 
             stmt.executeUpdate(query);
+
+            //Clearing table and re showing it -> or Refreshing it
             tableList.clear();
             showTable();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
-    // Delete Products feature
+    // Redirects to Delete Products Section
     public void deleteProduct(){
         try{
-
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/delete_product_page.fxml")));
             Stage stage_delete_product_page = new Stage();
+            stage_delete_product_page.setResizable(false);
             stage_delete_product_page.setTitle("All in one store - Add Product Admin");
             stage_delete_product_page.getIcons().add(new Image("src/img/icon.png"));
             stage_delete_product_page.setScene(new Scene(root,600,400));
@@ -164,16 +165,11 @@ public class DashboardAdminController implements Initializable {
 
     }
 
-    // Search Button Feature
-    public void searchButton() {
-    }
 
-
-
-    // Redirects to user details
-    public void userDetails(){
+    // Enable PopUp Window to show Personal Information
+    public void adminPersonalInformation(){
         try{
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/user_details.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/admin_personal_information.fxml")));
             Stage stage_user_details = new Stage();
             stage_user_details.setTitle("All IN ONE STORE - User Details");
             stage_user_details.setResizable(false);
@@ -189,33 +185,40 @@ public class DashboardAdminController implements Initializable {
     }
 
 
-    // Logout features
+    // Logout Admin from Dashboard
     public void logout() {
-
+        // Bring PopUp asking for Logout
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Logout");
         alert.setHeaderText("You're about to logout!");
         alert.setContentText("Are you sure do you want to Logout?");
 
+        // Close current Scene after user press OK button
         if(alert.showAndWait().get() == ButtonType.OK){
+
             try {
                 Stage stageClose = ((Stage) buttonLogout.getScene().getWindow());
                 stageClose.getIcons().add(new Image("src/img/icon.png"));
                 stageClose.close();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
+
         }
 
     }
 
 
+//======================================================================================================================
+//========================================= TABLE VIEW DISPLAY =========================================================
+//======================================================================================================================
 
 
     // Observable list for storing database data
     ObservableList<Table> tableList = FXCollections.observableArrayList();
 
-    // Insert data to Observable list (tableList)
+    // Insert data to Observable list -> (tableList)
     public void showTable(){
         String query = "SELECT * FROM product_admin";
         Statement stmt;
@@ -225,13 +228,17 @@ public class DashboardAdminController implements Initializable {
             Connection connectDB = AuthenticationDatabaseConnection.getConnection();
             stmt =connectDB.createStatement();
             rs = stmt.executeQuery(query);
+
             Table table;
             table = null;
 
+            // Looping through database data
             while (rs.next()){
                 table = new Table(rs.getString("product_id"),rs.getString("product_qty"),
                         rs.getString("product_name"), rs.getString("category"),
                         rs.getString("description"),rs.getString("price"));
+
+                // Add Fetched data to the Observable List
                 tableList.add(table);
             }
         } catch (Exception e) {
@@ -241,7 +248,8 @@ public class DashboardAdminController implements Initializable {
 
     }
 
-    // Refresh the table
+
+    // Set data to respective column of Table view
     public void refresh(){
 
         colID.setCellValueFactory(new PropertyValueFactory<Table,Integer>("product_id"));
@@ -255,7 +263,7 @@ public class DashboardAdminController implements Initializable {
     }
 
 
-    // To update table after adding data or deleting data
+    // To update tableView after adding data or deleting data
     public void btnUpdateTable(){
         tableList.clear();
         showTable();
@@ -264,14 +272,24 @@ public class DashboardAdminController implements Initializable {
     }
 
 
+    // Get data from login page
+    public void usrName(String username){
+        welcomeUsername.setText(username);
+
+    }
+
+
     // Action Listener for table Product
     private void addListenerTable(){
 
+        // Getting presently selected row data
         tableProduct.getSelectionModel().selectedItemProperty().addListener((obs,oldSelection,newSelection) ->{
             if (newSelection != null){
+                // Enabling button if any row is selected
                 btnUpdateProduct.setDisable(false);
                 deleteProduct.setDisable(false);
 
+                // Setting fetched data to the TextField and ComboBox
                 pidUpdate.setText("" + newSelection.getProduct_id());
                 pnameUpdate.setText(newSelection.getProduct_name());
                 pcategoryUpdate.getSelectionModel().select(newSelection.getCategory()); // Get category from database
@@ -280,6 +298,7 @@ public class DashboardAdminController implements Initializable {
                 pdescriptionUpdate.setText(newSelection.getDescription());
 
             }else{
+                // Setting Default values if no rows are selected
                 pidUpdate.setText("");
                 pnameUpdate.setText("");
                 pcategoryUpdate.getSelectionModel().selectFirst(); // Reset combo box
@@ -287,47 +306,36 @@ public class DashboardAdminController implements Initializable {
                 pdescriptionUpdate.setText("");
                 pquantityUpdate.setText("");
 
+                // Disabling button if nothing is selected
                 btnUpdateProduct.setDisable(true);
                 deleteProduct.setDisable(true);
 
             }
         });
-
-
     }
 
 
 
+//======================================================================================================================
+//==========================================  SEARCH FEATURE  ==========================================================
+//======================================================================================================================
 
-
-    // Initializing Methods
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        showTable();
-        addListenerTable();
-        refresh();
-
-
-
-
-        Table product ;
-
-
-        // Search product from table through searchfield keyword
+    // Search product from table through searchfield keyword
+    public void searchFeature(){
 
         // Initial Phase Filter code
-
         FilteredList<Table> filteredData = new FilteredList<>(tableList, b-> true);
 
         searchField.textProperty().addListener(((observable, oldValue, newValue) -> {
 
             filteredData.setPredicate(table -> {
 
-                // If no search value then display all records -- no changes
+                // If no search value then display all records --> no changes
                 if (newValue.isEmpty() || newValue.isBlank() || newValue ==null){
                     return true;
                 }
 
+                // Getting search field data and changing to lowercase
                 String searchValue = searchField.getText();
                 searchValue = newValue.toLowerCase();
 
@@ -358,11 +366,22 @@ public class DashboardAdminController implements Initializable {
             SortedList<Table> sortedData = new SortedList<> (filteredData);
 
             // Bind sorted data with  Table
-
             sortedData.comparatorProperty().bind(tableProduct.comparatorProperty());
             tableProduct.setItems(sortedData);
+
         }));
 
     }
+
+
+    // Initializing Methods
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        showTable();
+        addListenerTable();
+        refresh();
+        searchFeature();
+    }
+
 
 }

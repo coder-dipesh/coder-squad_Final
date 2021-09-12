@@ -33,7 +33,7 @@ public class ForgotPasswordAdminController {
     @FXML
     private TextField usernameReset;
 
-    // Window CLose on click Cancel Button
+    // Close current window on click
     public void closeButton(ActionEvent event) throws Exception {
         try {
             Stage stageClose = ((Stage) closeButton.getScene().getWindow());
@@ -45,20 +45,21 @@ public class ForgotPasswordAdminController {
 
     }
 
-    // Update on Save Click
 
+    // Update password on save button click
     public void isPasswordMatched(ActionEvent event) throws Exception{
         if (!hiddenPassword.getText().isBlank() && !hiddenConfirmPassword.getText().isBlank()){
+
             if(hiddenPassword.getText().equals( hiddenConfirmPassword.getText())){
-//                successMessage.setText("Password matched !");
+                successMessage.setText("");
             }else{
                 warningMessage.setText("Password does not match !");
             }
         }else {
             warningMessage.setText("Fields cannot be empty!");
         }
-
     }
+
 
     // Password Visibility on check
     public void checkboxVisiblePassword (ActionEvent event){
@@ -73,8 +74,8 @@ public class ForgotPasswordAdminController {
         visiblePassword.setVisible(false);
     }
 
-    // Password Visibility on check For Confirm Password
 
+    // Password Visibility on check For Confirm Password
     public void checkboxHiddenPassword (ActionEvent event){
         if (checkboxHiddenPassword.isSelected()) {
             visibleConfirmPassword.setText(hiddenConfirmPassword.getText());
@@ -87,14 +88,18 @@ public class ForgotPasswordAdminController {
         visibleConfirmPassword.setVisible(false);
     }
 
+
     // Update data from database
-    public void saveOnClickButton() throws SQLException {
+    public void saveOnClickButton()  {
+
+        // Checks if any fields are empty
         if (!hiddenPassword.getText().isBlank() && !hiddenConfirmPassword.getText().isBlank()) {
+
+            // Check if password matched or not
             if (hiddenPassword.getText().equals(hiddenConfirmPassword.getText())) {
                 successMessage.setText("Password Updated !");
 
-                // Update data to database
-
+                // Calling database connection
                 AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
                 Connection connectDB = connect.getConnection();
 
@@ -103,6 +108,7 @@ public class ForgotPasswordAdminController {
                 String getUsername = usernameReset.getText();
 
                 try {
+                    // Updating data of database
                     String query = "UPDATE admin_register SET password = ? WHERE username = ?";
                     PreparedStatement preparedStmt = connectDB.prepareStatement(query);
                     preparedStmt.setString(1, getPassword);

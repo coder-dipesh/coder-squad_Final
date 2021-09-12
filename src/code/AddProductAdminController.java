@@ -8,7 +8,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import java.net.URL;
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class AddProductAdminController implements Initializable{
@@ -25,7 +24,6 @@ public class AddProductAdminController implements Initializable{
     private TextField pquantityAddProduct;
     @FXML
     private TextField pdescriptionAddProduct;
-
     @FXML
     private Button btnAddProduct;
     @FXML
@@ -35,18 +33,11 @@ public class AddProductAdminController implements Initializable{
 
 
     // Calling database connection class
-
     AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
     Connection connectDB = connect.getConnection();
 
-    // Implementing Initializable
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        populateCategory();
-    }
 
     // Fetch data and show in dropdown
-
     public void populateCategory(){
         PreparedStatement pst;
         ResultSet rst;
@@ -90,13 +81,14 @@ public class AddProductAdminController implements Initializable{
             preparedStmt.setString(1,productID);
             ResultSet resultSet = preparedStmt.executeQuery();
 
+            // Checking if product id is already taken or not
             if (resultSet.isBeforeFirst()){
-
                 successAddProduct.setText("");
                 warningAddProduct.setText("Product ID already taken.");
 
             }
             else{
+                // Checking if any fields are empty or not
                 if(pidAddProduct.getText().isBlank() && pnameAddProduct.getText().isBlank()  && ppriceAddProduct.getText().isBlank()){
 
                     successAddProduct.setText("");
@@ -104,21 +96,18 @@ public class AddProductAdminController implements Initializable{
 
 
                 }else {
-
+                    // Query to insert data
                     String query = "INSERT INTO product_admin(product_id,product_qty,product_name,category,price,description) " +
                             "VALUES('" + productID + "','"+ productQuantity +"','" + productName + "'," +
                             "'" + productCategory + "','" + productPrice + "','"+ productDescription +"')";
+
                     Statement statement = connectDB.createStatement();
                     statement.executeUpdate(query);
 
                     warningAddProduct.setText("");
                     successAddProduct.setText("Product added successfully.");
 
-                    //Update table after entering data to it
-                    DashboardAdminController dash = new DashboardAdminController();
-                    dash.tableList.clear();
-                    dash.showTable();
-
+                    // Clearing Fields after successful insert of data
                     ppriceAddProduct.setText("");
                     pcategoryAddProduct.setValue("");
                     pnameAddProduct.setText("");
@@ -136,5 +125,11 @@ public class AddProductAdminController implements Initializable{
 
     }
 
+
+    // Implementing Initialize
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        populateCategory();
+    }
 
 }
