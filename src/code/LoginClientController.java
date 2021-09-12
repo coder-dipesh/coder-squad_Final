@@ -40,9 +40,20 @@ public class LoginClientController {
     private Hyperlink redirectClientSignup;
 
 
-    public void actionClientLogin(ActionEvent event){
+    public void setActionClientLogin(ActionEvent event){
         if(!usernameClientLogin.getText().isBlank() && !hiddenpasswordClientLogin.getText().isBlank()){
+
             validateLoginClient();
+
+            // To close previous window
+            try {
+                Stage stageClose = ((Stage) actionClientLogin.getScene().getWindow());
+                stageClose.close();
+
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+
         }
         else{
             warningmessageClientLogin.setText("Invalid Login! Please try again.");
@@ -86,8 +97,13 @@ public class LoginClientController {
                         warningmessageClientLogin.setVisible(false);
                         successmessageClientLogin.setVisible(true);
                         successmessageClientLogin.setText("Login successful!");
-                        // Redirect to Dashboard Page
+
+                        // Redirect to Client Dashboard Page
                         dashboardClient();
+
+                        // To clear the fields
+                        usernameClientLogin.setText("");
+                        hiddenpasswordClientLogin.setText("");
 
                     } else {
                         successmessageClientLogin.setVisible(false);
@@ -103,13 +119,23 @@ public class LoginClientController {
 
     // Redirects to Client Dashboard
     private void dashboardClient() {
+        try{
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/dashboard_client.fxml")));
+            Stage dashboardClient = new Stage();
+            dashboardClient.setTitle("All IN ONE STORE - Client Dashboard");
+            dashboardClient.getIcons().add(new Image("src/img/icon.png"));
+            dashboardClient.setScene(new Scene(root,1500,820));
+            dashboardClient.show();
+        }catch(Exception e){
+            e.printStackTrace();
+            e.getCause();
 
-
+        }
 
     }
 
 
-    // Password Visibality
+    // Password Visibility
 
     public void changeVisibilityLogin(ActionEvent event) {
 
@@ -123,7 +149,6 @@ public class LoginClientController {
         hiddenpasswordClientLogin.setVisible(true);
         visiblepasswordClientLogin.setVisible(false);
     }
-
 
     // Change Password of code.admin
 
@@ -145,9 +170,8 @@ public class LoginClientController {
 
     }
 
-    //
-    @FXML
-    private void redirectClientSignup(){
+
+    public void redirectClientSignup(){
 
         try{
 
@@ -164,6 +188,16 @@ public class LoginClientController {
             e.getCause();
 
         }
+
+        // To close previously opened window
+        try {
+            Stage stageClose = ((Stage) redirectClientSignup.getScene().getWindow());
+            stageClose.close();
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
 
 
     }

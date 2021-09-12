@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="820.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.DashboardClientController">
+   <children>
+      <BorderPane layoutY="-5.0" prefHeight="820.0" prefWidth="1500.0">
+         <center>
+            <BorderPane prefHeight="820.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+               <top>
+                  <Pane prefHeight="76.0" prefWidth="1362.0" style="-fx-background-color: #F6F4F4#F6F4F4;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="258.0" layoutY="46.0" text="Welcome to your dashboard!!">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchField" layoutX="627.0" layoutY="40.0" prefHeight="44.0" prefWidth="441.0" promptText="Search....">
+                           <font>
+                              <Font name="Fira Code Retina" size="14.0" />
+                           </font></TextField>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="1078.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" rotate="-95.2">
+                           <image>
+                              <Image url="@../img/f.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1197.0" layoutY="27.0">
+                           <image>
+                              <Image url="@../img/setting-user.png" />
+                           </image>
+                        </ImageView>
+                        <Line endX="1187.7176513671875" endY="7.62939453125E-6" layoutX="107.0" layoutY="114.0" startX="-100.0" />
+                        <ImageView fitHeight="83.0" fitWidth="82.0" layoutX="38.0" layoutY="11.0">
+                           <image>
+                              <Image url="@../img/dash_image-modified.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnUserDetails" layoutX="1180.0" layoutY="18.0" mnemonicParsing="false" onAction="#clientPersonalInformation" opacity="0.0" prefHeight="82.0" prefWidth="92.0" />
+                        <Label fx:id="loginUsername" layoutX="147.0" layoutY="46.0" prefHeight="36.0" prefWidth="102.0" textFill="#346fc1">
+                           <font>
+                              <Font name="Fira Code Medium" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </top>
+               <center>
+                  <Pane prefHeight="614.0" prefWidth="1298.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="242.0" layoutY="50.0" text="AVAILABLE PRODUCTS">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="909.0" layoutY="50.0" text="YOUR CART">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Line endX="1187.0" layoutX="107.0" layoutY="100.0" startX="-100.0" />
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="129.0" prefHeight="602.0" prefWidth="640.0">
+                           <columns>
+                              <TableColumn fx:id="id" prefWidth="60.992919921875" text=" ID" />
+                              <TableColumn fx:id="qty" prefWidth="79.0" resizable="false" text="QUANTITY" />
+                              <TableColumn fx:id="name" prefWidth="146.0" resizable="false" text="PRODUCT NAME" />
+                              <TableColumn fx:id="category" prefWidth="127.4666748046875" resizable="false" text="CATEGORY" />
+                              <TableColumn fx:id="price" prefWidth="100.0" resizable="false" text="PRICE" />
+                              <TableColumn fx:id="description" prefWidth="124.0" text="DESCRIPTION " />
+                           </columns>
+                        </TableView>
+                        <TableView fx:id="cartTable" layoutX="654.0" layoutY="129.0" prefHeight="602.0" prefWidth="640.0">
+                           <columns>
+                              <TableColumn fx:id="cartID" prefWidth="60.992919921875" resizable="false" text=" ID" />
+                              <TableColumn fx:id="cartQuantity" prefWidth="79.0" resizable="false" text="QUANTITY" />
+                              <TableColumn fx:id="cartName" prefWidth="146.0" resizable="false" text="PRODUCT NAME" />
+                              <TableColumn fx:id="cartCategory" prefWidth="127.4666748046875" resizable="false" text="CATEGORY" />
+                              <TableColumn fx:id="cartPrice" prefWidth="100.0" resizable="false" text="PRICE" />
+                              <TableColumn fx:id="cartDescription" prefWidth="155.0" text="DESCRIPTION " />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </center>
+         <left>
+            <Pane prefHeight="820.0" prefWidth="202.0" style="-fx-background-color: #30475E#30475E;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnDeleteProduct" layoutX="2.0" layoutY="292.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="190.0" />
+                  <Button fx:id="btnAddToCart" layoutX="2.0" layoutY="192.0" mnemonicParsing="false" onAction="#addToCart" opacity="0.0" prefHeight="57.0" prefWidth="190.0" />
+                  <Line endX="128.77516174316406" layoutX="60.0" layoutY="144.0" startX="-50.65603256225586" stroke="#f7f7f7" />
+                  <Label layoutX="84.0" layoutY="208.0" text="Add to cart" textFill="WHITE">
+                     <font>
+                        <Font name="AkzidenzGroteskBQ-Medium" size="18.0" />
+                     </font></Label>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="726.0">
+                     <image>
+                        <Image url="@../img/logout.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="64.0" layoutY="733.0" text="Logout" textFill="#f05454">
+                     <font>
+                        <Font name="AkzidenzGroteskBQ-Reg" size="18.0" />
+                     </font></Label>
+                  <ImageView fitHeight="39.0" fitWidth="32.0" layoutX="18.0" layoutY="300.0">
+                     <image>
+                        <Image url="@../img/delete_product_dash.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="69.0" layoutY="310.0" text="Delete Product " textFill="WHITE">
+                     <font>
+                        <Font name="AkzidenzGroteskBQ-Reg" size="18.0" />
+                     </font></Label>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="15.0" layoutY="187.0">
+                     <image>
+                        <Image url="@../img/cart.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnLogout" layoutX="2.0" layoutY="714.0" mnemonicParsing="false" onAction="#logout" opacity="0.0" prefHeight="57.0" prefWidth="190.0" />
+                  <ImageView fitHeight="123.0" fitWidth="124.0" layoutX="32.0" layoutY="12.0">
+                     <image>
+                        <Image url="@../img/main_logov2.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

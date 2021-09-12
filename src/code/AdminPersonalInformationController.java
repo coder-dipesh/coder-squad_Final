@@ -1,14 +1,14 @@
 package code;
 
+//Necessary Imports
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class UserDetailsController {
+public class AdminPersonalInformationController {
 
     // User Details Section
-
     @FXML
     private TextField userFname;
     @FXML
@@ -22,7 +22,7 @@ public class UserDetailsController {
 
 
 
-    //    // To view Loggedin User Details
+    // Close current Scene if close button pressed
     public void btnCloseWindow(){
         try {
             Stage stageClose = ((Stage) btnCloseWindow.getScene().getWindow());

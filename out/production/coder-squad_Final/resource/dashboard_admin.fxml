@@ -23,7 +23,7 @@
                     <center>
                         <Pane prefHeight="722.0" prefWidth="1327.0" style="-fx-background-color: #F6F4F4;" BorderPane.alignment="CENTER">
                             <children>
-                        <Button fx:id="userDetails" layoutX="1180.0" layoutY="18.0" mnemonicParsing="false" onAction="#userDetails" opacity="0.0" prefHeight="82.0" prefWidth="92.0" />
+                        <Button fx:id="userDetails" layoutX="1180.0" layoutY="18.0" mnemonicParsing="false" onAction="#adminPersonalInformation" opacity="0.0" prefHeight="82.0" prefWidth="92.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5e9ff" height="635.0" layoutX="750.0" layoutY="179.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="538.0" />
                                 <Label layoutX="939.0" layoutY="119.0" text="UPDATE PRODUCT">
                                     <font>
@@ -116,7 +116,7 @@
                               <Image url="@../img/f.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1197.0" layoutY="30.0" onMouseClicked="#userDetails">
+                        <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1197.0" layoutY="30.0" onMouseClicked="#adminPersonalInformation">
                            <image>
                               <Image url="@../img/setting-user.png" />
                            </image>

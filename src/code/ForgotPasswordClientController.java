@@ -10,6 +10,7 @@ import java.sql.*;
 
 
 public class ForgotPasswordClientController {
+
     @FXML
     private javafx.scene.control.Button closeButton;
     @FXML
@@ -33,6 +34,12 @@ public class ForgotPasswordClientController {
     @FXML
     private TextField usernameReset;
 
+
+    // Calling Database Connection class
+    AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
+    Connection connectDB = connect.getConnection();
+
+
     // Window CLose on click Cancel Button
     public void closeButton(ActionEvent event) throws Exception {
         try {
@@ -45,12 +52,15 @@ public class ForgotPasswordClientController {
 
     }
 
-    // Update on Save Click
 
+    // Update on Save Click
     public void isPasswordMatched(ActionEvent event) throws Exception{
+        // Checking if any fields are empty or not
         if (!hiddenPassword.getText().isBlank() && !hiddenConfirmPassword.getText().isBlank()){
+
+            // Checking both Password and Confirm password matches or not
             if(hiddenPassword.getText().equals( hiddenConfirmPassword.getText())){
-//                successMessage.setText("Password matched !");
+               successMessage.setText("");
             }else{
                 warningMessage.setText("Password does not match !");
             }
@@ -59,6 +69,7 @@ public class ForgotPasswordClientController {
         }
 
     }
+
 
     // Password Visibility on check
     public void checkboxVisiblePassword (ActionEvent event){
@@ -73,8 +84,8 @@ public class ForgotPasswordClientController {
         visiblePassword.setVisible(false);
     }
 
-    // Password Visibility on check For Confirm Password
 
+    // Password Visibility on check For Confirm Password
     public void checkboxHiddenPassword (ActionEvent event){
         if (checkboxHiddenPassword.isSelected()) {
             visibleConfirmPassword.setText(hiddenConfirmPassword.getText());
@@ -87,22 +98,28 @@ public class ForgotPasswordClientController {
         visibleConfirmPassword.setVisible(false);
     }
 
+
     // Update data from database
     public void saveOnClickButton() throws SQLException {
+
+        // Checking if any fields are empty or not
         if (!hiddenPassword.getText().isBlank() && !hiddenConfirmPassword.getText().isBlank()) {
+
+            // Checking both Password and Confirm password matches or not
             if (hiddenPassword.getText().equals(hiddenConfirmPassword.getText())) {
                 successMessage.setText("Password Updated !");
+                usernameReset.setText("");
+                hiddenPassword.setText("");
+                hiddenConfirmPassword.setText("");
 
-                // Update data to database
-
-                AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
-                Connection connectDB = connect.getConnection();
 
                 String getPassword = hiddenPassword.getText();
                 String confirmPassword = hiddenConfirmPassword.getText();
                 String getUsername = usernameReset.getText();
 
                 try {
+
+                    // Update data in database
                     String query = "UPDATE client_register SET password = ? WHERE username = ?";
                     PreparedStatement preparedStmt = connectDB.prepareStatement(query);
                     preparedStmt.setString(1, getPassword);

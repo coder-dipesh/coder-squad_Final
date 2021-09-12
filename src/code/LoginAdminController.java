@@ -3,7 +3,6 @@ package code;
 //Necessary Imports
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -11,16 +10,12 @@ import javafx.scene.image.Image;
 import  javafx.stage.Stage;
 import javafx.event.*;
 import javafx.stage.StageStyle;
-
-
 import java.io.IOException;
-import java.net.URL;
 import java.sql.*;
 import java.util.Objects;
-import java.util.ResourceBundle;
 
 
-public class LoginAdminController implements Initializable {
+public class LoginAdminController {
 
 
     @FXML
@@ -41,13 +36,14 @@ public class LoginAdminController implements Initializable {
     private Hyperlink redirectAdminSignup;
 
 
-        // Action while clicking Login button
-
+        // Login into the system after validation
         public void setActionLoginAdmin(ActionEvent event) {
         if (!usernameAdminLogin.getText().isBlank() && !passwordAdminLogin.getText().isBlank()) {
+
+            // Check user information valid or invalid
             validateLoginAdmin();
 
-            // To close previous window
+            // To close previously opened window
             try {
                 Stage stageClose = ((Stage) actionLoginAdmin.getScene().getWindow());
                 stageClose.close();
@@ -63,7 +59,7 @@ public class LoginAdminController implements Initializable {
     }
 
 
-        // Validate data from Database
+        // Validate user data from Database
         public void validateLoginAdmin(){
 
             Connection connection = null;
@@ -82,6 +78,7 @@ public class LoginAdminController implements Initializable {
                 preparedStatement.setString(1, username);
                 resultSet = preparedStatement.executeQuery();
 
+                // Validating username
                 if (!resultSet.isBeforeFirst()) {
                     warningmessageAdminLogin.setText("");
                     warningmessageAdminLogin.setVisible(false);
@@ -92,6 +89,7 @@ public class LoginAdminController implements Initializable {
                     while (resultSet.next()) {
                         String retrivedPassword = resultSet.getString("password");
 
+                        // Checking userEntered password with database password
                         if (retrivedPassword.equals(password)) {
                             warningmessageAdminLogin.setVisible(false);
                             successmessageAdminLogin.setVisible(true);
@@ -99,8 +97,8 @@ public class LoginAdminController implements Initializable {
 
                             // Redirect to Dashboard Page
                             dashboardAdmin();
-                            String userN = usernameAdminLogin.getText();
 
+                            // Clearing fields after successful login
                             usernameAdminLogin.setText("");
                             passwordAdminLogin.setText("");
 
@@ -116,13 +114,27 @@ public class LoginAdminController implements Initializable {
                 }
             }
 
-//  username field access
+
+        // Username field access
+        public void passData(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../resource/dashboard_admin.fxml"));
+            Parent root = (Parent)loader.load();
+
+            DashboardAdminController dash = loader.getController();
+            dash.usrName(usernameAdminLogin.getText());
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
 
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
-
-    // Password Visibility on check
+        // Password Visibility on check
         public void changeVisibility (ActionEvent event){
             if (showpasswordAdminLogin.isSelected()) {
                 visiblepasswordAdminLogin.setText(passwordAdminLogin.getText());
@@ -135,7 +147,8 @@ public class LoginAdminController implements Initializable {
             visiblepasswordAdminLogin.setVisible(false);
         }
 
-        // Redirect to Admin Signup
+
+        // Redirect to Admin Signup Section
         public void redirectAdminSignup (ActionEvent event){
             try {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/registration_admin.fxml")));
@@ -145,40 +158,45 @@ public class LoginAdminController implements Initializable {
                 registerAdminstage.setScene(new Scene(root, 1500, 820));
                 registerAdminstage.show();
 
-
             } catch (Exception e) {
                 e.printStackTrace();
                 e.getCause();
+            }
 
+            // To close previously opened window
+            try {
+                Stage stageClose = ((Stage) redirectAdminSignup.getScene().getWindow());
+                stageClose.close();
+
+            }catch(Exception e){
+                e.printStackTrace();
             }
 
         }
 
 
-// Redirects to Admin Dashboard after validating login details
+        // Redirects to Admin Dashboard after validating login details
+         private void dashboardAdmin() throws IOException {
 
-    private void dashboardAdmin() throws IOException {
-
-        Parent root = FXMLLoader.load(getClass().getResource("../resource/dashboard_admin.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/dashboard_admin.fxml")));
         Stage stage = new Stage();
         stage.setTitle("All IN ONE STORE - Admin Dashboard");
+        stage.setResizable(false);
         stage.getIcons().add(new Image("src/img/icon.png"));
         stage.setScene(new Scene(root,1500,820));
         stage.show();
 
 
-
     }
 
-    // Change Password of code.admin
 
-    public void forgotpasswordAdmin(){
-
+        // Change Password of Admin section
+        public void forgotpasswordAdmin(){
         try {
-
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/forgot_password_admin.fxml")));
             Stage stage = new Stage();
             stage.initStyle(StageStyle.UNDECORATED);
+            stage.setResizable(false);
             stage.getIcons().add(new Image("src/img/icon.png"));
             stage.setScene(new Scene(root, 500, 450));
             stage.show();
@@ -190,17 +208,6 @@ public class LoginAdminController implements Initializable {
 
         }
 
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-
-    }
 }
-
-
-
-
-
 
 

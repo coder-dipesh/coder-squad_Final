@@ -70,7 +70,7 @@
                      <font>
                         <Font size="14.0" />
                      </font></TextField>
-                        <Button fx:id="actionClientLogin" layoutX="221.0" layoutY="402.0" mnemonicParsing="false" onAction="#actionClientLogin" style="-fx-background-color: #FDC361;" text="LOG IN">
+                        <Button fx:id="actionClientLogin" layoutX="221.0" layoutY="402.0" mnemonicParsing="false" onAction="#setActionClientLogin" style="-fx-background-color: #FDC361;" text="LOG IN">
                             <font>
                                 <Font size="25.0" />
                             </font>

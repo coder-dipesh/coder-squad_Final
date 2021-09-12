@@ -10,10 +10,10 @@ import javafx.stage.StageStyle;
 
 import java.util.Objects;
 
-public class UserDetails extends Application {
+public class AdminPersonalInformation extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/user_details.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/admin_personal_information.fxml")));
         stage.setTitle("All IN ONE STORE - User Details");
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);

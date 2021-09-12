@@ -1,7 +1,9 @@
 package code;
 
+//Necessary Imports
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 
 public class EmailValidator {
 
