@@ -101,17 +101,17 @@
                            </font>
                         </Label>
                         <TextField fx:id="pdescriptionUpdate" layoutX="975.0" layoutY="621.0" prefHeight="44.0" prefWidth="252.0" />
-                        <Label fx:id="welcomeUsername" layoutX="137.0" layoutY="46.0" prefHeight="36.0" prefWidth="102.0" textFill="#346fc1">
+                        <Label fx:id="welcomeUsername" alignment="CENTER" layoutX="128.0" layoutY="47.0" prefHeight="36.0" prefWidth="159.0" textAlignment="CENTER" textFill="#5f85db">
                            <font>
-                              <Font name="Fira Code Medium" size="25.0" />
+                              <Font name="Poppins SemiBold" size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="238.0" layoutY="46.0" text="Welcome to your dashboard!!">
+                        <Label layoutX="291.0" layoutY="46.0" text="Welcome to your dashboard!!">
                            <font>
                               <Font size="25.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="1058.0" layoutY="44.0" rotate="-95.2">
+                        <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="1078.0" layoutY="44.0" rotate="-95.2">
                            <image>
                               <Image url="@../img/f.png" />
                            </image>
@@ -126,7 +126,7 @@
                               <Font name="AkzidenzGroteskBQ-Medium" size="18.0" />
                            </font>
                         </Button>
-                        <TextField fx:id="searchField" layoutX="627.0" layoutY="40.0" prefHeight="44.0" prefWidth="421.0" promptText="Search.....">
+                        <TextField fx:id="searchField" layoutX="678.0" layoutY="40.0" prefHeight="44.0" prefWidth="390.0" promptText="Search.....">
                            <font>
                               <Font name="Fira Code Retina" size="14.0" />
                            </font>

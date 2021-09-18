@@ -3,6 +3,7 @@ package code;
 //Necessary Imports
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -11,11 +12,13 @@ import  javafx.stage.Stage;
 import javafx.event.*;
 import javafx.stage.StageStyle;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 
-public class LoginAdminController {
+public class LoginAdminController implements Initializable {
 
 
     @FXML
@@ -38,24 +41,15 @@ public class LoginAdminController {
 
         // Login into the system after validation
         public void setActionLoginAdmin(ActionEvent event) {
-        if (!usernameAdminLogin.getText().isBlank() && !passwordAdminLogin.getText().isBlank()) {
+
+        if (usernameAdminLogin.getText().isBlank() && passwordAdminLogin.getText().isBlank()) {
 
             // Check user information valid or invalid
             validateLoginAdmin();
 
-            // To close previously opened window
-            try {
-                Stage stageClose = ((Stage) actionLoginAdmin.getScene().getWindow());
-                stageClose.close();
-
-            }catch(Exception e){
-                e.printStackTrace();
-            }
-
         } else {
             warningmessageAdminLogin.setText("Invalid Login! Fields cannot be empty.");
         }
-
     }
 
 
@@ -95,6 +89,7 @@ public class LoginAdminController {
                             successmessageAdminLogin.setVisible(true);
                             successmessageAdminLogin.setText("Login successful!");
 
+
                             // Redirect to Dashboard Page
                             dashboardAdmin();
 
@@ -116,22 +111,49 @@ public class LoginAdminController {
 
 
         // Username field access
-        public void passData(ActionEvent event){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../resource/dashboard_admin.fxml"));
-            Parent root = (Parent)loader.load();
+        public void passData()  {
 
-            DashboardAdminController dash = loader.getController();
-            dash.usrName(usernameAdminLogin.getText());
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
+            try {
+                // Loading FXML of second class
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../resource/dashboard_admin.fxml"));
+                Parent main = loader.load();
 
 
-        } catch (IOException e) {
-            e.printStackTrace();
+                // Get controller of second
+                DashboardAdminController dashboard = (DashboardAdminController)loader.getController();
+
+
+                // Calling method and passing data
+                dashboard.usrName(usernameAdminLogin.getText());
+
+
+                // Opening New stage for dashboard
+                Stage stage = new Stage();
+                stage.setScene(new Scene(main,1500,820));
+                stage.setTitle("All IN ONE STORE - Admin Dashboard");
+                stage.setResizable(false);
+                stage.getIcons().add(new Image("src/img/icon.png"));
+                stage.show();
+
+
+                // Clearing fields after successful login
+                usernameAdminLogin.setText("");
+                passwordAdminLogin.setText("");
+
+
+                // To close previously opened window
+                try {
+                     Stage stageClose = ((Stage) actionLoginAdmin.getScene().getWindow());
+                     stageClose.close();
+
+                     }catch(Exception e){
+                     e.printStackTrace();
+                            }
+                
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-    }
 
 
         // Password Visibility on check
@@ -185,8 +207,6 @@ public class LoginAdminController {
         stage.getIcons().add(new Image("src/img/icon.png"));
         stage.setScene(new Scene(root,1500,820));
         stage.show();
-
-
     }
 
 
@@ -208,6 +228,14 @@ public class LoginAdminController {
 
         }
 
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+            actionLoginAdmin.setOnAction(event -> {
+                passData();
+            });
+        }
 }
 
 

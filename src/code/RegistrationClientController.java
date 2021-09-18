@@ -49,7 +49,6 @@ public class RegistrationClientController {
     private Label confirmValidEmail;
 
 
-
     // Calling database connection class
     AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
     Connection connectDB = connect.getConnection();

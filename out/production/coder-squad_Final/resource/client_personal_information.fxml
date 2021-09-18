@@ -11,30 +11,30 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #F6F4F4;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.ClientPersonalInformationController">
     <children>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6f4f4" height="400.0" layoutX="2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="700.0" />
-        <Label alignment="CENTER" layoutX="208.0" layoutY="36.0" text="Personal Infromation">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f6f4f4" height="400.0" layoutX="2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="800.0" />
+        <Label alignment="CENTER" layoutX="208.0" layoutY="36.0" text="Personal Infromation" AnchorPane.rightAnchor="210.6">
             <font>
                 <Font name="AkzidenzGroteskBQ-Bold" size="30.0" />
             </font>
         </Label>
-        <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="139.0" layoutY="28.0">
+        <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="139.0" layoutY="28.0" AnchorPane.leftAnchor="210.0">
             <image>
                 <Image url="@../img/dash_image-modified.png" />
             </image>
         </ImageView>
-        <Label layoutX="20.0" layoutY="121.0" text="First Name" AnchorPane.leftAnchor="20.0">
+        <Label layoutX="10.0" layoutY="121.0" text="First Name" AnchorPane.leftAnchor="20.0">
             <font>
                 <Font size="20.0" />
             </font></Label>
-        <Label layoutX="371.4" layoutY="119.0" text="Last Name" AnchorPane.rightAnchor="237.0">
+        <Label layoutX="431.4" layoutY="119.0" text="Last Name" AnchorPane.rightAnchor="277.0">
             <font>
                 <Font size="20.0" />
             </font></Label>
-        <Label layoutX="20.0" layoutY="224.0" text="Email Address" AnchorPane.leftAnchor="20.0">
+        <Label layoutX="10.0" layoutY="224.0" text="Email Address" AnchorPane.leftAnchor="20.0">
             <font>
                 <Font size="20.0" />
             </font></Label>
-        <Label layoutX="375.4" layoutY="224.0" text="Username" AnchorPane.rightAnchor="237.0">
+        <Label layoutX="435.4" layoutY="224.0" text="Username" AnchorPane.rightAnchor="277.0">
             <font>
                 <Font size="20.0" />
             </font></Label>
@@ -42,9 +42,9 @@
             <font>
                 <Font name="Fira Code Medium" size="20.0" />
             </font></Button>
-        <TextField fx:id="userFname" layoutX="148.0" layoutY="119.0" prefHeight="35.0" prefWidth="200.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="354.0" />
-        <TextField fx:id="userEmail" layoutX="148.0" layoutY="225.0" prefHeight="35.0" prefWidth="200.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="354.0" />
-        <TextField fx:id="userLname" layoutX="482.0" layoutY="117.0" prefHeight="35.0" prefWidth="200.0" AnchorPane.rightAnchor="20.0" />
-        <TextField fx:id="userUsername" layoutX="482.0" layoutY="223.0" prefHeight="35.0" prefWidth="200.0" AnchorPane.rightAnchor="20.0" />
+        <TextField fx:id="userFname" editable="false" layoutX="148.0" layoutY="119.0" prefHeight="35.0" prefWidth="250.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="404.0" />
+        <TextField fx:id="userEmail" editable="false" layoutX="148.0" layoutY="225.0" prefHeight="35.0" prefWidth="250.0" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="404.0" />
+        <TextField fx:id="userLname" editable="false" layoutX="482.0" layoutY="117.0" prefHeight="35.0" prefWidth="250.0" AnchorPane.rightAnchor="20.0" />
+        <TextField fx:id="userUsername" editable="false" layoutX="482.0" layoutY="223.0" prefHeight="35.0" prefWidth="250.0" AnchorPane.rightAnchor="20.0" />
     </children>
 </AnchorPane>

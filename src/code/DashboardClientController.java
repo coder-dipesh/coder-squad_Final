@@ -15,6 +15,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.Objects;
@@ -22,6 +24,11 @@ import java.util.ResourceBundle;
 
 
 public class DashboardClientController implements Initializable {
+
+    // Calling database connection class
+    AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
+    Connection connectDB = connect.getConnection();
+
 
     @FXML
     private Button btnLogout;
@@ -34,7 +41,9 @@ public class DashboardClientController implements Initializable {
     @FXML
     private TextField searchField;
     @FXML
-    private Label loginUsername;
+    private Label welcomeUsername;
+    @FXML
+    private Label cartWarning;
 
     // Product Table
     @FXML
@@ -54,7 +63,7 @@ public class DashboardClientController implements Initializable {
 
     // Cart Table
     @FXML
-    public TableView <Table> cart;
+    public TableView <Table> cartTable;
     @FXML
     private TableColumn<Table, Integer> cartID;
     @FXML
@@ -109,6 +118,94 @@ public class DashboardClientController implements Initializable {
     }
 
 
+    String us;
+    // Get data from login page
+    public void usrName(String username){
+
+        us=username;
+        System.out.println(username);
+        welcomeUsername.setText(username);
+
+    }
+
+    String firstName;
+    String lastName ;
+    String emailId ;
+    String userName ;
+
+    // Fetched Data From login
+    public void dataUser(){
+
+        // Store data
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+
+        String usernameClient =us ;
+        System.out.println(usernameClient);
+        String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
+        String user = "root";
+        String dbPassword = "root";
+
+
+
+        try {
+            connection = DriverManager.getConnection(url, user, dbPassword);
+            preparedStatement = connection.prepareStatement("SELECT * FROM client_register WHERE username= '"+ usernameClient +"' ");
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                firstName = resultSet.getString("first_name");
+                lastName = resultSet.getString("last_name");
+                emailId = resultSet.getString("email_id");
+                userName = resultSet.getString("username");
+            }
+
+            System.out.println(firstName + lastName + emailId + userName);
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+
+        // Sending data to new Window
+        try {
+            // Loading FXML of second class
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../resource/client_personal_information.fxml"));
+            Parent main = loader.load();
+
+
+            // Get controller of second
+            ClientPersonalInformationController personal = (ClientPersonalInformationController) loader.getController();
+
+
+            // Calling method and passing data
+            personal.setData(firstName,lastName,emailId,userName);
+
+
+            // Opening New stage for dashboard
+            Stage stage = new Stage();
+            stage.setScene(new Scene(main,800,400));
+            stage.setTitle("All IN ONE STORE - Client Personal Information");
+            stage.setResizable(false);
+            stage.getIcons().add(new Image("src/img/icon.png"));
+            stage.show();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+
+
+
 //======================================================================================================================
 //========================================= TABLE VIEW DISPLAY =========================================================
 //======================================================================================================================
@@ -157,7 +254,7 @@ public class DashboardClientController implements Initializable {
     }
 
 
-    // Search product from table through searchfield keyword
+    // Search product from table through search field keyword
     public void searchFeature(){
 
         // Initial Phase Filter code
@@ -218,41 +315,201 @@ public class DashboardClientController implements Initializable {
 //========================================  Cart  Table   ==============================================================
 
 
+
+
+
     // Observable list for storing data
-    ObservableList<Table> products = FXCollections.observableArrayList();
+    ObservableList<Table> products =  FXCollections.observableArrayList();
 
-
-    // Set values to respective columns of tableView
-    private void initialize(){
-        cartID.setCellValueFactory(new PropertyValueFactory<Table,Integer>("product_id"));
-        cartQuantity.setCellValueFactory(new PropertyValueFactory<Table,Integer>("product_qty"));
-        cartName.setCellValueFactory(new PropertyValueFactory<Table,String>("product_name"));
-        cartCategory.setCellValueFactory(new PropertyValueFactory<Table,String>("category"));
-        cartPrice.setCellValueFactory(new PropertyValueFactory<Table,Integer>("price"));
-        cartDescription.setCellValueFactory(new PropertyValueFactory<Table,String>("description"));
-
-    }
 
 
     // Display data on cart table on click
     public void addToCart(){
-
         Table selection = tableView.getSelectionModel().getSelectedItem();
-        if (selection != null){
-            cart.getItems().add(new Table(selection.getProduct_id(),selection.getProduct_qty(),selection.getProduct_name(),
-                    selection.getCategory(),selection.getPrice(),selection.getDescription()));
+
+        if (selection != null) {
+            String id = selection.getProduct_id();
+            String qty = selection.getProduct_qty();
+            String name = selection.getProduct_name();
+            String category = selection.getCategory();
+            String price = selection.getPrice();
+            String description = selection.getDescription();
+
+            // Check if product already available or not
+            try {
+                String q = "SELECT * FROM cart WHERE product_id= '"+ id +"' ";
+                PreparedStatement s = connectDB.prepareStatement(q);
+                ResultSet rss = s.executeQuery();
+
+                if(!rss.isBeforeFirst()){
+
+                    // ADD to cart table view and refresh view
+                    products.clear();
+
+                    // INSERT IN DATABASE CART
+                    try {
+                        String query = "INSERT INTO cart(product_id,product_qty,product_name,category,price,description) " +
+                                "VALUES('" + id + "','" + qty + "','" + name + "'," +
+                                "'" + category + "','" + price + "','" + description + "')";
+                        Statement statement = connectDB.createStatement();
+                        statement.executeUpdate(query);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        e.getCause();
+                    }
+
+
+                    // Show in cart table
+                    String query = "SELECT * FROM cart";
+                    Statement stmt;
+                    ResultSet rs;
+
+                    try {
+                        Connection connectDB = AuthenticationDatabaseConnection.getConnection();
+                        stmt = connectDB.createStatement();
+                        rs = stmt.executeQuery(query);
+                        Table table;
+
+                        while (rs.next()) {
+                            table = new Table(rs.getString("product_id"), rs.getString("product_qty"),
+                                    rs.getString("product_name"), rs.getString("category"),
+                                    rs.getString("description"), rs.getString("price"));
+                            products.add(table);
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        e.printStackTrace();
+                    }
+
+                    // Show in table view
+                    cartID.setCellValueFactory(new PropertyValueFactory<Table, Integer>("product_id"));
+                    cartQuantity.setCellValueFactory(new PropertyValueFactory<Table, Integer>("product_qty"));
+                    cartName.setCellValueFactory(new PropertyValueFactory<Table, String>("product_name"));
+                    cartCategory.setCellValueFactory(new PropertyValueFactory<Table, String>("category"));
+                    cartPrice.setCellValueFactory(new PropertyValueFactory<Table, Integer>("price"));
+                    cartDescription.setCellValueFactory(new PropertyValueFactory<Table, String>("description"));
+                    cartTable.setItems(products);
+
+
+
+                }
+                else{
+                    cartWarning.setText("Product Already in Cart!");
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                e.getCause();
+            }
+
         }
     }
 
+
+    // Remove from cart
+     public void removeFromCart(){
+
+        Table selected = cartTable.getSelectionModel().getSelectedItem();
+        if(selected!=null){
+
+            String id = selected.getProduct_id();
+
+            // Check if product already available or not
+            try {
+                String q = "DELETE  FROM cart WHERE product_id= '"+ id +"' ";
+                Statement s = connectDB.createStatement();
+                s.executeUpdate(q);
+
+                    // ADD to cart table view and refresh view
+                    products.clear();
+
+                    // INSERT IN DATABASE CART
+                    try {
+                        String query = "INSERT INTO cart(product_id,product_qty,product_name,category,price,description) " +
+                                "VALUES('" + id + "','" + qty + "','" + name + "'," +
+                                "'" + category + "','" + price + "','" + description + "')";
+                        Statement statement = connectDB.createStatement();
+                        statement.executeUpdate(query);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        e.getCause();
+                    }
+
+
+                    // Show in cart table
+                    String query = "SELECT * FROM cart";
+                    Statement stmt;
+                    ResultSet rs;
+
+                    try {
+                        Connection connectDB = AuthenticationDatabaseConnection.getConnection();
+                        stmt = connectDB.createStatement();
+                        rs = stmt.executeQuery(query);
+                        Table table;
+
+                        while (rs.next()) {
+                            table = new Table(rs.getString("product_id"), rs.getString("product_qty"),
+                                    rs.getString("product_name"), rs.getString("category"),
+                                    rs.getString("description"), rs.getString("price"));
+                            products.add(table);
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        e.printStackTrace();
+                    }
+
+                    // Show in table view
+                    cartID.setCellValueFactory(new PropertyValueFactory<Table, Integer>("product_id"));
+                    cartQuantity.setCellValueFactory(new PropertyValueFactory<Table, Integer>("product_qty"));
+                    cartName.setCellValueFactory(new PropertyValueFactory<Table, String>("product_name"));
+                    cartCategory.setCellValueFactory(new PropertyValueFactory<Table, String>("category"));
+                    cartPrice.setCellValueFactory(new PropertyValueFactory<Table, Integer>("price"));
+                    cartDescription.setCellValueFactory(new PropertyValueFactory<Table, String>("description"));
+                    cartTable.setItems(products);
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                e.getCause();
+            }
+
+        }
+
+     }
+
+
+
+    public void btnClearCart(){
+
+        // Clear the table view
+        products.clear();
+
+        // Clear the Whole Cart
+        try {
+            String query = "TRUNCATE TABLE cart";
+            Statement statement = connectDB.createStatement();
+            statement.executeUpdate(query);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+
+
+    }
 
 
     //Initializing Methods
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        initialize();
         showTable();
         setData();
         searchFeature();
+
+        btnUserDetails.setOnAction(event -> dataUser());
+
     }
 
 }

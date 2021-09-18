@@ -47,7 +47,7 @@
                            </image>
                         </ImageView>
                         <Button fx:id="btnUserDetails" layoutX="1180.0" layoutY="18.0" mnemonicParsing="false" onAction="#clientPersonalInformation" opacity="0.0" prefHeight="82.0" prefWidth="92.0" />
-                        <Label fx:id="loginUsername" layoutX="147.0" layoutY="46.0" prefHeight="36.0" prefWidth="102.0" textFill="#346fc1">
+                        <Label fx:id="welcomeUsername" layoutX="147.0" layoutY="46.0" prefHeight="36.0" prefWidth="102.0" textFill="#346fc1">
                            <font>
                               <Font name="Fira Code Medium" size="25.0" />
                            </font>
@@ -69,7 +69,7 @@
                            </font>
                         </Label>
                         <Line endX="1187.0" layoutX="107.0" layoutY="100.0" startX="-100.0" />
-                        <TableView fx:id="tableView" layoutX="14.0" layoutY="129.0" prefHeight="602.0" prefWidth="640.0">
+                        <TableView fx:id="tableView" layoutX="4.0" layoutY="139.0" prefHeight="602.0" prefWidth="640.0">
                            <columns>
                               <TableColumn fx:id="id" prefWidth="60.992919921875" text=" ID" />
                               <TableColumn fx:id="qty" prefWidth="79.0" resizable="false" text="QUANTITY" />
@@ -79,7 +79,7 @@
                               <TableColumn fx:id="description" prefWidth="124.0" text="DESCRIPTION " />
                            </columns>
                         </TableView>
-                        <TableView fx:id="cartTable" layoutX="654.0" layoutY="129.0" prefHeight="602.0" prefWidth="640.0">
+                        <TableView fx:id="cartTable" layoutX="651.0" layoutY="139.0" prefHeight="602.0" prefWidth="640.0">
                            <columns>
                               <TableColumn fx:id="cartID" prefWidth="60.992919921875" resizable="false" text=" ID" />
                               <TableColumn fx:id="cartQuantity" prefWidth="79.0" resizable="false" text="QUANTITY" />
@@ -89,6 +89,11 @@
                               <TableColumn fx:id="cartDescription" prefWidth="155.0" text="DESCRIPTION " />
                            </columns>
                         </TableView>
+                        <Label fx:id="cartWarning" layoutX="852.0" layoutY="107.0" prefHeight="28.0" prefWidth="270.0" textFill="#f05454">
+                           <font>
+                              <Font name="Poppins Regular" size="20.0" />
+                           </font>
+                        </Label>
                      </children>
                   </Pane>
                </center>
@@ -97,10 +102,8 @@
          <left>
             <Pane prefHeight="820.0" prefWidth="202.0" style="-fx-background-color: #30475E#30475E;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="btnDeleteProduct" layoutX="2.0" layoutY="292.0" mnemonicParsing="false" opacity="0.0" prefHeight="57.0" prefWidth="190.0" />
-                  <Button fx:id="btnAddToCart" layoutX="2.0" layoutY="192.0" mnemonicParsing="false" onAction="#addToCart" opacity="0.0" prefHeight="57.0" prefWidth="190.0" />
                   <Line endX="128.77516174316406" layoutX="60.0" layoutY="144.0" startX="-50.65603256225586" stroke="#f7f7f7" />
-                  <Label layoutX="84.0" layoutY="208.0" text="Add to cart" textFill="WHITE">
+                  <Label layoutX="76.0" layoutY="206.0" text="Add to cart" textFill="WHITE">
                      <font>
                         <Font name="AkzidenzGroteskBQ-Medium" size="18.0" />
                      </font></Label>
@@ -127,12 +130,25 @@
                         <Image url="@../img/cart.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="btnLogout" layoutX="2.0" layoutY="714.0" mnemonicParsing="false" onAction="#logout" opacity="0.0" prefHeight="57.0" prefWidth="190.0" />
                   <ImageView fitHeight="123.0" fitWidth="124.0" layoutX="32.0" layoutY="12.0">
                      <image>
                         <Image url="@../img/main_logov2.png" />
                      </image>
                   </ImageView>
+                  <Label layoutX="69.0" layoutY="395.0" text="Clear Cart" textFill="WHITE">
+                     <font>
+                        <Font name="AkzidenzGroteskBQ-Reg" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnLogout" layoutX="2.0" layoutY="714.0" mnemonicParsing="false" onAction="#logout" opacity="0.0" prefHeight="57.0" prefWidth="190.0" />
+                  <Button fx:id="btnAddToCart" layoutX="2.0" layoutY="192.0" mnemonicParsing="false" onAction="#addToCart" opacity="0.0" prefHeight="57.0" prefWidth="190.0" />
+                  <Button fx:id="btnDeleteProduct" layoutX="2.0" layoutY="292.0" mnemonicParsing="false" onAction="#removeFromCart" opacity="0.0" prefHeight="57.0" prefWidth="190.0" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="381.0">
+                     <image>
+                        <Image url="@../img/clear.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnClearCart" layoutX="2.0" layoutY="375.0" mnemonicParsing="false" onAction="#btnClearCart" opacity="0.0" prefHeight="57.0" prefWidth="190.0" />
                </children>
             </Pane>
          </left>

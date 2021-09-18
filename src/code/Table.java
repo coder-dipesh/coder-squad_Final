@@ -8,6 +8,7 @@ public class Table {
     public  String category,description;
     public String price;
 
+
     //Constructor
     public Table(String product_id, String product_qty, String product_name, String category, String description, String price) {
         this.product_id = product_id;
@@ -16,7 +17,10 @@ public class Table {
         this.category = category;
         this.description = description;
         this.price = price;
+
     }
+
+
 
     // GETTERS and SETTERS for variables
     public String getProduct_id() {
