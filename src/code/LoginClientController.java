@@ -5,19 +5,25 @@ package code;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import  javafx.stage.Stage;
-import javafx.event.ActionEvent;
+import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.sql.*;
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 
-public class LoginClientController {
+public class LoginClientController implements Initializable {
 
 
     @FXML
@@ -40,19 +46,10 @@ public class LoginClientController {
     private Hyperlink redirectClientSignup;
 
 
-    public void setActionClientLogin(ActionEvent event){
+    public void setActionClientLogin(){
         if(!usernameClientLogin.getText().isBlank() && !hiddenpasswordClientLogin.getText().isBlank()){
 
             validateLoginClient();
-
-            // To close previous window
-            try {
-                Stage stageClose = ((Stage) actionClientLogin.getScene().getWindow());
-                stageClose.close();
-
-            }catch(Exception e){
-                e.printStackTrace();
-            }
 
         }
         else{
@@ -65,11 +62,9 @@ public class LoginClientController {
     // Validate data from Database
     public void validateLoginClient(){
 
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
-        AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
-        Connection connectDB = connect.getConnection();
+        Connection connection;
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
 
         String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
         String user = "root";
@@ -108,7 +103,6 @@ public class LoginClientController {
                     } else {
                         successmessageClientLogin.setVisible(false);
                         warningmessageClientLogin.setText("Invalid login! Password does not match.");
-
                     }
                 }
             } }catch(Exception e){
@@ -116,6 +110,56 @@ public class LoginClientController {
             e.getCause();
         }
     }
+
+
+    // Username field access
+    public void passData()  {
+
+        try {
+            // Loading FXML of second class
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../resource/dashboard_client.fxml"));
+            Parent main = loader.load();
+
+
+            // Get controller of second
+            DashboardClientController dashboard = loader.getController();
+
+
+            // Calling method and passing data
+            dashboard.usrName(usernameClientLogin.getText());
+
+
+            // Opening New stage for dashboard
+            Stage stage = new Stage();
+            stage.setScene(new Scene(main,1500,820));
+            stage.setTitle("All IN ONE STORE - Client Dashboard");
+            stage.setResizable(false);
+            stage.getIcons().add(new Image("src/img/icon.png"));
+            stage.show();
+
+
+            // Clearing fields after successful login
+            usernameClientLogin.setText("");
+            hiddenpasswordClientLogin.setText("");
+
+
+            // To close previously opened window
+            try {
+                Stage stageClose = ((Stage) actionClientLogin.getScene().getWindow());
+                stageClose.close();
+
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
 
     // Redirects to Client Dashboard
     private void dashboardClient() {
@@ -137,7 +181,7 @@ public class LoginClientController {
 
     // Password Visibility
 
-    public void changeVisibilityLogin(ActionEvent event) {
+    public void changeVisibilityLogin() {
 
         if (showpasswordClientLogin.isSelected()) {
             visiblepasswordClientLogin.setText(hiddenpasswordClientLogin.getText());
@@ -202,5 +246,11 @@ public class LoginClientController {
 
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        actionClientLogin.setOnAction(event -> passData());
+
+    }
 }
 

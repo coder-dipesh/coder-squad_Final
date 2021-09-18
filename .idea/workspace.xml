@@ -2,69 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e9ce43-85f8-49ff-a11e-4a4f6e99faaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM_[Changes]1/Dashboard_Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_25_PM__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_57_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_3_57_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM_[Changes]1/AuthenticationDatabaseConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM_[Changes]1/LoginAdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM_[Changes]1/LoginClientController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM_[Changes]1/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_9_3_2021_4_11_PM__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AddProductAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AddProductAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Add_Product_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Add_Product_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AuthenticationDatabaseConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/CreateCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/CreateCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Create_Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Create_Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coder-squad_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coder-squad_Final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AdminPersonalInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AdminPersonalInformationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/ClientPersonalInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/ClientPersonalInformationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/ForgotPasswordAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/ForgotPasswordAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DeleteProductAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DeleteProductAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Delete_Product_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Delete_Product_Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/EmailValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/EmailValidator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/ForgotPasswordClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/ForgotPasswordClientController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Login_Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Login_Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Login_Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Login_Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/RegisterAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/RegisterAdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/RegistrationClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/RegistrationClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/SplashScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/SplashScreenController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Splash_Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Splash_Screen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/UserDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/UserDetailsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Registration_Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Registration_Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Registration_Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Registration_Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Table.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/forgot_password.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/forgot_password.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/admin_personal_information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/admin_personal_information.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/client_personal_information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/client_personal_information.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/login_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/login_client.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/user_details.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AddProductAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AddProductAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Add_Product_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Add_Product_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AuthenticationDatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AuthenticationDatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/CreateCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/CreateCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Create_Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Create_Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_client.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/AdminPersonalInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AdminPersonalInformationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/ClientPersonalInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ClientPersonalInformationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/DashboardAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DashboardAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/DeleteProductAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DeleteProductAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Delete_Product_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Delete_Product_Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/EmailValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/EmailValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/ForgotPasswordAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ForgotPasswordAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/ForgotPasswordClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ForgotPasswordClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Forgot_Password.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Forgot_Password.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/DashboardClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DashboardClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/LoginAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/LoginClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Login_Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Login_Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Login_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Login_Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/RegisterAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/RegisterAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/RegistrationClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/RegistrationClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Registration_Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Registration_Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Registration_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Registration_Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/SplashScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/SplashScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Splash_Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Splash_Screen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/UserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AdminPersonalInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/UserDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AdminPersonalInformationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/admin_personal_information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/admin_personal_information.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/client_personal_information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/client_personal_information.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resource/dashboard_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/dashboard_admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/login_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/login_client.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/user_details.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/admin_personal_information.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resource/dashboard_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/dashboard_client.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,16 +70,18 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/code/DeleteProductAdminController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/resource/dashboard_client.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/code/DashboardAdminController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/code/DashboardClientController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/code/Table.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/code/Dashboard_Client.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/code/Dashboard_Admin.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/coder-squad_Final.iml" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/code/Splash_Screen.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/resource/add_product_page.fxml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/code/DeleteProductAdminController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/coder-squad_Final.iml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/code/DashboardClientController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/code/Dashboard_Client.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/code/LoginAdminController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/code/Table.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/code/LoginClientController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/code/Dashboard_Admin.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1xZqO06rsZef8d3pZVPczX6oTru" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -115,14 +91,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/SceneBuilder/SceneBuilder.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14414415" />
     <property name="project.structure.side.proportion" value="0.17528735" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="ReaderModeSettings">
     <option name="enabled" value="false" />
@@ -139,7 +118,7 @@
       <recent name="code" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Dashboard_Client">
+  <component name="RunManager" selected="Application.Splash_Screen">
     <configuration name="Add_Product_Page" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="code.Add_Product_Page" />
       <module name="coder-squad_Final" />
@@ -265,9 +244,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Login_Admin" />
         <item itemvalue="Application.Dashboard_Admin" />
         <item itemvalue="Application.Login_Client" />
-        <item itemvalue="Application.Login_Admin" />
         <item itemvalue="Application.UserDetails" />
         <item itemvalue="Application.Add_Product_Page" />
       </list>
@@ -281,8 +260,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630572931380</updated>
+      <workItem from="1631609642216" duration="1943000" />
+      <workItem from="1631621488649" duration="1022000" />
+      <workItem from="1631966203967" duration="6501000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -317,10 +302,10 @@
     <SUITE FILE_PATH="coverage/coder_squad_Final$Login_Client.ic" NAME="Login_Client Coverage Results" MODIFIED="1630573284572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>code.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/coder_squad_Final$Create_Category.ic" NAME="Create_Category Coverage Results" MODIFIED="1630923630277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coder_squad_Final$Delete_Product_Page.ic" NAME="Delete_Product_Page Coverage Results" MODIFIED="1630573218959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>code.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/coder_squad_Final$Delete_Product_Page.ic" NAME="Delete_Product_Page Coverage Results" MODIFIED="1630573218959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/coder_squad_Final$Create_Category.ic" NAME="Create_Category Coverage Results" MODIFIED="1630923630277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>code.*</FILTER>
     </SUITE>
   </component>

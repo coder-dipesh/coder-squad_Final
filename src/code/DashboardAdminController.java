@@ -15,6 +15,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.Objects;
@@ -22,6 +23,7 @@ import java.util.ResourceBundle;
 
 
 public class DashboardAdminController implements Initializable {
+
 
     // Calling database connection
     AuthenticationDatabaseConnection connect = new AuthenticationDatabaseConnection();
@@ -43,7 +45,8 @@ public class DashboardAdminController implements Initializable {
     @FXML
     private Button userDetails;
     @FXML
-    private Label welcomeUsername;
+    public Label welcomeUsername;
+
 
     // Product Table FXML
     @FXML
@@ -100,6 +103,7 @@ public class DashboardAdminController implements Initializable {
 
     }
 
+
     // Redirects to Add product Section
     public void addProduct(){
         try{
@@ -115,10 +119,8 @@ public class DashboardAdminController implements Initializable {
             e.printStackTrace();
             e.getCause();
         }
-
-
-
     }
+
 
     // Update Data on click
     public void btnUpdateProduct(ActionEvent event){
@@ -145,6 +147,7 @@ public class DashboardAdminController implements Initializable {
             e.printStackTrace();
         }
     }
+
 
     // Redirects to Delete Products Section
     public void deleteProduct(){
@@ -218,6 +221,7 @@ public class DashboardAdminController implements Initializable {
     // Observable list for storing database data
     ObservableList<Table> tableList = FXCollections.observableArrayList();
 
+
     // Insert data to Observable list -> (tableList)
     public void showTable(){
         String query = "SELECT * FROM product_admin";
@@ -272,10 +276,88 @@ public class DashboardAdminController implements Initializable {
     }
 
 
+    String us;
     // Get data from login page
     public void usrName(String username){
+
+        us=username;
+        System.out.println(username);
         welcomeUsername.setText(username);
 
+    }
+
+
+    String firstName;
+    String lastName ;
+    String emailId ;
+    String userName ;
+
+
+    // Fetched Data From login
+    public void dataUser(){
+
+        // Store data
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+
+        String usernameAdmin =us ;
+        System.out.println(usernameAdmin);
+        String url = "jdbc:mysql://127.0.0.1:3306/codersquad";
+        String user = "root";
+        String dbPassword = "root";
+
+
+
+        try {
+            connection = DriverManager.getConnection(url, user, dbPassword);
+            preparedStatement = connection.prepareStatement("SELECT * FROM admin_register WHERE username= '"+ usernameAdmin +"' ");
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                firstName = resultSet.getString("first_name");
+                lastName = resultSet.getString("last_name");
+                emailId = resultSet.getString("email_id");
+                userName = resultSet.getString("username");
+            }
+
+            System.out.println(firstName + lastName + emailId + userName);
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+
+        // Sending data to new Window
+        try {
+            // Loading FXML of second class
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../resource/admin_personal_information.fxml"));
+            Parent main = loader.load();
+
+
+            // Get controller of second
+            AdminPersonalInformationController personal = (AdminPersonalInformationController) loader.getController();
+
+
+            // Calling method and passing data
+            personal.setData(firstName,lastName,emailId,userName);
+
+
+            // Opening New stage for dashboard
+            Stage stage = new Stage();
+            stage.setScene(new Scene(main,800,400));
+            stage.setTitle("All IN ONE STORE - Admin Personal Information");
+            stage.setResizable(false);
+            stage.getIcons().add(new Image("src/img/icon.png"));
+            stage.show();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -374,14 +456,19 @@ public class DashboardAdminController implements Initializable {
     }
 
 
+
     // Initializing Methods
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources ) {
         showTable();
         addListenerTable();
         refresh();
         searchFeature();
-    }
 
+        userDetails.setOnAction(event -> {
+            dataUser();
+        });
+
+    }
 
 }

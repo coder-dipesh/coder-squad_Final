@@ -19,6 +19,24 @@ public class ClientPersonalInformationController {
     @FXML
     private Button btnCloseWindow;
 
+    // User Data Show
+    public void setData(String firstName, String lastName, String emailID, String userName){
+
+        System.out.println("Data are " + firstName);
+        System.out.println("Data are " + lastName);
+        System.out.println("Data are " + emailID);
+        System.out.println("Data are " + userName);
+
+        // Setting data to respective fields
+
+        userFname.setText(firstName);
+        userLname.setText(lastName);
+        userEmail.setText(emailID);
+        userUsername.setText(userName);
+
+
+    }
+
 
 
     // Close current Scene if close button pressed
