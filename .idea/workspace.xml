@@ -2,54 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8e9ce43-85f8-49ff-a11e-4a4f6e99faaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1f32e352-8b16-4d60-8299-9333edd5ad25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1f32e352-8b16-4d60-8299-9333edd5ad25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e9ab73-59cc-4c88-abd9-f4193efe713f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e9ab73-59cc-4c88-abd9-f4193efe713f/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e9ab73-59cc-4c88-abd9-f4193efe713f/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e9ab73-59cc-4c88-abd9-f4193efe713f/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e9ab73-59cc-4c88-abd9-f4193efe713f/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coder-squad_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coder-squad_Final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AdminPersonalInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/AdminPersonalInformationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/ClientPersonalInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/ClientPersonalInformationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DashboardClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DeleteProductAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/DeleteProductAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Delete_Product_Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Delete_Product_Page.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/EmailValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/EmailValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/ForgotPasswordClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/ForgotPasswordClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/LoginClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Login_Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Login_Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Login_Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Login_Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/RegisterAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/RegisterAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/RegistrationClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/RegistrationClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Registration_Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Registration_Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Registration_Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Registration_Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Table.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/forgot_password.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/forgot_password.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/admin_personal_information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/admin_personal_information.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/client_personal_information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/client_personal_information.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/resource/dashboard_client.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/AdminPersonalInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/AdminPersonalInformationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/ClientPersonalInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ClientPersonalInformationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/DashboardAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DashboardAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/DashboardClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/DashboardClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/LoginAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/LoginClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/LoginClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/RegistrationClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/RegistrationClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/admin_personal_information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/admin_personal_information.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/client_personal_information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/client_personal_information.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/dashboard_admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/dashboard_admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resource/dashboard_client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resource/dashboard_client.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Splash_Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Splash_Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Splash_Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Splash_Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -92,11 +73,18 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/SceneBuilder/SceneBuilder.exe" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14414415" />
     <property name="project.structure.side.proportion" value="0.17528735" />
@@ -114,71 +102,21 @@
       <recent name="C:\Users\dipes\IdeaProjects\coder-squad_Final\src\code\resource" />
       <recent name="C:\Users\dipes\IdeaProjects\coder-squad_Final\src\code\main" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="testing" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="code" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Splash_Screen">
-    <configuration name="Add_Product_Page" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="code.Add_Product_Page" />
-      <module name="coder-squad_Final" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="code.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Dashboard_Admin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="code.Dashboard_Admin" />
-      <module name="coder-squad_Final" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="code.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Dashboard_Client" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="16" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="code.Dashboard_Client" />
-      <module name="coder-squad_Final" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="code.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Login_Admin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="code.Login_Admin" />
-      <module name="coder-squad_Final" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="code.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Login_Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="code.Login_Client" />
       <module name="coder-squad_Final" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
@@ -219,16 +157,82 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDetails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="code.UserDetails" />
+    <configuration name="ClientLogin_ClassTest.test_case_second" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="coder-squad_Final" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="code.*" />
+          <option name="PATTERN" value="testing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="testing" />
+      <option name="MAIN_CLASS_NAME" value="testing.ClientLogin_ClassTest" />
+      <option name="METHOD_NAME" value="test_case_second" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientRegister_ClassTest.testConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coder-squad_Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testing" />
+      <option name="MAIN_CLASS_NAME" value="testing.ClientRegister_ClassTest" />
+      <option name="METHOD_NAME" value="testConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientRegister_ClassTest.testGetters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coder-squad_Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testing" />
+      <option name="MAIN_CLASS_NAME" value="testing.ClientRegister_ClassTest" />
+      <option name="METHOD_NAME" value="testGetters" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientRegister_ClassTest.testGettersEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coder-squad_Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testing" />
+      <option name="MAIN_CLASS_NAME" value="testing.ClientRegister_ClassTest" />
+      <option name="METHOD_NAME" value="testGettersEmail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DbConnectTest_Test.connectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coder-squad_Final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testing" />
+      <option name="MAIN_CLASS_NAME" value="testing.DbConnectTest_Test" />
+      <option name="METHOD_NAME" value="connectionTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -236,19 +240,19 @@
     <list>
       <item itemvalue="Application.Splash_Screen" />
       <item itemvalue="Application.Dashboard_Client" />
-      <item itemvalue="Application.Dashboard_Admin" />
-      <item itemvalue="Application.Login_Admin" />
-      <item itemvalue="Application.Add_Product_Page" />
-      <item itemvalue="Application.UserDetails" />
-      <item itemvalue="Application.Login_Client" />
+      <item itemvalue="JUnit.ClientLogin_ClassTest.test_case_second" />
+      <item itemvalue="JUnit.ClientRegister_ClassTest.testConstructor" />
+      <item itemvalue="JUnit.ClientRegister_ClassTest.testGetters" />
+      <item itemvalue="JUnit.ClientRegister_ClassTest.testGettersEmail" />
+      <item itemvalue="JUnit.DbConnectTest_Test.connectionTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Login_Admin" />
-        <item itemvalue="Application.Dashboard_Admin" />
-        <item itemvalue="Application.Login_Client" />
-        <item itemvalue="Application.UserDetails" />
-        <item itemvalue="Application.Add_Product_Page" />
+        <item itemvalue="JUnit.DbConnectTest_Test.connectionTest" />
+        <item itemvalue="JUnit.ClientRegister_ClassTest.testGettersEmail" />
+        <item itemvalue="JUnit.ClientRegister_ClassTest.testGetters" />
+        <item itemvalue="JUnit.ClientRegister_ClassTest.testConstructor" />
+        <item itemvalue="JUnit.ClientLogin_ClassTest.test_case_second" />
       </list>
     </recent_temporary>
   </component>
@@ -263,6 +267,16 @@
       <workItem from="1631609642216" duration="1943000" />
       <workItem from="1631621488649" duration="1022000" />
       <workItem from="1631966203967" duration="6501000" />
+      <workItem from="1632140203874" duration="962000" />
+      <workItem from="1632283362439" duration="1650000" />
+      <workItem from="1632289018110" duration="1496000" />
+      <workItem from="1632297555846" duration="42000" />
+      <workItem from="1632297856619" duration="1489000" />
+      <workItem from="1632468667719" duration="4117000" />
+      <workItem from="1632478771842" duration="674000" />
+      <workItem from="1632479538024" duration="1907000" />
+      <workItem from="1632569174430" duration="4416000" />
+      <workItem from="1632713993261" duration="7643000" />
     </task>
     <servers />
   </component>
