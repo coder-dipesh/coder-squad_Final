@@ -18,21 +18,6 @@ public class Splash_Screen extends Application {
         stage.setScene(new Scene(root,1500,820));
         stage.show();
     }
-
     public static void main(String[] args) { launch(args);}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
