@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8e9ce43-85f8-49ff-a11e-4a4f6e99faaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1f32e352-8b16-4d60-8299-9333edd5ad25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1f32e352-8b16-4d60-8299-9333edd5ad25.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e9ab73-59cc-4c88-abd9-f4193efe713f.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e9ab73-59cc-4c88-abd9-f4193efe713f/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e9ab73-59cc-4c88-abd9-f4193efe713f/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e9ab73-59cc-4c88-abd9-f4193efe713f/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e9ab73-59cc-4c88-abd9-f4193efe713f/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coder-squad_Final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/coder-squad_Final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Splash_Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/coder-squad_Final/code/Splash_Screen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/coder-squad_Final/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/Splash_Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Splash_Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" />
-    </list>
+    <list default="true" id="d8e9ce43-85f8-49ff-a11e-4a4f6e99faaa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
