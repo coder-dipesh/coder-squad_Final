@@ -17,7 +17,7 @@ public class Registration_Admin extends Application {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/registration_admin.fxml")));
         primaryStage.setTitle("All IN ONE STORE - Admin Registration");
         primaryStage.setResizable(false);
-        primaryStage.getIcons().add(new Image("src/img/icon.png"));
+        primaryStage.getIcons().add(new Image("img/icon.png"));
         primaryStage.setScene(new Scene(root,1500,820));
         primaryStage.show();
     }

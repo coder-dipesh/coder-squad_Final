@@ -89,7 +89,7 @@ public class DashboardClientController implements Initializable {
         if(alert.showAndWait().get() == ButtonType.OK){
             try {
                 Stage stageClose = ((Stage) btnLogout.getScene().getWindow());
-                stageClose.getIcons().add(new Image("src/img/icon.png"));
+                stageClose.getIcons().add(new Image("img/icon.png"));
                 stageClose.close();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -106,7 +106,7 @@ public class DashboardClientController implements Initializable {
             Stage stage_user_details = new Stage();
             stage_user_details.setTitle("All IN ONE STORE - Client Personal Information");
             stage_user_details.setResizable(false);
-            stage_user_details .getIcons().add(new Image("src/img/icon.png"));
+            stage_user_details .getIcons().add(new Image("img/icon.png"));
             stage_user_details .setScene(new Scene(root,700,400));
             stage_user_details .show();
 
@@ -191,7 +191,7 @@ public class DashboardClientController implements Initializable {
             stage.setScene(new Scene(main,800,400));
             stage.setTitle("All IN ONE STORE - Client Personal Information");
             stage.setResizable(false);
-            stage.getIcons().add(new Image("src/img/icon.png"));
+            stage.getIcons().add(new Image("img/icon.png"));
             stage.show();
 
 

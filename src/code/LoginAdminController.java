@@ -132,7 +132,7 @@ public class LoginAdminController implements Initializable {
                 stage.setScene(new Scene(main,1500,820));
                 stage.setTitle("All IN ONE STORE - Admin Dashboard");
                 stage.setResizable(false);
-                stage.getIcons().add(new Image("src/img/icon.png"));
+                stage.getIcons().add(new Image("img/icon.png"));
                 stage.show();
 
 
@@ -176,7 +176,7 @@ public class LoginAdminController implements Initializable {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/registration_admin.fxml")));
                 Stage registerAdminstage = new Stage();
                 registerAdminstage.setTitle("All IN ONE STORE - Admin Signup");
-                registerAdminstage.getIcons().add(new Image("src/img/icon.png"));
+                registerAdminstage.getIcons().add(new Image("img/icon.png"));
                 registerAdminstage.setScene(new Scene(root, 1500, 820));
                 registerAdminstage.show();
 
@@ -204,7 +204,7 @@ public class LoginAdminController implements Initializable {
         Stage stage = new Stage();
         stage.setTitle("All IN ONE STORE - Admin Dashboard");
         stage.setResizable(false);
-        stage.getIcons().add(new Image("src/img/icon.png"));
+        stage.getIcons().add(new Image("img/icon.png"));
         stage.setScene(new Scene(root,1500,820));
         stage.show();
     }
@@ -217,7 +217,7 @@ public class LoginAdminController implements Initializable {
             Stage stage = new Stage();
             stage.initStyle(StageStyle.UNDECORATED);
             stage.setResizable(false);
-            stage.getIcons().add(new Image("src/img/icon.png"));
+            stage.getIcons().add(new Image("img/icon.png"));
             stage.setScene(new Scene(root, 500, 450));
             stage.show();
 

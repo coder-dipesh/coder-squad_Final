@@ -92,7 +92,7 @@ public class DashboardAdminController implements Initializable {
             Stage stage_create_category = new Stage();
             stage_create_category.setResizable(false);
             stage_create_category.setTitle("All in one store - Create Category Admin");
-            stage_create_category.getIcons().add(new Image("src/img/icon.png"));
+            stage_create_category.getIcons().add(new Image("img/icon.png"));
             stage_create_category.setScene(new Scene(root,600,400));
             stage_create_category.show();
 
@@ -111,7 +111,7 @@ public class DashboardAdminController implements Initializable {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/add_product_page.fxml")));
             Stage stage_add_product_page = new Stage();
             stage_add_product_page.setTitle("All in one store - Add Product Admin");
-            stage_add_product_page.getIcons().add(new Image("src/img/icon.png"));
+            stage_add_product_page.getIcons().add(new Image("img/icon.png"));
             stage_add_product_page.setScene(new Scene(root,1500,820));
             stage_add_product_page.show();
 
@@ -156,7 +156,7 @@ public class DashboardAdminController implements Initializable {
             Stage stage_delete_product_page = new Stage();
             stage_delete_product_page.setResizable(false);
             stage_delete_product_page.setTitle("All in one store - Add Product Admin");
-            stage_delete_product_page.getIcons().add(new Image("src/img/icon.png"));
+            stage_delete_product_page.getIcons().add(new Image("img/icon.png"));
             stage_delete_product_page.setScene(new Scene(root,600,400));
             stage_delete_product_page.show();
 
@@ -176,7 +176,7 @@ public class DashboardAdminController implements Initializable {
             Stage stage_user_details = new Stage();
             stage_user_details.setTitle("All IN ONE STORE - User Details");
             stage_user_details.setResizable(false);
-            stage_user_details .getIcons().add(new Image("src/img/icon.png"));
+            stage_user_details .getIcons().add(new Image("img/icon.png"));
             stage_user_details .setScene(new Scene(root,700,400));
             stage_user_details .show();
 
@@ -201,7 +201,7 @@ public class DashboardAdminController implements Initializable {
 
             try {
                 Stage stageClose = ((Stage) buttonLogout.getScene().getWindow());
-                stageClose.getIcons().add(new Image("src/img/icon.png"));
+                stageClose.getIcons().add(new Image("img/icon.png"));
                 stageClose.close();
 
             } catch (Exception e) {
@@ -351,7 +351,7 @@ public class DashboardAdminController implements Initializable {
             stage.setScene(new Scene(main,800,400));
             stage.setTitle("All IN ONE STORE - Admin Personal Information");
             stage.setResizable(false);
-            stage.getIcons().add(new Image("src/img/icon.png"));
+            stage.getIcons().add(new Image("img/icon.png"));
             stage.show();
 
 

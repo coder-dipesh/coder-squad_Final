@@ -21,7 +21,7 @@ public class Forgot_Password extends Application {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/forgot_password_admin.fxml")));
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setResizable(false);
-        stage.getIcons().add(new Image("src/img/icon.png"));
+        stage.getIcons().add(new Image("img/icon.png"));
         stage.setScene(new Scene(root, 500, 450));
         stage.show();
 

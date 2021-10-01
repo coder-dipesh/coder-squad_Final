@@ -16,7 +16,7 @@ public class Add_Product_Page extends Application {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/add_product_page.fxml")));
         stage_add_product_page.setTitle("All in one store - Add Product Admin");
         stage_add_product_page.setResizable(false);
-        stage_add_product_page.getIcons().add(new Image("src/img/icon.png"));
+        stage_add_product_page.getIcons().add(new Image("img/icon.png"));
         stage_add_product_page.setScene(new Scene(root,1500,820));
         stage_add_product_page.show();
     }

@@ -27,7 +27,7 @@ public class SplashScreenController {
         Stage redirectToAdminStage = new Stage();
         redirectToAdminStage.setTitle("All IN ONE STORE - Admin Login");
         redirectToAdminStage.setResizable(false);
-        redirectToAdminStage.getIcons().add(new Image("src/img/icon.png"));
+        redirectToAdminStage.getIcons().add(new Image("img/icon.png"));
         redirectToAdminStage.setScene(new Scene(root,1500,820));
         redirectToAdminStage.show();
 
@@ -50,7 +50,7 @@ public class SplashScreenController {
             Stage redirectToClientStage = new Stage();
             redirectToClientStage.setTitle("All IN ONE STORE - Client Login");
             redirectToClientStage.setResizable(false);
-            redirectToClientStage.getIcons().add(new Image("src/img/icon.png"));
+            redirectToClientStage.getIcons().add(new Image("img/icon.png"));
             redirectToClientStage.setScene(new Scene(root,1500,820));
             redirectToClientStage.show();
 
