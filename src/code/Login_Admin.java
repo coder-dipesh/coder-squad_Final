@@ -16,7 +16,7 @@ public class Login_Admin extends Application {
         stage.setTitle("All IN ONE STORE - Admin Login");
         stage.setAlwaysOnTop(true);
         stage.setResizable(false);
-        stage.getIcons().add(new Image("src/img/icon.png"));
+        stage.getIcons().add(new Image("img/icon.png"));
         stage.setScene(new Scene(root,1500,820));
         stage.show();
     }

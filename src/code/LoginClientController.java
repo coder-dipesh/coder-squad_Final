@@ -134,7 +134,7 @@ public class LoginClientController implements Initializable {
             stage.setScene(new Scene(main,1500,820));
             stage.setTitle("All IN ONE STORE - Client Dashboard");
             stage.setResizable(false);
-            stage.getIcons().add(new Image("src/img/icon.png"));
+            stage.getIcons().add(new Image("img/icon.png"));
             stage.show();
 
 
@@ -167,7 +167,7 @@ public class LoginClientController implements Initializable {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/dashboard_client.fxml")));
             Stage dashboardClient = new Stage();
             dashboardClient.setTitle("All IN ONE STORE - Client Dashboard");
-            dashboardClient.getIcons().add(new Image("src/img/icon.png"));
+            dashboardClient.getIcons().add(new Image("img/icon.png"));
             dashboardClient.setScene(new Scene(root,1500,820));
             dashboardClient.show();
         }catch(Exception e){
@@ -203,7 +203,7 @@ public class LoginClientController implements Initializable {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/forgot_password_client.fxml")));
             Stage stage = new Stage();
             stage.initStyle(StageStyle.UNDECORATED);
-            stage.getIcons().add(new Image("src/img/icon.png"));
+            stage.getIcons().add(new Image("img/icon.png"));
             stage.setScene(new Scene(root, 500, 450));
             stage.show();
 
@@ -222,7 +222,7 @@ public class LoginClientController implements Initializable {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../resource/registration_client.fxml")));
             Stage registerClientstage = new Stage();
             registerClientstage.setTitle("All IN ONE STORE - Client Registration");
-            registerClientstage.getIcons().add(new Image("src/img/icon.png"));
+            registerClientstage.getIcons().add(new Image("img/icon.png"));
             registerClientstage.setScene(new Scene(root,1500,820));
             registerClientstage.show();
 

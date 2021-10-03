@@ -16,7 +16,7 @@ public class Dashboard_Client extends Application{
         Parent root = FXMLLoader.load(requireNonNull(getClass().getResource("../resource/dashboard_client.fxml")));
         stage.setTitle("All IN ONE STORE - Client Dashboard");
         stage.setResizable(false);
-        stage.getIcons().add(new Image("src/img/icon.png"));
+        stage.getIcons().add(new Image("img/icon.png"));
         stage.setScene(new Scene(root,1500,820));
         stage.show();
 

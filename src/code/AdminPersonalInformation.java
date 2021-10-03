@@ -17,7 +17,7 @@ public class AdminPersonalInformation extends Application {
         stage.setTitle("All IN ONE STORE - User Details");
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
-        stage.getIcons().add(new Image("src/img/icon.png"));
+        stage.getIcons().add(new Image("img/icon.png"));
         stage.setScene(new Scene(root,700,400));
         stage.show();
     }
